@@ -1,0 +1,230 @@
+---
+title: "Basic Commands"
+format: html
+engine: knitr
+filters:
+  - webr
+---
+
+## Comments
+
+The comment character in R is `#`. Each commented line must be preceded by a `#` symbol. There are no block comments in
+R. Comments are not evaluated when you run your code
+
+Run the following R code to generate a vector of 10 numbers and print the result.
+
+```{webr-r}
+1:10
+```
+
+In the following code, the expression `1:10` is "commented out", so R doesn't evaluate that line.
+
+```{webr-r}
+#1:10
+```
+
+## Assignment
+
+To do anything useful, we need to create objects that hold data. We 'assign' values to objects via the 'assignment'
+operator, `<-`.
+
+Run the following code to assign the values `7`, `2.5`, and `"foo"` to the objects `x`, `y`, and `z`, respectively.
+
+```{webr-r}
+x <- 7
+y <- 2.5
+z <- "foo"
+```
+
+Notice the lack of printed output. These three commands create three new objects in your environment (`x`, `y`, `z`)
+that store the assigned data values (`7`, `2.5`, `"foo"`). However, we haven't yet asked R to do anything with those
+stored values, so we don't see any printed output.
+
+To view the contents of an object, we can evaluate the object's name without assignment.
+
+Run the following code to print the values saved as `x` and `y`.
+
+```{webr-r}
+x
+y
+```
+
+We can also create new objects by assigning them the values of existing objects.
+
+Run the following code to create a new object `w` that takes the value of the existing object `z`.
+
+```{webr-r}
+w <- z
+w
+```
+
+## Mathematical Operators
+
+All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored
+in those objects are used to evaluate the expression.
+
+Run the following code to add, subtract, multiply, and divide the values stored as `y` and `x`.
+
+```{webr-r}
+y + x
+y - x
+y * x
+y / x
+```
+
+We use the carret character, `^`, to specify exponents.
+
+Run the following code to square and cube the value of `y`.
+
+```{webr-r}
+y^2
+y^3
+```
+
+The `sqrt()` function returns the square root of it's argument (i.e., the value we specify inside the parantheses).
+
+Run the following code to calculate the square root of `y`.
+
+```{webr-r}
+sqrt(y)
+```
+
+For other roots, we can use fractional exponents.
+
+```{webr-r}
+y^(1/3) # cube root of y
+y^(1/4) # quartic root of y
+```
+
+R also includes special functions for the most common logarithms as well as the anti-log operator.
+
+```{webr-r}
+log(y)   # natural logarithm of y
+log10(y) # log base 10 of y
+log2(y)  # log base 2 of y
+
+exp(x) # exponentiate x
+```
+
+Note that `log(y)` calculates the *natural logarithm* of `y`, $\ln(y)$. If you want the "ordinary" base-10 log, you need
+to use the `log10()` function.
+
+## Practice
+
+1. Create an object called `age` that takes the value of your age in whole years.
+1. Use the `age` object you created in above to create a second object called `weeks` that takes the value of your age
+   in whole weeks.
+   - Assume 52 weeks in each year.
+   - Disregard partial years (i.e., assume every year counted in `age` contains 52 whole weeks).
+
+```{webr-r}
+
+
+
+```
+
+## Logical Comparisons
+
+```{webr-r}
+## Define some objects to play with
+y <- 5
+x <- 7
+w <- 5
+
+### Check equality
+y == x
+y == w
+```
+
+```{webr-r}
+y > x  # greater than
+y >= x # greater than or equal to
+y < x  # less than
+y <= x # less than or equal to
+
+y > w
+y >= w
+y < w
+y <= w
+```
+
+We can negate any logical condition by prepending the '!' character
+
+```{webr-r}
+y > x
+!y > x
+
+y == w
+!y == w
+```
+
+Rather than negating an equality check, we will typically use the special "not-equal" operator, `!=`.
+
+```{webr-r}
+y == w
+y != w
+```
+
+We can create more complex logical conditions with the AND and OR operators: `&` and `|`.
+
+```{webr-r}
+y == w & y < x
+y == w & y > x
+y == w | y > x
+```
+
+## Practice
+
+Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the 'weeks' object
+you created above is evenly divisible by 7.
+
+```{webr-r}
+
+
+
+```
+
+## Order of Operations
+
+When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
+operation according to the usual PEMDAS ordering.
+
+```{webr-r}
+y + x / w
+(y + x) / w
+```
+
+```{webr-r}
+y^(1/2)
+y^1/2
+
+y^(1/2) == sqrt(y)
+y^1/2 == y/2
+```
+
+## Interacting with the Environment
+
+The 'environment' is a loosely organized set of all the objects that R currently has stored in working memory
+
+We can use the `ls()` function to list the contents of the current environment.
+
+```{webr-r}
+ls()
+```
+
+The `rm()` function will remove an object from the environment.
+
+```{webr-r}
+rm(x) # Remove 'x' from the environment
+ls()  # Check the results
+```
+
+## Practice
+
+Use the rm() function to remove the `age` object that you created above from your environment.
+
+```{webr-r}
+
+
+
+```

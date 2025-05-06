@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "first_steps"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+webr:
+  channel-type: "post-message"
+engine: knitr
+filters:
+  - webr
+

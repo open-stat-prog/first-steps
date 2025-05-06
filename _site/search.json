@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "first_steps",
+    "section": "",
+    "text": "This is a Quarto website."
+  },
+  {
+    "objectID": "index.html#hello-world",
+    "href": "index.html#hello-world",
+    "title": "first_steps",
+    "section": "Hello World!",
+    "text": "Hello World!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  }
+]
