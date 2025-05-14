@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Basic Commands – first_steps</title>
+<title>packages_help – first_steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -366,7 +400,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"1:10","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-1","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":2,"code":"#1:10","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-2","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":3,"code":"x <- 7\ny <- 2.5\nz <- \"foo\"","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-3","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":4,"code":"x\ny","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-4","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":5,"code":"w <- z\nw","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-5","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":6,"code":"y + x\ny - x\ny * x\ny / x","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-6","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":7,"code":"y^2\ny^3","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-7","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":8,"code":"sqrt(y)","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-8","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":9,"code":"y^(1/3) # cube root of y\ny^(1/4) # quartic root of y","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-9","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":10,"code":"log(y)   # natural logarithm of y\nlog10(y) # log base 10 of y\nlog2(y)  # log base 2 of y\n\nexp(x) # exponentiate x","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-10","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":11,"code":"","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-11","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":12,"code":"## Define some objects to play with\ny <- 5\nx <- 7\nw <- 5\n\n### Check equality\ny == x\ny == w","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-12","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":13,"code":"y > x  # greater than\ny >= x # greater than or equal to\ny < x  # less than\ny <= x # less than or equal to\n\ny > w\ny >= w\ny < w\ny <= w","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-13","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":14,"code":"y > x\n!y > x\n\ny == w\n!y == w","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-14","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":15,"code":"y == w\ny != w","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-15","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":16,"code":"y == w & y < x\ny == w & y > x\ny == w | y > x","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-16","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":17,"code":"","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-17","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":18,"code":"y + x / w\n(y + x) / w","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-18","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":19,"code":"y^(1/2)\ny^1/2\n\ny^(1/2) == sqrt(y)\ny^1/2 == y/2","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-19","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":20,"code":"ls()","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-20","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":21,"code":"rm(x) # Remove 'x' from the environment\nls()  # Check the results","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-21","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}},{"id":22,"code":"","options":{"classes":"","context":"interactive","results":"markup","editor-max-height":"","fig-width":7,"label":"unnamed-chunk-22","editor-word-wrap":"true","warning":"true","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"read-only":"false","message":"true","editor-font-scale":"1","comment":"","out-height":"","fig-height":5,"fig-cap":"","autorun":"false","output":"true"}}];
+globalThis.qwebrCellDetails = [{"options":{"context":"interactive","editor-word-wrap":"true","out-height":"","results":"markup","message":"true","warning":"true","label":"unnamed-chunk-1","dpi":72,"read-only":"false","fig-height":5,"comment":"","editor-max-height":"","classes":"","autorun":"false","out-width":"700px","editor-font-scale":"1","output":"true","fig-cap":"","editor-quick-suggestions":"false","fig-width":7},"id":1,"code":"## Use the default CRAN mirror\ninstall.packages(\"psych\")"},{"options":{"context":"interactive","editor-word-wrap":"true","out-height":"","results":"markup","message":"true","warning":"true","label":"unnamed-chunk-2","dpi":72,"read-only":"false","fig-height":5,"comment":"","editor-max-height":"","classes":"","autorun":"false","out-width":"700px","editor-font-scale":"1","output":"true","fig-cap":"","editor-quick-suggestions":"false","fig-width":7},"id":2,"code":""}];
 
 </script>
 <script type="module">
@@ -1620,35 +1654,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -1690,15 +1695,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
-  <li><a href="#mathematical-operators" id="toc-mathematical-operators" class="nav-link" data-scroll-target="#mathematical-operators">Mathematical Operators</a></li>
+  <li><a href="#add-on-packages" id="toc-add-on-packages" class="nav-link active" data-scroll-target="#add-on-packages">Add-On Packages</a></li>
   <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  <li><a href="#logical-comparisons" id="toc-logical-comparisons" class="nav-link" data-scroll-target="#logical-comparisons">Logical Comparisons</a></li>
-  <li><a href="#practice-1" id="toc-practice-1" class="nav-link" data-scroll-target="#practice-1">Practice</a></li>
-  <li><a href="#order-of-operations" id="toc-order-of-operations" class="nav-link" data-scroll-target="#order-of-operations">Order of Operations</a></li>
-  <li><a href="#interacting-with-the-environment" id="toc-interacting-with-the-environment" class="nav-link" data-scroll-target="#interacting-with-the-environment">Interacting with the Environment</a></li>
-  <li><a href="#practice-2" id="toc-practice-2" class="nav-link" data-scroll-target="#practice-2">Practice</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
   </ul>
 </nav>
     </div>
@@ -1989,131 +1988,224 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Basic Commands</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>The comment character in R is <code>#</code>. Each commented line must be preceded by a <code>#</code> symbol. There are no block comments in R. Comments are not evaluated when you run your code</p>
-<p>Run the following R code to generate a vector of 10 numbers and print the result.</p>
+<section id="add-on-packages" class="level2">
+<h2 class="anchored" data-anchor-id="add-on-packages">Add-On Packages</h2>
+<p>When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on <em>packages</em> to complete most real-world data analyses.</p>
+<p>For example:</p>
+<ul>
+<li>If your data are incomplete and you want to treat the missing data using multiple imputation, then you will need to install a package like <a href="">mice</a>, <a href="">amelia</a>, or <a href="">mi</a>.</li>
+<li>If you want to use structural equation modeling to analyze your data, then you will need to install something like <a href="">lavaan</a> or <a href="">openmx</a>.</li>
+<li>To estimate multilevel regression models, you will need <a href="">lme4</a>.</li>
+<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="">tidyverse</a> packages are indespesible (unless you enjoy making your work needlessly more painful).</li>
+</ul>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In the following code, the expression <code>1:10</code> is “commented out”, so R doesn’t evaluate that line.</p>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="assignment" class="level2">
-<h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
-<p>To do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, <code>&lt;-</code>.</p>
-<p>Run the following code to assign the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Notice the lack of printed output. These three commands create three new objects in your environment (<code>x</code>, <code>y</code>, <code>z</code>) that store the assigned data values (<code>7</code>, <code>2.5</code>, <code>"foo"</code>). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.</p>
-<p>To view the contents of an object, we can evaluate the object’s name without assignment.</p>
-<p>Run the following code to print the values saved as <code>x</code> and <code>y</code>.</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We can also create new objects by assigning them the values of existing objects.</p>
-<p>Run the following code to create a new object <code>w</code> that takes the value of the existing object <code>z</code>.</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="mathematical-operators" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-operators">Mathematical Operators</h2>
-<p>All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored in those objects are used to evaluate the expression.</p>
-<p>Run the following code to add, subtract, multiply, and divide the values stored as <code>y</code> and <code>x</code>.</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We use the carret character, <code>^</code>, to specify exponents.</p>
-<p>Run the following code to square and cube the value of <code>y</code>.</p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The <code>sqrt()</code> function returns the square root of it’s argument (i.e., the value we specify inside the parantheses).</p>
-<p>Run the following code to calculate the square root of <code>y</code>.</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>For other roots, we can use fractional exponents.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>R also includes special functions for the most common logarithms as well as the anti-log operator.</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Note that <code>log(y)</code> calculates the <em>natural logarithm</em> of <code>y</code>, <span class="math inline">\(\ln(y)\)</span>. If you want the “ordinary” base-10 log, you need to use the <code>log10()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify the CRAN mirror a priori</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"lattice"</span>, <span class="st">"gridExtra"</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="st">"http://cloud.r-project.org"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="st">"http://cloud.r-project.org"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">lib =</span> <span class="st">"../software"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Install from local source</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"../software/magrittr_2.0.1.tar.gz"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"Source"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="practice" class="level2">
 <h2 class="anchored" data-anchor-id="practice">Practice</h2>
-<ol type="1">
-<li>Create an object called <code>age</code> that takes the value of your age in whole years.</li>
-<li>Use the <code>age</code> object you created in above to create a second object called <code>weeks</code> that takes the value of your age in whole weeks.
+<p>Use the install.packages() function to install the following packages in the default location (i.e., don’t specify anything for the ‘lib’ argument).</p>
 <ul>
-<li>Assume 52 weeks in each year.</li>
-<li>Disregard partial years (i.e., assume every year counted in <code>age</code> contains 52 whole weeks).</li>
-</ul></li>
-</ol>
-<div id="qwebr-insertion-location-11"></div>
+<li><code>ggplot2</code></li>
+<li><code>dplyr</code></li>
+<li><code>haven</code></li>
+</ul>
+<div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="logical-comparisons" class="level2">
-<h2 class="anchored" data-anchor-id="logical-comparisons">Logical Comparisons</h2>
-<div id="qwebr-insertion-location-12"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We can negate any logical condition by prepending the ‘!’ character</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Rather than negating an equality check, we will typically use the special “not-equal” operator, <code>!=</code>.</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We can create more complex logical conditions with the AND and OR operators: <code>&amp;</code> and <code>|</code>.</p>
-<div id="qwebr-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="practice-1" class="level2">
-<h2 class="anchored" data-anchor-id="practice-1">Practice</h2>
-<p>Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.</p>
-<div id="qwebr-insertion-location-17"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="order-of-operations" class="level2">
-<h2 class="anchored" data-anchor-id="order-of-operations">Order of Operations</h2>
-<p>When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical operation according to the usual PEMDAS ordering.</p>
-<div id="qwebr-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="interacting-with-the-environment" class="level2">
-<h2 class="anchored" data-anchor-id="interacting-with-the-environment">Interacting with the Environment</h2>
-<p>The ‘environment’ is a loosely organized set of all the objects that R currently has stored in working memory</p>
-<p>We can use the <code>ls()</code> function to list the contents of the current environment.</p>
-<div id="qwebr-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The <code>rm()</code> function will remove an object from the environment.</p>
-<div id="qwebr-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="practice-2" class="level2">
-<h2 class="anchored" data-anchor-id="practice-2">Practice</h2>
-<p>Use the rm() function to remove the <code>age</code> object that you created above from your environment.</p>
-<div id="qwebr-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="getting-help" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
+<p>Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation (AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for the <code>if_else()</code> function from the <strong>dplyr</strong> package.</p>
+<div class=".container">
+
+
+
+  
+    <title>R: Vectorised if-else</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"> -->
+    <script type="text/javascript">
+    const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+    function processMathHTML() {
+      var l = document.getElementsByClassName('reqn');
+      for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+      return;
+    }
+    </script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" onload="processMathHTML();"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="R.css" /> -->
+  
+
+  
+    <div class="container">
+      <main>
+
+        
+<table class="caption-top table" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td>if_else {dplyr}</td>
+<td style="text-align: right;">R Documentation</td>
+</tr>
+</tbody>
+</table>
+
+
+        <h2 class="anchored">Vectorised if-else</h2>
+
+        <h3 class="anchored">Description</h3>
+
+        <p>
+          <code>if_else()</code> is a vectorized if-else. Compared to the base R equivalent,
+          <code>ifelse()</code>, this function allows you to handle missing values in the
+          <code>condition</code> with <code>missing</code> and always takes <code>true</code>, <code>false</code>, and
+          <code>missing</code> into account when determining what the output type should be.
+        </p>
+
+        <h3 class="anchored">Usage</h3>
+
+        <pre>if_else(condition, true, false, missing = NULL, ..., ptype = NULL, size = NULL)</pre>
+
+        <h3 class="anchored">Arguments</h3>
+
+        
+<table class="caption-top table" data-quarto-postprocess="true" role="presentation">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><code id="condition">condition</code></td>
+<td><p>A logical vector</p></td>
+</tr>
+<tr class="even">
+<td><code id="true">true</code>, <code id="false">false</code></td>
+<td><p>Vectors to use for <code>TRUE</code> and <code>FALSE</code> values of <code>condition</code>.</p>
+<p>Both <code>true</code> and <code>false</code> will be recycled to the size of <code>condition</code>.</p>
+<p><code>true</code>, <code>false</code>, and <code>missing</code> (if used) will be cast to their common type.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="missing">missing</code></td>
+<td><p>If not <code>NULL</code>, will be used as the value for <code>NA</code> values of <code>condition</code>. Follows the same size and type rules as <code>true</code> and <code>false</code>.</p></td>
+</tr>
+<tr class="even">
+<td><code id="...">...</code></td>
+<td><p>These dots are for future extensions and must be empty.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="ptype">ptype</code></td>
+<td><p>An optional prototype declaring the desired output type. If supplied, this overrides the common type of <code>true</code>, <code>false</code>, and <code>missing</code>.</p></td>
+</tr>
+<tr class="even">
+<td><code id="size">size</code></td>
+<td><p>An optional size declaring the desired output size. If supplied, this overrides the size of <code>condition</code>.</p></td>
+</tr>
+</tbody>
+</table>
+
+
+        <h3 class="anchored">Value</h3>
+
+        <p>
+          A vector with the same size as <code>condition</code> and the same type as the common type of <code>true</code>,
+          <code>false</code>, and <code>missing</code>.
+        </p>
+        <p>
+          Where <code>condition</code> is <code>TRUE</code>, the matching values from <code>true</code>, where it is
+          <code>FALSE</code>, the matching values from <code>false</code>, and where it is <code>NA</code>, the matching
+          values from <code>missing</code>, if provided, otherwise a missing value will be used.
+        </p>
+
+        <h3 class="anchored">Examples</h3>
+
+        <pre><code class="sourceCode">x &lt;- c(-5:5, NA)
+if_else(x &lt; 0, NA, x)
+
+<code class="co"># Explicitly handle `NA` values in the `condition` with `missing`</code>
+if_else(x &lt; 0, "negative", "positive", missing = "missing")
+
+<code class="co"># Unlike `ifelse()`, `if_else()` preserves types</code>
+x &lt;- factor(sample(letters[1:5], 10, replace = TRUE))
+ifelse(x %in% c("a", "b", "c"), x, NA)
+if_else(x %in% c("a", "b", "c"), x, NA)
+
+<code class="co"># `if_else()` is often useful for creating new columns inside of `mutate()`</code>
+starwars %&gt;%
+mutate(category = if_else(height &lt; 100, "short", "tall"), .keep = "used")</code></pre>
+
+      </main>
+    </div>
+  
+
+
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>, <span class="cn">NA</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="cn">NA</span>, x)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Explicitly handle `NA` values in the `condition` with `missing`</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"negative"</span>, <span class="st">"positive"</span>, <span class="at">missing =</span> <span class="st">"missing"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Unlike `ifelse()`, `if_else()` preserves types</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(x <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>), x, <span class="cn">NA</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">if_else</span>(x <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>), x, <span class="cn">NA</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># `if_else()` is often useful for creating new columns inside of `mutate()`</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>starwars <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">category =</span> <span class="fu">if_else</span>(height <span class="sc">&lt;</span> <span class="dv">100</span>, <span class="st">"short"</span>, <span class="st">"tall"</span>), <span class="at">.keep =</span> <span class="st">"used"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Prepending the '?' character will access the help file for a function</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>?lm</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## We can also use the 'help' function</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Non-letter characters need to be quoted</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>?<span class="sc">/</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="sc">/</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>?<span class="st">"/"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"/"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="do">## If a package is not loaded, we need to specify the namespace</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>?quickpred</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>?mice<span class="sc">::</span>quickpred</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(quickpred, <span class="at">package =</span> <span class="st">"mice"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="do">## We can also open an interactive web-based help page</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>()</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="do">## PRACTICE PROBLEM 1.5</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="do">##  (a) Access the help file for the vector() function.</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="do">##  (b) How many arguments does the vector() function take?</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
