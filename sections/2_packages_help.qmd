@@ -12,16 +12,17 @@ For example, the following list shows some common analyses for which you would t
 suitable packages).
 
 - Treating missing data using multiple imputation
-   - [mice]()
-   - [amelia]()
-   - [mi]()
+   - [mice](https://cran.r-project.org/web/packages/mice/index.html)
+   - [Amelia](https://cran.r-project.org/web/packages/Amelia/index.html)
+   - [mi](https://cran.r-project.org/web/packages/mi/index.html)
 - Structural equation modeling
-  - [lavaan]()
-  - [openmx]()
+  - [lavaan](https://cran.r-project.org/web/packages/lavaan/index.html)
+  - [OpenMx](https://cran.r-project.org/web/packages/OpenMx/index.html)
 - Multilevel regression modeling
-   - [lme4]()
-- For all but the most trivial data processing, manipulation, and visualization, the [tidyverse]() packages are
-virtually obligatory.
+   - [lme4](https://cran.r-project.org/web/packages/lme4/index.html)
+   - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
+- For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
+packages are virtually obligatory.
 
 ### Installing Packages
 
@@ -69,8 +70,8 @@ install.packages("mvtnorm", lib = "../software")
 
 #### Practice
 
-Use the install.packages() function to install the following packages in the default location (i.e., don't specify
-anything for the 'lib' argument).
+Use the `install.packages()` function to install the following packages in the default location (i.e., don't specify
+anything for the `lib` argument).
 
 - `ggplot2`
 - `dplyr`
@@ -134,16 +135,28 @@ the `if_else()` function from the **dplyr** package.
 
 Not all R help files include all possible sections. The most common and useful are shown in the example above.
 
-- [Description] A brief description of the function.
-- [Usage] Shows how to call the function
-   - The functions name
-   - The name of all the function arguments
-   - The order of the function arguments
-   - Any default values defined for function arguments
-- [Arguments] Briefly explains each function argument
-- [Details] Provides additional details of function arguments or the functions behavior
-- [Value] Describes the object returned by the function
-- [Examples] Executible R code demonstrating the functions use
+Description 
+: A brief description of the function.
+
+Usage
+: Shows how to call the function
+
+- The functions name
+- The name of all the function arguments
+- The order of the function arguments
+- Any default values defined for function arguments
+
+Arguments
+: Briefly explains each function argument
+
+Details
+: Provides additional details of function arguments or the functions behavior
+
+Value
+: Describes the object returned by the function
+
+Examples
+: Executible R code demonstrating the functions use
 
 ### Accessing Help Files
 
@@ -170,21 +183,23 @@ The following code will produce an error because you haven't loaded the **dplyr*
 ?arrange
 ```
 
-```{r}
-## If a package is not loaded, we need to specify the namespace
-?quickpred
-?mice::quickpred
-help(quickpred, package = "mice")
+We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which
+package provides the function. To do so, either use the *namespace resolution operator*, `::`, or provide a value for
+the `package` argument in the `help()` function.
 
-## We can also open an interactive web-based help page
-help.start()
+The following code should run without errors, because we've told R to search for the `arrange()` help file in the
+**dplyr** package
 
-################################################################################
-## PRACTICE PROBLEM 1.5
-##
-##  (a) Access the help file for the vector() function.
-##  (b) How many arguments does the vector() function take?
-##
-################################################################################
+```{webr-r}
+?dplyr::arrange
+help(arrange, package = "dplyr")
+```
 
+#### Practice
+
+- Access the help file for the vector() function.
+   - How many arguments does the vector() function take?
+   - What is the default value of the `mode` argument?
+
+```{webr-r}
 ```

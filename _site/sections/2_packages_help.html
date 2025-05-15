@@ -400,7 +400,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"","options":{"dpi":72,"classes":"","comment":"","fig-height":5,"fig-cap":"","message":"true","editor-quick-suggestions":"false","context":"interactive","out-height":"","label":"unnamed-chunk-1","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","output":"true","autorun":"false","warning":"true","editor-max-height":"","fig-width":7,"results":"markup"}},{"id":2,"code":"ggplot(iris, aes(Species)) + geom_bar()","options":{"dpi":72,"classes":"","comment":"","fig-height":5,"fig-cap":"","message":"true","editor-quick-suggestions":"false","context":"interactive","out-height":"","label":"unnamed-chunk-2","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","output":"true","autorun":"false","warning":"true","editor-max-height":"","fig-width":7,"results":"markup"}},{"id":3,"code":"library(ggplot2)\n\nggplot(iris, aes(Species)) + geom_bar()","options":{"dpi":72,"classes":"","comment":"","fig-height":5,"fig-cap":"","message":"true","editor-quick-suggestions":"false","context":"interactive","out-height":"","label":"unnamed-chunk-3","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","output":"true","autorun":"false","warning":"true","editor-max-height":"","fig-width":7,"results":"markup"}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-1","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":""},{"id":2,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-2","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()"},{"id":3,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-3","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()"},{"id":4,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-4","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":"?arrange"},{"id":5,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-5","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")"},{"id":6,"options":{"fig-width":7,"fig-cap":"","results":"markup","autorun":"false","read-only":"false","out-height":"","classes":"","label":"unnamed-chunk-6","message":"true","warning":"true","context":"interactive","editor-font-scale":"1","fig-height":5,"output":"true","dpi":72,"out-width":"700px","editor-quick-suggestions":"false","editor-max-height":"","comment":"","editor-word-wrap":"true"},"code":""}];
 
 </script>
 <script type="module">
@@ -1700,7 +1700,11 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing Packages</a></li>
   <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading Packages</a></li>
   </ul></li>
-  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a>
+  <ul class="collapse">
+  <li><a href="#help-file-sections" id="toc-help-file-sections" class="nav-link" data-scroll-target="#help-file-sections">Help File Sections</a></li>
+  <li><a href="#accessing-help-files" id="toc-accessing-help-files" class="nav-link" data-scroll-target="#accessing-help-files">Accessing Help Files</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -2001,20 +2005,21 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <ul>
 <li>Treating missing data using multiple imputation
 <ul>
-<li><a href="">mice</a></li>
-<li><a href="">amelia</a></li>
-<li><a href="">mi</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mice/index.html">mice</a></li>
+<li><a href="https://cran.r-project.org/web/packages/Amelia/index.html">Amelia</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mi/index.html">mi</a></li>
 </ul></li>
 <li>Structural equation modeling
 <ul>
-<li><a href="">lavaan</a></li>
-<li><a href="">openmx</a></li>
+<li><a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan</a></li>
+<li><a href="https://cran.r-project.org/web/packages/OpenMx/index.html">OpenMx</a></li>
 </ul></li>
 <li>Multilevel regression modeling
 <ul>
-<li><a href="">lme4</a></li>
+<li><a href="https://cran.r-project.org/web/packages/lme4/index.html">lme4</a></li>
+<li><a href="https://cran.r-project.org/web/packages/nlme/index.html">nlme</a></li>
 </ul></li>
-<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="">tidyverse</a> packages are virtually obligatory.</li>
+<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="https://www.tidyverse.org/">tidyverse</a> packages are virtually obligatory.</li>
 </ul>
 <section id="installing-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-packages">Installing Packages</h3>
@@ -2042,7 +2047,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 <section id="practice" class="level4">
 <h4 class="anchored" data-anchor-id="practice">Practice</h4>
-<p>Use the install.packages() function to install the following packages in the default location (i.e., don’t specify anything for the ‘lib’ argument).</p>
+<p>Use the <code>install.packages()</code> function to install the following packages in the default location (i.e., don’t specify anything for the <code>lib</code> argument).</p>
 <ul>
 <li><code>ggplot2</code></li>
 <li><code>dplyr</code></li>
@@ -2055,7 +2060,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <section id="loading-packages" class="level3">
 <h3 class="anchored" data-anchor-id="loading-packages">Loading Packages</h3>
 <p>Once you’ve installed a new package, you’re nearly ready to start using the functionality provided by that package, but there’s still one final step: you must <em>load</em> the package into your active R session.</p>
-<p>If you run the following code, you will get an error because we’re trying to using the <code>ggplot()</code>, <code>aes()</code>, and <code>geom_bar()</code> functions that are provided by the <strong>ggplot2</strong> package, but we haven’t yet loaded that package.</p>
+<p>If you run the following code, you will get an error because we’re trying to using the <code>ggplot()</code>, <code>aes()</code>, and <code>geom_boxplot()</code> functions that are provided by the <strong>ggplot2</strong> package, but we haven’t yet loaded that package.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>An R package is really just a small piece of software. Like any other software, you only need to install a given R package once (just like you only need to install RStudio once), but you’ll need to load the package every time you want to use it in a new R session (like you need to open RStudio every time you want to use it).</p>
@@ -2201,38 +2206,78 @@ mutate(category = if_else(height &lt; 100, "short", "tall"), .keep = "used")</co
 
 
 
+<section id="help-file-sections" class="level3">
+<h3 class="anchored" data-anchor-id="help-file-sections">Help File Sections</h3>
+<p>Not all R help files include all possible sections. The most common and useful are shown in the example above.</p>
+<dl>
+<dt>Description</dt>
+<dd>
+A brief description of the function.
+</dd>
+<dt>Usage</dt>
+<dd>
+Shows how to call the function
+</dd>
+</dl>
+<ul>
+<li>The functions name</li>
+<li>The name of all the function arguments</li>
+<li>The order of the function arguments</li>
+<li>Any default values defined for function arguments</li>
+</ul>
+<dl>
+<dt>Arguments</dt>
+<dd>
+Briefly explains each function argument
+</dd>
+<dt>Details</dt>
+<dd>
+Provides additional details of function arguments or the functions behavior
+</dd>
+<dt>Value</dt>
+<dd>
+Describes the object returned by the function
+</dd>
+<dt>Examples</dt>
+<dd>
+Executible R code demonstrating the functions use
+</dd>
+</dl>
+</section>
+<section id="accessing-help-files" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-help-files">Accessing Help Files</h3>
+<p>The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the <code>?</code> character. The following code will pull up the documentation for the <code>lm()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Prepending the '?' character will access the help file for a function</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>?lm</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## We can also use the 'help' function</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Non-letter characters need to be quoted</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>?<span class="sc">/</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="sc">/</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>?<span class="st">"/"</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"/"</span>)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="do">## If a package is not loaded, we need to specify the namespace</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>?quickpred</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>?mice<span class="sc">::</span>quickpred</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(quickpred, <span class="at">package =</span> <span class="st">"mice"</span>)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="do">## We can also open an interactive web-based help page</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>()</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="do">## PRACTICE PROBLEM 1.5</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="do">##  (a) Access the help file for the vector() function.</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="do">##  (b) How many arguments does the vector() function take?</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>You can achieve the same effect by providing the function name to the <code>help()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function’s help file is provided by the package that provides the function. So, you cannot access the help file for functions provided by unloaded packages.</p>
+<p>The following code will produce an error because you haven’t loaded the <strong>dplyr</strong> function that provides <code>arrange()</code>.</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function. To do so, either use the <em>namespace resolution operator</em>, <code>::</code>, or provide a value for the <code>package</code> argument in the <code>help()</code> function.</p>
+<p>The following code should run without errors, because we’ve told R to search for the <code>arrange()</code> help file in the <strong>dplyr</strong> package</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="practice-1" class="level4">
+<h4 class="anchored" data-anchor-id="practice-1">Practice</h4>
+<ul>
+<li>Access the help file for the vector() function.
+<ul>
+<li>How many arguments does the vector() function take?</li>
+<li>What is the default value of the <code>mode</code> argument?</li>
+</ul></li>
+</ul>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
