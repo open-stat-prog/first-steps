@@ -1,0 +1,48 @@
+/* Code blocks */
+pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 1em;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* Inline code */
+code {
+  background-color: #f8f9fa;
+  padding: 0; /*0.2em 0.4em; */
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e83e8c;
+}
+
+/* Code cell output */
+.cell-output {
+  background-color: #ffffff;
+  /* border: 1px solid #dee2e6; */
+  border-radius: 4px;
+  /* padding: 0.5em; */
+  padding-bottom: 1em;
+  margin-top: 0;
+}
+
+/* Syntax highlighting customization */
+.sourceCode .kw { color: #007bff; } /* Keywords */
+.sourceCode .st { color: #28a745; } /* Strings */
+.sourceCode .dv { color: #dc3545; } /* Decimal values */
+.sourceCode .co {                   /* Comments */
+  color: #6c757d; 
+  font-style: italic;
+}
+.sourceCode .fu { color: #fd7e14; } /* Functions */
+
+/* Embedded Man-Page Styling */
+div.container {
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+table, tr, th, td {
+  border: none;
+}

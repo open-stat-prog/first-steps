@@ -11,12 +11,23 @@ website:
 format:
   html:
     theme: cosmo
-    css: /styles.css
+    css:
+      - html/custom.scss
+      - html/styles.css
     toc: true
 
 webr:
   channel-type: "post-message"
+
+custom-callout:
+  practice:
+    title: "Practice"
+    icon-symbol: "fa-gears"
+    color: "green"
+
 engine: knitr
+
 filters:
   - webr
+  - custom-callout
 

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,6 +73,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -362,11 +398,11 @@ globalThis.qwebrCustomizedWebROptions = {
   "baseURL": "https://webr.r-wasm.org/v0.4.0/",
   "serviceWorkerUrl": "",
   "homedir": "/home/web_user", 
-  "channelType": "ChannelType.PostMessage"
+  "channelType": "ChannelType.Automatic"
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"1:10","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-1","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":2,"code":"#1:10","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-2","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":3,"code":"x <- 7\ny <- 2.5\nz <- \"foo\"","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-3","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":4,"code":"x\ny","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-4","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":5,"code":"w <- z\nw","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-5","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":6,"code":"y + x\ny - x\ny * x\ny / x","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-6","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":7,"code":"y^2\ny^3","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-7","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":8,"code":"sqrt(y)","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-8","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":9,"code":"y^(1/3) # cube root of y\ny^(1/4) # quartic root of y","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-9","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":10,"code":"log(y)   # natural logarithm of y\nlog10(y) # log base 10 of y\nlog2(y)  # log base 2 of y\n\nexp(x) # exponentiate x","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-10","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":11,"code":"","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-11","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":12,"code":"## Define some objects to play with\ny <- 5\nx <- 7\nw <- 5\n\n### Check equality\ny == x\ny == w","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-12","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":13,"code":"y > x  # greater than\ny >= x # greater than or equal to\ny < x  # less than\ny <= x # less than or equal to\n\ny > w\ny >= w\ny < w\ny <= w","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-13","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":14,"code":"y > x\n!y > x\n\ny == w\n!y == w","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-14","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":15,"code":"y == w\ny != w","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-15","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":16,"code":"y == w & y < x\ny == w & y > x\ny == w | y > x","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-16","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":17,"code":"","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-17","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":18,"code":"y + x / w\n(y + x) / w","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-18","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":19,"code":"y^(1/2)\ny^1/2\n\ny^(1/2) == sqrt(y)\ny^1/2 == y/2","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-19","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":20,"code":"ls()","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-20","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":21,"code":"rm(x) # Remove 'x' from the environment\nls()  # Check the results","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-21","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}},{"id":22,"code":"","options":{"comment":"","fig-width":7,"editor-font-scale":"1","read-only":"false","message":"true","editor-word-wrap":"true","editor-max-height":"","out-width":"700px","context":"interactive","label":"unnamed-chunk-22","output":"true","dpi":72,"autorun":"false","classes":"","fig-height":5,"fig-cap":"","out-height":"","warning":"true","results":"markup","editor-quick-suggestions":"false"}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-1","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":"1:10"},{"id":2,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-2","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":"#1:10"},{"id":3,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-3","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":"x\ny"},{"id":4,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-4","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":""},{"id":5,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-5","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":""},{"id":6,"options":{"editor-quick-suggestions":"false","fig-height":"3.7","editor-font-scale":"0.85","warning":"true","classes":"","out-height":"","label":"unnamed-chunk-6","output":"true","message":"true","context":"interactive","fig-cap":"","out-width":"70%","dpi":72,"results":"markup","editor-word-wrap":"true","comment":"","autorun":"false","read-only":"false","editor-max-height":"","fig-width":"6"},"code":""}];
 
 </script>
 <script type="module">
@@ -1619,6 +1655,21 @@ globalThis.qwebrExecuteCode = async function (
 }
 
 </script>
+<style>
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -1650,10 +1701,11 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../html/custom.scss">
+<link rel="stylesheet" href="../html/styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1685,23 +1737,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
-  <li><a href="#mathematical-operators" id="toc-mathematical-operators" class="nav-link" data-scroll-target="#mathematical-operators">Mathematical Operators</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  <li><a href="#logical-comparisons" id="toc-logical-comparisons" class="nav-link" data-scroll-target="#logical-comparisons">Logical Comparisons</a></li>
-  <li><a href="#practice-1" id="toc-practice-1" class="nav-link" data-scroll-target="#practice-1">Practice</a></li>
-  <li><a href="#order-of-operations" id="toc-order-of-operations" class="nav-link" data-scroll-target="#order-of-operations">Order of Operations</a></li>
-  <li><a href="#interacting-with-the-environment" id="toc-interacting-with-the-environment" class="nav-link" data-scroll-target="#interacting-with-the-environment">Interacting with the Environment</a></li>
-  <li><a href="#practice-2" id="toc-practice-2" class="nav-link" data-scroll-target="#practice-2">Practice</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
@@ -2014,50 +2050,144 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <p>Run the following R code to generate a vector of 10 numbers and print the result.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In the following code, the expression <code>1:10</code> is “commented out”, so R doesn’t evaluate that line.</p>
+<p>In the following code, the expression <code>1:10</code> is “commented out”, so R doesn’t evaluate that line, and we get no output.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="assignment" class="level2">
 <h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
 <p>To do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, <code>&lt;-</code>.</p>
-<p>Run the following code to assign the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The following code assigns the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="st">"foo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Notice the lack of printed output. These three commands create three new objects in your environment (<code>x</code>, <code>y</code>, <code>z</code>) that store the assigned data values (<code>7</code>, <code>2.5</code>, <code>"foo"</code>). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.</p>
 <p>To view the contents of an object, we can evaluate the object’s name without assignment.</p>
 <p>Run the following code to print the values saved as <code>x</code> and <code>y</code>.</p>
-<div id="qwebr-insertion-location-4"></div>
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We can also create new objects by assigning them the values of existing objects.</p>
-<p>Run the following code to create a new object <code>w</code> that takes the value of the existing object <code>z</code>.</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The following code creates a new object, <code>w</code>, that takes the value of the existing object <code>z</code>. When we print the value of <code>w</code>, you can see that it has the same value as <code>z</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> z</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "foo"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "foo"</code></pre>
+</div>
+</div>
+<p>When we create <code>w</code> above, we are not replacing <code>z</code> with <code>w</code>: we’re making a copy of <code>z</code> and calling that copy <code>w</code>. So, both <code>w</code> and <code>z</code> are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.</p>
 </section>
 <section id="mathematical-operators" class="level2">
 <h2 class="anchored" data-anchor-id="mathematical-operators">Mathematical Operators</h2>
 <p>All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored in those objects are used to evaluate the expression.</p>
-<p>Run the following code to add, subtract, multiply, and divide the values stored as <code>y</code> and <code>x</code>.</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The following code will add, subtract, multiply, and divide the values stored as <code>y</code> and <code>x</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">+</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">-</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">*</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 17.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">/</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3571429</code></pre>
+</div>
+</div>
 <p>We use the carret character, <code>^</code>, to specify exponents.</p>
-<p>Run the following code to square and cube the value of <code>y</code>.</p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The following code will square and cube the value of <code>y</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.25</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15.625</code></pre>
+</div>
+</div>
 <p>The <code>sqrt()</code> function returns the square root of it’s argument (i.e., the value we specify inside the parantheses).</p>
-<p>Run the following code to calculate the square root of <code>y</code>.</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The following code calculates the square root of <code>y</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.581139</code></pre>
+</div>
+</div>
 <p>For other roots, we can use fractional exponents.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>R also includes special functions for the most common logarithms as well as the anti-log operator.</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>) <span class="co"># cube root of y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.357209</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>) <span class="co"># quartic root of y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.257433</code></pre>
+</div>
+</div>
+<p>R also includes many special functions for the most common mathematical operations.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(y)   <span class="co"># natural logarithm of y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9162907</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(y) <span class="co"># log base 10 of y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.39794</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log2</span>(y)  <span class="co"># log base 2 of y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.321928</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(x) <span class="co"># exponentiate x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1096.633</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">%%</span> x <span class="co"># modulo: remainder after dividing y by x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>foo <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">3.14159</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(foo, <span class="dv">3</span>) <span class="co"># round 'foo' to 3 decimal places</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -3.142</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">floor</span>(foo)    <span class="co"># round 'foo' down to the nearest whole number</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ceiling</span>(foo)  <span class="co"># round 'foo' up to the nearest whole number</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(foo) <span class="co"># absolute value of 'foo'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14159</code></pre>
+</div>
+</div>
 <p>Note that <code>log(y)</code> calculates the <em>natural logarithm</em> of <code>y</code>, <span class="math inline">\(\ln(y)\)</span>. If you want the “ordinary” base-10 log, you need to use the <code>log10()</code> function.</p>
-</section>
-<section id="practice" class="level2">
-<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Create an object called <code>age</code> that takes the value of your age in whole years.</li>
 <li>Use the <code>age</code> object you created in above to create a second object called <code>weeks</code> that takes the value of your age in whole weeks.
@@ -2066,54 +2196,310 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li>Disregard partial years (i.e., assume every year counted in <code>age</code> contains 52 whole weeks).</li>
 </ul></li>
 </ol>
-<div id="qwebr-insertion-location-11"></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>At time-of-writing, I’m 38 years old. So, these would be my <code>age</code> and <code>weeks</code> objects.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>age   <span class="ot">&lt;-</span> <span class="dv">38</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>weeks <span class="ot">&lt;-</span> <span class="dv">38</span> <span class="sc">*</span> <span class="dv">52</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="logical-comparisons" class="level2">
 <h2 class="anchored" data-anchor-id="logical-comparisons">Logical Comparisons</h2>
-<div id="qwebr-insertion-location-12"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of <code>TRUE</code> whenever the tested condition is satisified and <code>FALSE</code> when the tested condition is not satisfied.</p>
+<p>The simplest logical test is an equality check. To check if two objects are equal, we use the ‘equality operator’, <code>==</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Define some objects to play with</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="do">### Check equality</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>We can also check the usual greater-than/less-than conditions with <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> x  <span class="co"># greater than</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> x <span class="co"># greater than or equal to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> x  <span class="co"># less than</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> x <span class="co"># less than or equal to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What values will the following four expressions return?</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> w</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> w</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> w</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>We can negate any logical condition by prepending the ‘!’ character</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
 <p>Rather than negating an equality check, we will typically use the special “not-equal” operator, <code>!=</code>.</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">!=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
 <p>We can create more complex logical conditions with the AND and OR operators: <code>&amp;</code> and <code>|</code>.</p>
-<div id="qwebr-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="practice-1" class="level2">
-<h2 class="anchored" data-anchor-id="practice-1">Practice</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&lt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">|</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.</p>
-<div id="qwebr-insertion-location-17"></div>
+<ul>
+<li><em>Hint:</em> Use <code>x %% 7</code> to calculate the remainder after dividing <code>x</code> by <code>7</code>.</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">6</span> <span class="sc">%%</span> <span class="dv">7</span>) <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p>If the remainder of dividing <code>weeks</code> by 7 is zero, we know that the value of <code>weeks</code> is evenly divisible by 7.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="order-of-operations" class="level2">
 <h2 class="anchored" data-anchor-id="order-of-operations">Order of Operations</h2>
 <p>When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical operation according to the usual PEMDAS ordering.</p>
-<div id="qwebr-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Notice how the following two expressions produce different results.</p>
+<ul>
+<li>In the first line, we first divide <code>x</code> by <code>w</code> and then add <code>y</code> to the result.</li>
+<li>In the second line, we first add <code>x</code> to <code>y</code> and then divide the result by <code>w</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">+</span> x <span class="sc">/</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>(y <span class="sc">+</span> x) <span class="sc">/</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.4</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Why do the following two expressions produce different answers?</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.236068</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span><span class="dv">1</span><span class="sc">/</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.5</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">==</span> <span class="fu">sqrt</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">^</span><span class="dv">1</span><span class="sc">/</span><span class="dv">2</span> <span class="sc">==</span> y<span class="sc">/</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li>In the first case, we’re raising <code>y</code> to the power of <span class="math inline">\(\frac{1}{2}\)</span>.</li>
+<li>In the second case, we’re first raising <code>y</code> to the power of 1 (which does nothing) and then dividing the result by 2.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="interacting-with-the-environment" class="level2">
 <h2 class="anchored" data-anchor-id="interacting-with-the-environment">Interacting with the Environment</h2>
-<p>The ‘environment’ is a loosely organized set of all the objects that R currently has stored in working memory</p>
+<p>The ‘environment’ is a loosely organized set of all the objects that R currently has stored in working memory.</p>
 <p>We can use the <code>ls()</code> function to list the contents of the current environment.</p>
-<div id="qwebr-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "age"            "begin_buttons"  "create_buttons" "first_buttons" 
+ [5] "foo"            "w"              "weeks"          "x"             
+ [9] "y"              "z"             </code></pre>
+</div>
+</div>
 <p>The <code>rm()</code> function will remove an object from the environment.</p>
-<div id="qwebr-insertion-location-21"></div>
+<p>The following code will remove <code>x</code> from the environment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x) <span class="co"># Remove 'x' from the environment</span></span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()  <span class="co"># Check the results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "age"            "begin_buttons"  "create_buttons" "first_buttons" 
+[5] "foo"            "w"              "weeks"          "y"             
+[9] "z"             </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <code>rm()</code> function to remove the <code>age</code> object that you created above from your environment, and use <code>ls()</code> to check your work.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="practice-2" class="level2">
-<h2 class="anchored" data-anchor-id="practice-2">Practice</h2>
-<p>Use the rm() function to remove the <code>age</code> object that you created above from your environment.</p>
-<div id="qwebr-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(age)</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "begin_buttons"  "create_buttons" "first_buttons"  "foo"           
+[5] "w"              "weeks"          "y"              "z"             </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
