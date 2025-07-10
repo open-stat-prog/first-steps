@@ -1,11 +1,13 @@
 ---
-title: "first_steps"
+title: "First Steps"
 ---
 
 This is a Quarto website.
 
 ## Hello World!
 
-```{webr-r}
-rnorm(100) |> hist()
-```
+[Basic Commands](/sections/1_basic_commands.qmd)
+
+[Add-On Packages](/sections/2_packages.qmd)
+
+[Getting Help](/sections/3_help.qmd)

@@ -1,8 +1,9 @@
 project:
   type: website
+  execute-dir: project
 
 website:
-  title: "first_steps"
+  title: "First Steps"
   navbar:
     left:
       - href: index.qmd

@@ -380,7 +380,7 @@ iframe.qwebr-output-code-browse {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['dplyr'];
+globalThis.qwebrInstallRPackagesList = ['dplyr', 'ggplot2'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -402,7 +402,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-1","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":1},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-2","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":2},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-3","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":3},{"code":"?arrange","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-4","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":4},{"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-5","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":5},{"code":"","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-6","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":6}];
+globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-1","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":2,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-2","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":3,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-3","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}}];
 
 </script>
 <script type="module">
@@ -2039,24 +2039,24 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <section id="installing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing Packages</h2>
 <p>Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the <code>install.packages()</code> function. The following code will install the <strong>psych</strong> package.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install one package</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"psych"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you want to install more than one package, you simply using the concatenation function, <code>c()</code>, to define a character vector giving the names of your desired packages, as shown in the following code.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install two packages</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"mice"</span>, <span class="st">"lavaan"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the ordinary use-case, <code>install.packages()</code> will download the data needed to install a given package from the <em>Comprehensive R Archive Network</em> (CRAN). CRAN is a global network of servers (so-called CRAN mirrors) that each host a complete copy of the database of the available R packages (as well as the Base R components).</p>
 <p>Usually, you don’t need to tell R which of these CRAN mirrors to use because RStudio defines a default mirror that gets used whenever you call <code>install.pacakges()</code>. However, if you want to explicitly specify a different CRAN mirror, you can do so via the <code>repos</code> argument.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify the CRAN mirror a priori</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"lattice"</span>, <span class="st">"gridExtra"</span>), <span class="at">repos =</span> <span class="st">"http://cloud.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Similarly, you don’t usually have to tell R where you want to install new packages. If your user doesn’t have write permissions for the default library location, R will ask if you want to install the packages in a different location for which you should have suitable permissions.</p>
 <p>Sometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for employees). In such cases—or anytime you want to explicitly define the package library location—you can define the package library via the <code>lib</code> argument.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>, <span class="at">lib =</span> <span class="st">"../software"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2084,7 +2084,7 @@ Practice
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"haven"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -2101,243 +2101,19 @@ Practice
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>An R package is really just a small piece of software. Like any other software, you only need to install a given R package once (just like you only need to install RStudio once), but you’ll need to load the package every time you want to use it in a new R session (like you need to open RStudio every time you want to use it).</p>
 <p>We load R packages with the <code>library()</code> function.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>library()</code> function can only load one package at a time, so you need to call <code>library()</code> multiple times to load multiple packages.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mice)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Running the following code should produce a simple plot, because we’ve loaded the <strong>ggplot2</strong> package before trying to use the functions it provides.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="getting-help" class="level1">
-<h1>Getting Help</h1>
-<p>Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation (AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for the <code>if_else()</code> function from the <strong>dplyr</strong> package.</p>
 
 
-
-  
-    <title>R: Vectorised if-else</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"> -->
-    <script type="text/javascript">
-    const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
-    function processMathHTML() {
-      var l = document.getElementsByClassName('reqn');
-      for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
-      return;
-    }
-    </script>
-    <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" onload="processMathHTML();"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="R.css" /> -->
-  
-
-  
-    <div class="container">
-      <main>
-
-        
-<table class="caption-top table" data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td>if_else {dplyr}</td>
-<td style="text-align: right;">R Documentation</td>
-</tr>
-</tbody>
-</table>
-
-
-        <h2 class="anchored" data-anchor-id="getting-help">Vectorised if-else</h2>
-
-        <h3 class="anchored">Description</h3>
-
-        <p>
-          <code>if_else()</code> is a vectorized if-else. Compared to the base R equivalent,
-          <code>ifelse()</code>, this function allows you to handle missing values in the
-          <code>condition</code> with <code>missing</code> and always takes <code>true</code>, <code>false</code>, and
-          <code>missing</code> into account when determining what the output type should be.
-        </p>
-
-        <h3 class="anchored">Usage</h3>
-
-        <pre>if_else(condition, true, false, missing = NULL, ..., ptype = NULL, size = NULL)</pre>
-
-        <h3 class="anchored">Arguments</h3>
-
-        
-<table class="caption-top table" data-quarto-postprocess="true" role="presentation">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><code id="condition">condition</code></td>
-<td><p>A logical vector</p></td>
-</tr>
-<tr class="even">
-<td><code id="true">true</code>, <code id="false">false</code></td>
-<td><p>Vectors to use for <code>TRUE</code> and <code>FALSE</code> values of <code>condition</code>.</p>
-<p>Both <code>true</code> and <code>false</code> will be recycled to the size of <code>condition</code>.</p>
-<p><code>true</code>, <code>false</code>, and <code>missing</code> (if used) will be cast to their common type.</p></td>
-</tr>
-<tr class="odd">
-<td><code id="missing">missing</code></td>
-<td><p>If not <code>NULL</code>, will be used as the value for <code>NA</code> values of <code>condition</code>. Follows the same size and type rules as <code>true</code> and <code>false</code>.</p></td>
-</tr>
-<tr class="even">
-<td><code id="...">...</code></td>
-<td><p>These dots are for future extensions and must be empty.</p></td>
-</tr>
-<tr class="odd">
-<td><code id="ptype">ptype</code></td>
-<td><p>An optional prototype declaring the desired output type. If supplied, this overrides the common type of <code>true</code>, <code>false</code>, and <code>missing</code>.</p></td>
-</tr>
-<tr class="even">
-<td><code id="size">size</code></td>
-<td><p>An optional size declaring the desired output size. If supplied, this overrides the size of <code>condition</code>.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-        <h3 class="anchored">Value</h3>
-
-        <p>
-          A vector with the same size as <code>condition</code> and the same type as the common type of <code>true</code>,
-          <code>false</code>, and <code>missing</code>.
-        </p>
-        <p>
-          Where <code>condition</code> is <code>TRUE</code>, the matching values from <code>true</code>, where it is
-          <code>FALSE</code>, the matching values from <code>false</code>, and where it is <code>NA</code>, the matching
-          values from <code>missing</code>, if provided, otherwise a missing value will be used.
-        </p>
-
-        <h3 class="anchored">Examples</h3>
-
-        <pre><code class="sourceCode">x &lt;- c(-5:5, NA)
-if_else(x &lt; 0, NA, x)
-
-<code class="co"># Explicitly handle `NA` values in the `condition` with `missing`</code>
-if_else(x &lt; 0, "negative", "positive", missing = "missing")
-
-<code class="co"># Unlike `ifelse()`, `if_else()` preserves types</code>
-x &lt;- factor(sample(letters[1:5], 10, replace = TRUE))
-ifelse(x %in% c("a", "b", "c"), x, NA)
-if_else(x %in% c("a", "b", "c"), x, NA)
-
-<code class="co"># `if_else()` is often useful for creating new columns inside of `mutate()`</code>
-starwars %&gt;%
-mutate(category = if_else(height &lt; 100, "short", "tall"), .keep = "used")</code></pre>
-
-      </main>
-    </div>
-  
-
-
-
-
-<section id="help-file-sections" class="level2">
-<h2 class="anchored" data-anchor-id="help-file-sections">Help File Sections</h2>
-<p>Not all R help files include all possible sections. The most common and useful are shown in the example above.</p>
-<dl>
-<dt>Description</dt>
-<dd>
-A brief description of the function.
-</dd>
-<dt>Usage</dt>
-<dd>
-Shows how to call the function
-</dd>
-</dl>
-<ul>
-<li>The functions name</li>
-<li>The name of all the function arguments</li>
-<li>The order of the function arguments</li>
-<li>Any default values defined for function arguments</li>
-</ul>
-<dl>
-<dt>Arguments</dt>
-<dd>
-Briefly explains each function argument
-</dd>
-<dt>Details</dt>
-<dd>
-Provides additional details of function arguments or the functions behavior
-</dd>
-<dt>Value</dt>
-<dd>
-Describes the object returned by the function
-</dd>
-<dt>Examples</dt>
-<dd>
-Executible R code demonstrating the functions use
-</dd>
-</dl>
-</section>
-<section id="accessing-help-files" class="level2">
-<h2 class="anchored" data-anchor-id="accessing-help-files">Accessing Help Files</h2>
-<p>The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the <code>?</code> character. The following code will pull up the documentation for the <code>lm()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You can achieve the same effect by providing the function name to the <code>help()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>A function’s help file is provided by the package that provides the function. So, you cannot access the help file for functions provided by unloaded packages.</p>
-<p>The following code will produce an error because you haven’t loaded the <strong>dplyr</strong> function that provides <code>arrange()</code>.</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function. To do so, either use the <em>namespace resolution operator</em>, <code>::</code>, or provide a value for the <code>package</code> argument in the <code>help()</code> function.</p>
-<p>The following code should run without errors, because we’ve told R to search for the <code>arrange()</code> help file in the <strong>dplyr</strong> package</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-practice callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Practice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Access the help file for the vector() function.
-<ul>
-<li>How many arguments does the vector() function take?</li>
-<li>What is the default value of the <code>mode</code> argument?</li>
-</ul></li>
-</ul>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>?vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>The <code>vector()</code> function takes 2 arguments: <code>mode</code> and <code>length</code>.</li>
-<li>The default argument for <code>mode</code> is “logical”.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</section>
 </section>
 
 </main> <!-- /main -->

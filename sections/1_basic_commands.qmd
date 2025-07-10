@@ -19,8 +19,22 @@ webr:
     out-width: "70%"
 ---
 
-```{r include = FALSE}
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
 source(here::here("R", "helpers.R"))
+
+## Define an asis engine that will evaluate inline code within an asis block:
+knit_engines$set(asis = function(options) {
+  if(options$echo && options$eval) knit_child(text = options$code)
+}
+)
+
+opts_chunk$set(message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_fig/1_basic_commands-",
+               cache.path = "_cache/1_basic_commands-")
 ```
 
 ## Comments
@@ -143,6 +157,8 @@ abs(foo) # absolute value of 'foo'
 Note that `log(y)` calculates the *natural logarithm* of `y`, $\ln(y)$. If you want the "ordinary" base-10 log, you need
 to use the `log10()` function.
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 ::: practice
 
 ## Practice
@@ -170,6 +186,8 @@ weeks <- 38 * 52
 ::::
 
 :::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## Logical Comparisons
 
@@ -199,7 +217,9 @@ y < x  # less than
 y <= x # less than or equal to
 ```
 
-::: {.callout-note icon=false}
+<!--------------------------------------------------------------------------------------------------------------------->
+
+::: practice
 
 ## Practice
 
@@ -227,6 +247,8 @@ y <= w
 
 :::
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 We can negate any logical condition by prepending the '!' character
 
 ```{r}
@@ -252,7 +274,9 @@ y == w & y > x
 y == w | y > x
 ```
 
-::: {.callout-note icon=false}
+<!--------------------------------------------------------------------------------------------------------------------->
+
+::: practice
 
 ## Practice
 
@@ -278,6 +302,8 @@ If the remainder of dividing `weeks` by 7 is zero, we know that the value of `we
 
 :::
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 ## Order of Operations
 
 When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
@@ -293,7 +319,9 @@ y + x / w
 (y + x) / w
 ```
 
-::: {.callout-note icon=false}
+<!--------------------------------------------------------------------------------------------------------------------->
+
+::: practice
 
 ## Practice
 
@@ -320,6 +348,8 @@ y^1/2 == y/2
 
 :::
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 ## Interacting with the Environment
 
 The 'environment' is a loosely organized set of all the objects that R currently has stored in working memory.
@@ -339,7 +369,9 @@ rm(x) # Remove 'x' from the environment
 ls()  # Check the results
 ```
 
-::: {.callout-note icon=false}
+<!--------------------------------------------------------------------------------------------------------------------->
+
+::: practice
 
 ## Practice
 
@@ -361,3 +393,5 @@ ls()
 ::::
 
 :::
+
+<!--------------------------------------------------------------------------------------------------------------------->

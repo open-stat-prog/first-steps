@@ -1,7 +1,24 @@
-## Add-On Packages
+---
+title: "Add-On Packages"
+
+format:
+  html: 
+    toc: false
+
+webr:  
+  show-startup-message: true
+  packages: ['dplyr', 'ggplot2']
+---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(eval = FALSE)
+library(knitr)
+
+opts_chunk$set(eval = FALSE,
+               message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_fig/2_packages-",
+               cache.path = "_cache/2_packages-")
 ```
 
 When you install R, you're only installing the core set of functionality. You can already do quite a lot with this
@@ -24,7 +41,7 @@ suitable packages).
 - For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
 packages are virtually obligatory.
 
-### Installing Packages
+## Installing Packages
 
 Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that
 you want to install in the `install.packages()` function. The following code will install the **psych** package.
@@ -68,7 +85,9 @@ package library via the `lib` argument.
 install.packages("mvtnorm", lib = "../software")
 ```
 
-#### Practice
+::: practice
+
+## Practice
 
 Use the `install.packages()` function to install the following packages in the default location (i.e., don't specify
 anything for the `lib` argument).
@@ -77,10 +96,24 @@ anything for the `lib` argument).
 - `dplyr`
 - `haven`
 
+:::: {.panel-tabset}
+
+## {{< fa code >}}&ensp;Interactive Editor
+
 ```{webr-r}
 ```
 
-### Loading Packages
+## {{< fa circle-check >}}&ensp;Solution
+
+```{r}
+install.packages(c("ggplot2", "dplyr", "haven"))
+```
+
+::::
+
+:::
+
+## Loading Packages
 
 Once you've installed a new package, you're nearly ready to start using the functionality provided by that package, but
 there's still one final step: you must *load* the package into your active R session.
@@ -119,87 +152,3 @@ library(ggplot2)
 ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()
 ```
 
-## Getting Help
-
-Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation
-(AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for 
-the `if_else()` function from the **dplyr** package.
-
-```{=html}
-
-{{< include /if_else.html >}}
-
-```
-
-### Help File Sections
-
-Not all R help files include all possible sections. The most common and useful are shown in the example above.
-
-Description 
-: A brief description of the function.
-
-Usage
-: Shows how to call the function
-
-- The functions name
-- The name of all the function arguments
-- The order of the function arguments
-- Any default values defined for function arguments
-
-Arguments
-: Briefly explains each function argument
-
-Details
-: Provides additional details of function arguments or the functions behavior
-
-Value
-: Describes the object returned by the function
-
-Examples
-: Executible R code demonstrating the functions use
-
-### Accessing Help Files
-
-The simplest way to access a function's help file is to prepend the function name (without parentheses) with the `?`
-character. The following code will pull up the documentation for the `lm()` function.
-
-```{r}
-?lm
-```
-
-You can achieve the same effect by providing the function name to the `help()` function.
-
-```{r}
-help(lm)
-help("lm")
-```
-
-A function's help file is provided by the package that provides the function. So, you cannot access the help file for
-functions provided by unloaded packages.
-
-The following code will produce an error because you haven't loaded the **dplyr** function that provides `arrange()`.
-
-```{webr-r}
-?arrange
-```
-
-We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which
-package provides the function. To do so, either use the *namespace resolution operator*, `::`, or provide a value for
-the `package` argument in the `help()` function.
-
-The following code should run without errors, because we've told R to search for the `arrange()` help file in the
-**dplyr** package
-
-```{webr-r}
-?dplyr::arrange
-help(arrange, package = "dplyr")
-```
-
-#### Practice
-
-- Access the help file for the vector() function.
-   - How many arguments does the vector() function take?
-   - What is the default value of the `mode` argument?
-
-```{webr-r}
-```

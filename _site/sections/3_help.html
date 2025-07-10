@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Add-On Packages – First Steps</title>
+<title>Getting Help – First Steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -402,7 +402,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-1","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":1},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-2","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":2},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-3","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":3},{"code":"?arrange","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-4","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":4},{"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-5","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":5},{"code":"","options":{"message":"true","warning":"true","classes":"","fig-width":7,"comment":"","out-width":"700px","fig-cap":"","output":"true","results":"markup","read-only":"false","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","dpi":72,"label":"unnamed-chunk-6","editor-font-scale":"1","autorun":"false","editor-max-height":"","editor-word-wrap":"true"},"id":6}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"?arrange","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-1","fig-height":5,"comment":""}},{"id":2,"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-2","fig-height":5,"comment":""}},{"id":3,"code":"","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-3","fig-height":5,"comment":""}}];
 
 </script>
 <script type="module">
@@ -1998,7 +1998,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Add-On Packages</h1>
+<h1 class="title">Getting Help</h1>
 </div>
 
 
@@ -2015,106 +2015,6 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on <em>packages</em> to complete most real-world data analyses.</p>
-<p>For example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).</p>
-<ul>
-<li>Treating missing data using multiple imputation
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/mice/index.html">mice</a></li>
-<li><a href="https://cran.r-project.org/web/packages/Amelia/index.html">Amelia</a></li>
-<li><a href="https://cran.r-project.org/web/packages/mi/index.html">mi</a></li>
-</ul></li>
-<li>Structural equation modeling
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan</a></li>
-<li><a href="https://cran.r-project.org/web/packages/OpenMx/index.html">OpenMx</a></li>
-</ul></li>
-<li>Multilevel regression modeling
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/lme4/index.html">lme4</a></li>
-<li><a href="https://cran.r-project.org/web/packages/nlme/index.html">nlme</a></li>
-</ul></li>
-<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="https://www.tidyverse.org/">tidyverse</a> packages are virtually obligatory.</li>
-</ul>
-<section id="installing-packages" class="level2">
-<h2 class="anchored" data-anchor-id="installing-packages">Installing Packages</h2>
-<p>Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the <code>install.packages()</code> function. The following code will install the <strong>psych</strong> package.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install one package</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"psych"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>If you want to install more than one package, you simply using the concatenation function, <code>c()</code>, to define a character vector giving the names of your desired packages, as shown in the following code.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install two packages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"mice"</span>, <span class="st">"lavaan"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In the ordinary use-case, <code>install.packages()</code> will download the data needed to install a given package from the <em>Comprehensive R Archive Network</em> (CRAN). CRAN is a global network of servers (so-called CRAN mirrors) that each host a complete copy of the database of the available R packages (as well as the Base R components).</p>
-<p>Usually, you don’t need to tell R which of these CRAN mirrors to use because RStudio defines a default mirror that gets used whenever you call <code>install.pacakges()</code>. However, if you want to explicitly specify a different CRAN mirror, you can do so via the <code>repos</code> argument.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify the CRAN mirror a priori</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"lattice"</span>, <span class="st">"gridExtra"</span>), <span class="at">repos =</span> <span class="st">"http://cloud.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Similarly, you don’t usually have to tell R where you want to install new packages. If your user doesn’t have write permissions for the default library location, R will ask if you want to install the packages in a different location for which you should have suitable permissions.</p>
-<p>Sometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for employees). In such cases—or anytime you want to explicitly define the package library location—you can define the package library via the <code>lib</code> argument.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>, <span class="at">lib =</span> <span class="st">"../software"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout callout-style-default callout-practice callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Practice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use the <code>install.packages()</code> function to install the following packages in the default location (i.e., don’t specify anything for the <code>lib</code> argument).</p>
-<ul>
-<li><code>ggplot2</code></li>
-<li><code>dplyr</code></li>
-<li><code>haven</code></li>
-</ul>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="qwebr-insertion-location-1"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"haven"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="loading-packages" class="level2">
-<h2 class="anchored" data-anchor-id="loading-packages">Loading Packages</h2>
-<p>Once you’ve installed a new package, you’re nearly ready to start using the functionality provided by that package, but there’s still one final step: you must <em>load</em> the package into your active R session.</p>
-<p>If you run the following code, you will get an error because we’re trying to using the <code>ggplot()</code>, <code>aes()</code>, and <code>geom_boxplot()</code> functions that are provided by the <strong>ggplot2</strong> package, but we haven’t yet loaded that package.</p>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>An R package is really just a small piece of software. Like any other software, you only need to install a given R package once (just like you only need to install RStudio once), but you’ll need to load the package every time you want to use it in a new R session (like you need to open RStudio every time you want to use it).</p>
-<p>We load R packages with the <code>library()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The <code>library()</code> function can only load one package at a time, so you need to call <code>library()</code> multiple times to load multiple packages.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mice)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Running the following code should produce a simple plot, because we’ve loaded the <strong>ggplot2</strong> package before trying to use the functions it provides.</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="getting-help" class="level1">
-<h1>Getting Help</h1>
 <p>Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation (AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for the <code>if_else()</code> function from the <strong>dplyr</strong> package.</p>
 
 
@@ -2151,7 +2051,7 @@ Practice
 </table>
 
 
-        <h2 class="anchored" data-anchor-id="getting-help">Vectorised if-else</h2>
+        <h2 class="anchored">Vectorised if-else</h2>
 
         <h3 class="anchored">Description</h3>
 
@@ -2282,21 +2182,21 @@ Executible R code demonstrating the functions use
 <section id="accessing-help-files" class="level2">
 <h2 class="anchored" data-anchor-id="accessing-help-files">Accessing Help Files</h2>
 <p>The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the <code>?</code> character. The following code will pull up the documentation for the <code>lm()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can achieve the same effect by providing the function name to the <code>help()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A function’s help file is provided by the package that provides the function. So, you cannot access the help file for functions provided by unloaded packages.</p>
 <p>The following code will produce an error because you haven’t loaded the <strong>dplyr</strong> function that provides <code>arrange()</code>.</p>
-<div id="qwebr-insertion-location-4"></div>
+<div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function. To do so, either use the <em>namespace resolution operator</em>, <code>::</code>, or provide a value for the <code>package</code> argument in the <code>help()</code> function.</p>
 <p>The following code should run without errors, because we’ve told R to search for the <code>arrange()</code> help file in the <strong>dplyr</strong> package</p>
-<div id="qwebr-insertion-location-5"></div>
+<div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2316,15 +2216,15 @@ Practice
 </ul></li>
 </ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div id="qwebr-insertion-location-6"></div>
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>?vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>?vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>The <code>vector()</code> function takes 2 arguments: <code>mode</code> and <code>length</code>.</li>
@@ -2337,7 +2237,6 @@ Practice
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
