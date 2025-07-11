@@ -2,12 +2,12 @@
 title: "Basic Commands"
 format:
   html: 
-    toc: false
+    toc: true
     section-divs: true
-    # include-after-body: 
-    #   - text: |
-    #       <script src="/js/progressive-reveal.js"></script>
-
+    include-after-body: 
+      - text: |
+          <script src="/js/progressive-reveal.js"></script>
+          <script src="/js/bootstrapify.js"></script>
 engine: knitr
 filters:
   - webr
@@ -54,6 +54,8 @@ In the following code, the expression `1:10` is "commented out", so R doesn't ev
 #1:10
 ```
 
+:::::: {.pr-chunk}
+
 ## Assignment
 
 To do anything useful, we need to create objects that hold data. We 'assign' values to objects via the 'assignment'
@@ -95,6 +97,10 @@ When we create `w` above, we are not replacing `z` with `w`: we're making a copy
 both `w` and `z` are still available. In almost all cases, R will copy objects during assignment. This behavior is good
 to keep in mind when you're working with larger datasets: you can quickly flood your memory with unnecessary copies of 
 your data, if you're not careful.
+
+::::::
+
+:::::: {.pr-chunk}
 
 ## Mathematical Operators
 
@@ -188,6 +194,10 @@ weeks <- 38 * 52
 :::
 
 <!--------------------------------------------------------------------------------------------------------------------->
+
+::::::
+
+:::::: {.pr-chunk}
 
 ## Logical Comparisons
 
@@ -304,6 +314,10 @@ If the remainder of dividing `weeks` by 7 is zero, we know that the value of `we
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
+::::::
+
+:::::: {.pr-chunk}
+
 ## Order of Operations
 
 When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
@@ -350,6 +364,10 @@ y^1/2 == y/2
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
+::::::
+
+:::::: {.pr-chunk}
+
 ## Interacting with the Environment
 
 The 'environment' is a loosely organized set of all the objects that R currently has stored in working memory.
@@ -395,3 +413,11 @@ ls()
 :::
 
 <!--------------------------------------------------------------------------------------------------------------------->
+
+::::::
+
+```{r}
+#| echo: false
+#| results: asis
+create_buttons("2_packages.html")
+```

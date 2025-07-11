@@ -1,13 +1,29 @@
 ---
 title: "First Steps"
+format:
+  html: 
+    toc: false
+    section-divs: true
+    include-after-body: 
+      - text: |
+          <script src="/js/progressive-reveal.js"></script>
+          <script src="/js/bootstrapify.js"></script>
 ---
 
-This is a Quarto website.
+```{r include = FALSE}
+source(here::here("R", "helpers.R"))
+```
+Welcome to the *First Steps* module. In this module, you will learn the basics of R usage. The module content is broken
+into three tutorials:
 
-## Hello World!
+- [Basic Commands](/sections/1_basic_commands.qmd)
+- [Add-On Packages](/sections/2_packages.qmd)
+- [Getting Help](/sections/3_help.qmd)
 
-[Basic Commands](/sections/1_basic_commands.qmd)
+Click the button below to get started with the first tutorial.
 
-[Add-On Packages](/sections/2_packages.qmd)
-
-[Getting Help](/sections/3_help.qmd)
+```{r}
+#| echo: false
+#| results: asis
+begin_buttons("/sections/1_basic_commands.html")
+```

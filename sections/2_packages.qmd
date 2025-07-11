@@ -1,23 +1,41 @@
 ---
 title: "Add-On Packages"
-
 format:
   html: 
-    toc: false
-
-webr:  
-  show-startup-message: true
+    toc: true
+    section-divs: true
+    include-after-body: 
+      - text: |
+          <script src="/js/progressive-reveal.js"></script>
+          <script src="/js/bootstrapify.js"></script>
+engine: knitr
+filters:
+  - webr
+webr:
   packages: ['dplyr', 'ggplot2']
+  cell-options:
+    editor-font-scale: 0.85
+    fig-width: 6
+    fig-height: 3.7
+    out-width: "70%"
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+## Define an asis engine that will evaluate inline code within an asis block:
+knit_engines$set(asis = function(options) {
+  if(options$echo && options$eval) knit_child(text = options$code)
+}
+)
 
 opts_chunk$set(eval = FALSE,
                message = FALSE,
                warning = FALSE,
                fig.align = "center",
-               fig.path = "_fig/2_packages-",
+               fig.path = "_figures/2_packages-",
                cache.path = "_cache/2_packages-")
 ```
 
@@ -40,6 +58,8 @@ suitable packages).
    - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
 - For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
 packages are virtually obligatory.
+
+:::::: {.pr-chunk}
 
 ## Installing Packages
 
@@ -113,6 +133,10 @@ install.packages(c("ggplot2", "dplyr", "haven"))
 
 :::
 
+::::::
+
+:::::: {.pr-chunk}
+
 ## Loading Packages
 
 Once you've installed a new package, you're nearly ready to start using the functionality provided by that package, but
@@ -152,3 +176,11 @@ library(ggplot2)
 ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()
 ```
 
+::::::
+
+```{r}
+#| eval: true
+#| echo: false
+#| results: asis
+create_buttons("3_help.html")
+```

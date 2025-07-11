@@ -1,24 +1,41 @@
 ---
 title: "Getting Help"
-
 format:
   html: 
-    toc: false
+    toc: true
     section-divs: true
-
-webr:  
-  show-startup-message: true
+    include-after-body: 
+      - text: |
+          <script src="/js/progressive-reveal.js"></script>
+          <script src="/js/bootstrapify.js"></script>
+engine: knitr
+filters:
+  - webr
+webr:
   packages: ['dplyr']
+  cell-options:
+    editor-font-scale: 0.85
+    fig-width: 6
+    fig-height: 3.7
+    out-width: "70%"
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+## Define an asis engine that will evaluate inline code within an asis block:
+knit_engines$set(asis = function(options) {
+  if(options$echo && options$eval) knit_child(text = options$code)
+}
+)
 
 opts_chunk$set(eval = FALSE,
                message = FALSE,
                warning = FALSE,
                fig.align = "center",
-               fig.path = "_fig/3_help-",
+               fig.path = "_figures/3_help-",
                cache.path = "_cache/3_help-")
 ```
 
@@ -28,7 +45,7 @@ the `if_else()` function from the **dplyr** package.
 
 ```{=html}
 
-{{< include /assets/if_else.html >}}
+{{< include /assets/docs/if_else.html >}}
 
 ```
 
@@ -58,6 +75,8 @@ Value
 
 Examples
 : Executible R code demonstrating the functions use
+
+:::::: {.pr-chunk}
 
 ## Accessing Help Files
 
@@ -123,3 +142,11 @@ help(arrange, package = "dplyr")
 
 :::
 
+::::::
+
+```{r}
+#| eval: true
+#| echo: false
+#| results: asis
+create_buttons("99_finish.html")
+```

@@ -402,7 +402,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-1","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":2,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-2","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":3,"options":{"editor-max-height":"","out-height":"","fig-height":5,"warning":"true","output":"true","classes":"","message":"true","fig-width":7,"label":"unnamed-chunk-3","results":"markup","context":"interactive","out-width":"700px","editor-word-wrap":"true","read-only":"false","editor-quick-suggestions":"false","comment":"","fig-cap":"","autorun":"false","dpi":72,"editor-font-scale":"1"}}];
+globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"editor-word-wrap":"true","comment":"","dpi":72,"fig-width":"6","classes":"","out-height":"","out-width":"70%","output":"true","autorun":"false","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-1","warning":"true","fig-cap":"","read-only":"false","message":"true","context":"interactive","editor-max-height":"","fig-height":"3.7","results":"markup"}},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":2,"options":{"editor-word-wrap":"true","comment":"","dpi":72,"fig-width":"6","classes":"","out-height":"","out-width":"70%","output":"true","autorun":"false","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-2","warning":"true","fig-cap":"","read-only":"false","message":"true","context":"interactive","editor-max-height":"","fig-height":"3.7","results":"markup"}},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","id":3,"options":{"editor-word-wrap":"true","comment":"","dpi":72,"fig-width":"6","classes":"","out-height":"","out-width":"70%","output":"true","autorun":"false","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-3","warning":"true","fig-cap":"","read-only":"false","message":"true","context":"interactive","editor-max-height":"","fig-height":"3.7","results":"markup"}}];
 
 </script>
 <script type="module">
@@ -1676,7 +1676,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <link rel="stylesheet" href="../html/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1708,7 +1708,16 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link active" data-scroll-target="#installing-packages">Installing Packages</a></li>
+  <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading Packages</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
@@ -2036,7 +2045,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </ul></li>
 <li>For all but the most trivial data processing, manipulation, and visualization, the <a href="https://www.tidyverse.org/">tidyverse</a> packages are virtually obligatory.</li>
 </ul>
-<section id="installing-packages" class="level2">
+<section id="installing-packages" class="level2 pr-chunk">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing Packages</h2>
 <p>Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the <code>install.packages()</code> function. The following code will install the <strong>psych</strong> package.</p>
 <div class="cell" data-layout-align="center">
@@ -2093,7 +2102,7 @@ Practice
 </div>
 </div>
 </section>
-<section id="loading-packages" class="level2">
+<section id="loading-packages" class="level2 pr-chunk">
 <h2 class="anchored" data-anchor-id="loading-packages">Loading Packages</h2>
 <p>Once you’ve installed a new package, you’re nearly ready to start using the functionality provided by that package, but there’s still one final step: you must <em>load</em> the package into your active R session.</p>
 <p>If you run the following code, you will get an error because we’re trying to using the <code>ggplot()</code>, <code>aes()</code>, and <code>geom_boxplot()</code> functions that are provided by the <strong>ggplot2</strong> package, but we haven’t yet loaded that package.</p>
@@ -2112,9 +2121,17 @@ Practice
 <p>Running the following code should produce a simple plot, because we’ve loaded the <strong>ggplot2</strong> package before trying to use the functions it provides.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-
-
 </section>
+<div class="cell" data-layout-align="center">
+<section id="buttons">
+<button id="continueButton" class="btn btn-primary float-start me-2">
+Continue
+</button>
+<a id="nextTopicButton" class="btn btn-danger disabled" href="3_help.html" role="button">Next Topic</a> <button id="resetButton" class="btn btn-outline-warning float-end">Restart Topic</button>
+</section>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2538,6 +2555,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script src="../js/progressive-reveal.js"></script>
+<script src="../js/bootstrapify.js"></script>
 <script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(

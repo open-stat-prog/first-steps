@@ -1,0 +1,51 @@
+---
+title: "The End"
+format:
+  html: 
+    toc: false
+    section-divs: true
+    # include-after-body: 
+    #   - text: |
+    #       <script src="/js/progressive-reveal.js"></script>
+    #       <script src="/js/bootstrapify.js"></script>
+engine: knitr
+# filters:
+#   - webr
+# webr:
+#   cell-options:
+#     editor-font-scale: 0.85
+#     fig-width: 6
+#     fig-height: 3.7
+#     out-width: "70%"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+## Define an asis engine that will evaluate inline code within an asis block:
+knit_engines$set(asis = function(options) {
+  if(options$echo && options$eval) knit_child(text = options$code)
+}
+)
+
+opts_chunk$set(eval = FALSE,
+               message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_figures/99_finish-",
+               cache.path = "_cache/99_finish-")
+```
+
+<iframe
+  src="https://giphy.com/embed/WdeTlfNTcfL0RjJolo"
+  width="480"
+  height="480"
+  style=""
+  frameBorder="0"
+  class="giphy-embed"
+  allowFullScreen>
+</iframe>
+
+That's it: you're done. Good work!

@@ -402,7 +402,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"?arrange","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-1","fig-height":5,"comment":""}},{"id":2,"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-2","fig-height":5,"comment":""}},{"id":3,"code":"","options":{"results":"markup","warning":"true","fig-cap":"","fig-width":7,"context":"interactive","output":"true","autorun":"false","read-only":"false","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","out-height":"","out-width":"700px","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-3","fig-height":5,"comment":""}}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"?arrange","options":{"context":"interactive","comment":"","label":"unnamed-chunk-1","message":"true","editor-font-scale":"0.85","read-only":"false","autorun":"false","out-width":"70%","fig-height":"3.7","warning":"true","fig-cap":"","output":"true","editor-word-wrap":"true","results":"markup","dpi":72,"fig-width":"6","out-height":"","editor-max-height":"","classes":"","editor-quick-suggestions":"false"}},{"id":2,"code":"?dplyr::arrange\nhelp(arrange, package = \"dplyr\")","options":{"context":"interactive","comment":"","label":"unnamed-chunk-2","message":"true","editor-font-scale":"0.85","read-only":"false","autorun":"false","out-width":"70%","fig-height":"3.7","warning":"true","fig-cap":"","output":"true","editor-word-wrap":"true","results":"markup","dpi":72,"fig-width":"6","out-height":"","editor-max-height":"","classes":"","editor-quick-suggestions":"false"}},{"id":3,"code":"","options":{"context":"interactive","comment":"","label":"unnamed-chunk-3","message":"true","editor-font-scale":"0.85","read-only":"false","autorun":"false","out-width":"70%","fig-height":"3.7","warning":"true","fig-cap":"","output":"true","editor-word-wrap":"true","results":"markup","dpi":72,"fig-width":"6","out-height":"","editor-max-height":"","classes":"","editor-quick-suggestions":"false"}}];
 
 </script>
 <script type="module">
@@ -1676,7 +1676,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <link rel="stylesheet" href="../html/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1708,7 +1708,16 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#help-file-sections" id="toc-help-file-sections" class="nav-link active" data-scroll-target="#help-file-sections">Help File Sections</a></li>
+  <li><a href="#accessing-help-files" id="toc-accessing-help-files" class="nav-link" data-scroll-target="#accessing-help-files">Accessing Help Files</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
@@ -2179,7 +2188,7 @@ Executible R code demonstrating the functions use
 </dd>
 </dl>
 </section>
-<section id="accessing-help-files" class="level2">
+<section id="accessing-help-files" class="level2 pr-chunk">
 <h2 class="anchored" data-anchor-id="accessing-help-files">Accessing Help Files</h2>
 <p>The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the <code>?</code> character. The following code will pull up the documentation for the <code>lm()</code> function.</p>
 <div class="cell" data-layout-align="center">
@@ -2235,9 +2244,17 @@ Practice
 </div>
 </div>
 </div>
-
-
 </section>
+<div class="cell" data-layout-align="center">
+<section id="buttons">
+<button id="continueButton" class="btn btn-primary float-start me-2">
+Continue
+</button>
+<a id="nextTopicButton" class="btn btn-danger disabled" href="99_finish.html" role="button">Next Topic</a> <button id="resetButton" class="btn btn-outline-warning float-end">Restart Topic</button>
+</section>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2661,6 +2678,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script src="../js/progressive-reveal.js"></script>
+<script src="../js/bootstrapify.js"></script>
 <script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(
