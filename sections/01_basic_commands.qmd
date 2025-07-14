@@ -21,6 +21,7 @@ webr:
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
+library(checkdown)
 
 source(here::here("R", "helpers.R"))
 
@@ -416,8 +417,36 @@ ls()
 
 ::::::
 
+:::::: {.pr-chunk}
+
+::: quiz
+
+**Which of the following commands represents the preferred way to assign the value `7` to the object `y`?**
+
+```{r quiz1}
+#| echo: FALSE
+x <- c(
+  "y <- 7",
+  "y = 7",
+  "7 -> y",
+  "y == 7"
+)
+check_question(
+  answer = x[1],
+  options = x,
+  type = "radio", 
+  button_label = "Submit Answer", 
+  q_id = 1,
+  right = "Correct!",
+  wrong = c("Bad1", "Bad2", "Bad3")
+)
+```
+:::
+
+::::::
+
 ```{r}
 #| echo: false
 #| results: asis
-create_buttons("2_packages.html")
+create_buttons("02_packages.html")
 ```

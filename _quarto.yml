@@ -25,6 +25,10 @@ custom-callout:
     title: "Practice"
     icon-symbol: "fa-gears"
     color: "green"
+  quiz:
+    title: "Knowledge Quiz"
+    icon-symbol: "fa-mortar-board"
+    color: "violet"
 
 engine: knitr
 

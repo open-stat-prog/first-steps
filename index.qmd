@@ -13,17 +13,37 @@ format:
 ```{r include = FALSE}
 source(here::here("R", "helpers.R"))
 ```
-Welcome to the *First Steps* module. In this module, you will learn the basics of R usage. The module content is broken
-into three tutorials:
+Welcome to the *First Steps* module. In this module, you will take the first steps in your R programming journey by
+learning the basics of R usage. The module content is broken into three tutorials:
 
-- [Basic Commands](/sections/1_basic_commands.qmd)
-- [Add-On Packages](/sections/2_packages.qmd)
-- [Getting Help](/sections/3_help.qmd)
+- [Basic Commands](/sections/01_basic_commands.qmd)
+- [Add-On Packages](/sections/02_packages.qmd)
+- [Getting Help](/sections/03_help.qmd)
+
+## Learning Goals
+
+### Basic Commands
+
+1. Blah
+1. Blah, blah
+1. Blah, blah, blah
+
+### Add-On Packages
+
+1. Blah
+1. Blah, blah
+1. Blah, blah, blah
+
+### Getting Help
+
+1. Blah
+1. Blah, blah
+1. Blah, blah, blah
 
 Click the button below to get started with the first tutorial.
 
 ```{r}
 #| echo: false
 #| results: asis
-begin_buttons("/sections/1_basic_commands.html")
+begin_buttons("/sections/01_basic_commands.html")
 ```

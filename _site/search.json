@@ -7,22 +7,22 @@
     "text": "That’s it: you’re done. Good work!"
   },
   {
-    "objectID": "sections/2_packages.html",
-    "href": "sections/2_packages.html",
+    "objectID": "sections/02_packages.html",
+    "href": "sections/02_packages.html",
     "title": "Add-On Packages",
     "section": "",
     "text": "When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on packages to complete most real-world data analyses.\nFor example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).\nContinue\n\nNext Topic Restart Topic"
   },
   {
-    "objectID": "sections/2_packages.html#installing-packages",
-    "href": "sections/2_packages.html#installing-packages",
+    "objectID": "sections/02_packages.html#installing-packages",
+    "href": "sections/02_packages.html#installing-packages",
     "title": "Add-On Packages",
     "section": "Installing Packages",
     "text": "Installing Packages\nFortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the install.packages() function. The following code will install the psych package.\n\n## Use the default CRAN mirror to install one package\ninstall.packages(\"psych\")\n\nIf you want to install more than one package, you simply using the concatenation function, c(), to define a character vector giving the names of your desired packages, as shown in the following code.\n\n## Use the default CRAN mirror to install two packages\ninstall.packages(c(\"mice\", \"lavaan\"))\n\nIn the ordinary use-case, install.packages() will download the data needed to install a given package from the Comprehensive R Archive Network (CRAN). CRAN is a global network of servers (so-called CRAN mirrors) that each host a complete copy of the database of the available R packages (as well as the Base R components).\nUsually, you don’t need to tell R which of these CRAN mirrors to use because RStudio defines a default mirror that gets used whenever you call install.pacakges(). However, if you want to explicitly specify a different CRAN mirror, you can do so via the repos argument.\n\n## Specify the CRAN mirror a priori\ninstall.packages(c(\"lattice\", \"gridExtra\"), repos = \"http://cloud.r-project.org\")\n\nSimilarly, you don’t usually have to tell R where you want to install new packages. If your user doesn’t have write permissions for the default library location, R will ask if you want to install the packages in a different location for which you should have suitable permissions.\nSometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for employees). In such cases—or anytime you want to explicitly define the package library location—you can define the package library via the lib argument.\n\n## Specify a non-standard directory into which the packages will be installed\ninstall.packages(\"mvtnorm\", lib = \"../software\")\n\n\n\n\n\n\n\nPractice\n\n\n\nUse the install.packages() function to install the following packages in the default location (i.e., don’t specify anything for the lib argument).\n\nggplot2\ndplyr\nhaven\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\ninstall.packages(c(\"ggplot2\", \"dplyr\", \"haven\"))"
   },
   {
-    "objectID": "sections/2_packages.html#loading-packages",
-    "href": "sections/2_packages.html#loading-packages",
+    "objectID": "sections/02_packages.html#loading-packages",
+    "href": "sections/02_packages.html#loading-packages",
     "title": "Add-On Packages",
     "section": "Loading Packages",
     "text": "Loading Packages\nOnce you’ve installed a new package, you’re nearly ready to start using the functionality provided by that package, but there’s still one final step: you must load the package into your active R session.\nIf you run the following code, you will get an error because we’re trying to using the ggplot(), aes(), and geom_boxplot() functions that are provided by the ggplot2 package, but we haven’t yet loaded that package.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAn R package is really just a small piece of software. Like any other software, you only need to install a given R package once (just like you only need to install RStudio once), but you’ll need to load the package every time you want to use it in a new R session (like you need to open RStudio every time you want to use it).\nWe load R packages with the library() function.\n\nlibrary(dplyr)\n\nThe library() function can only load one package at a time, so you need to call library() multiple times to load multiple packages.\n\nlibrary(mice)\nlibrary(lavaan)\n\nRunning the following code should produce a simple plot, because we’ve loaded the ggplot2 package before trying to use the functions it provides.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
@@ -32,81 +32,81 @@
     "href": "index.html",
     "title": "First Steps",
     "section": "",
-    "text": "Welcome to the First Steps module. In this module, you will learn the basics of R usage. The module content is broken into three tutorials:\n\nBasic Commands\nAdd-On Packages\nGetting Help\n\nClick the button below to get started with the first tutorial.\n\n Begin Exercises"
+    "text": "Welcome to the First Steps module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage. The module content is broken into three tutorials:"
   },
   {
-    "objectID": "index.html#hello-world",
-    "href": "index.html#hello-world",
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
     "title": "First Steps",
-    "section": "",
-    "text": "Basic Commands\nAdd-On Packages\nGetting Help\n\n Begin Exercises"
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nBasic Commands\n\nBlah\nBlah, blah\nBlah, blah, blah\n\n\n\nAdd-On Packages\n\nBlah\nBlah, blah\nBlah, blah, blah\n\n\n\nGetting Help\n\nBlah\nBlah, blah\nBlah, blah, blah\n\nClick the button below to get started with the first tutorial.\n\n Begin Exercises"
   },
   {
-    "objectID": "sections/1_basic_commands.html",
-    "href": "sections/1_basic_commands.html",
+    "objectID": "sections/01_basic_commands.html",
+    "href": "sections/01_basic_commands.html",
     "title": "Basic Commands",
     "section": "",
     "text": "The comment character in R is #. Each commented line must be preceded by a # symbol. There are no block comments in R. Comments are not evaluated when you run your code\nRun the following R code to generate a vector of 10 numbers and print the result.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn the following code, the expression 1:10 is “commented out”, so R doesn’t evaluate that line, and we get no output.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nContinue\n\nNext Topic Restart Topic"
   },
   {
-    "objectID": "sections/1_basic_commands.html#comments",
-    "href": "sections/1_basic_commands.html#comments",
+    "objectID": "sections/01_basic_commands.html#comments",
+    "href": "sections/01_basic_commands.html#comments",
     "title": "Basic Commands",
     "section": "",
     "text": "The comment character in R is #. Each commented line must be preceded by a # symbol. There are no block comments in R. Comments are not evaluated when you run your code\nRun the following R code to generate a vector of 10 numbers and print the result.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn the following code, the expression 1:10 is “commented out”, so R doesn’t evaluate that line, and we get no output.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "sections/1_basic_commands.html#assignment",
-    "href": "sections/1_basic_commands.html#assignment",
+    "objectID": "sections/01_basic_commands.html#assignment",
+    "href": "sections/01_basic_commands.html#assignment",
     "title": "Basic Commands",
     "section": "Assignment",
     "text": "Assignment\nTo do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, &lt;-.\nThe following code assigns the values 7, 2.5, and \"foo\" to the objects x, y, and z, respectively.\n\nx &lt;- 7\ny &lt;- 2.5\nz &lt;- \"foo\"\n\nNotice the lack of printed output. These three commands create three new objects in your environment (x, y, z) that store the assigned data values (7, 2.5, \"foo\"). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.\nTo view the contents of an object, we can evaluate the object’s name without assignment.\nRun the following code to print the values saved as x and y.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] \"foo\"\n\nz\n\n[1] \"foo\"\n\n\nWhen we create w above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful."
   },
   {
-    "objectID": "sections/1_basic_commands.html#mathematical-operators",
-    "href": "sections/1_basic_commands.html#mathematical-operators",
+    "objectID": "sections/01_basic_commands.html#mathematical-operators",
+    "href": "sections/01_basic_commands.html#mathematical-operators",
     "title": "Basic Commands",
     "section": "Mathematical Operators",
     "text": "Mathematical Operators\nAll of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored in those objects are used to evaluate the expression.\nThe following code will add, subtract, multiply, and divide the values stored as y and x.\n\ny + x\n\n[1] 9.5\n\ny - x\n\n[1] -4.5\n\ny * x\n\n[1] 17.5\n\ny / x\n\n[1] 0.3571429\n\n\nWe use the carret character, ^, to specify exponents.\nThe following code will square and cube the value of y.\n\ny^2\n\n[1] 6.25\n\ny^3\n\n[1] 15.625\n\n\nThe sqrt() function returns the square root of it’s argument (i.e., the value we specify inside the parantheses).\nThe following code calculates the square root of y.\n\nsqrt(y)\n\n[1] 1.581139\n\n\nFor other roots, we can use fractional exponents.\n\ny^(1/3) # cube root of y\n\n[1] 1.357209\n\ny^(1/4) # quartic root of y\n\n[1] 1.257433\n\n\nR also includes many special functions for the most common mathematical operations.\n\nlog(y)   # natural logarithm of y\n\n[1] 0.9162907\n\nlog10(y) # log base 10 of y\n\n[1] 0.39794\n\nlog2(y)  # log base 2 of y\n\n[1] 1.321928\n\nexp(x) # exponentiate x\n\n[1] 1096.633\n\ny %% x # modulo: remainder after dividing y by x\n\n[1] 2.5\n\nfoo &lt;- -3.14159\n\nround(foo, 3) # round 'foo' to 3 decimal places\n\n[1] -3.142\n\nfloor(foo)    # round 'foo' down to the nearest whole number\n\n[1] -4\n\nceiling(foo)  # round 'foo' up to the nearest whole number\n\n[1] -3\n\nabs(foo) # absolute value of 'foo'\n\n[1] 3.14159\n\n\nNote that log(y) calculates the natural logarithm of y, \\(\\ln(y)\\). If you want the “ordinary” base-10 log, you need to use the log10() function.\n\n\n\n\n\n\n\nPractice\n\n\n\n\nCreate an object called age that takes the value of your age in whole years.\nUse the age object you created in above to create a second object called weeks that takes the value of your age in whole weeks.\n\nAssume 52 weeks in each year.\nDisregard partial years (i.e., assume every year counted in age contains 52 whole weeks).\n\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nAt time-of-writing, I’m 38 years old. So, these would be my age and weeks objects.\n\nage   &lt;- 38\nweeks &lt;- 38 * 52"
   },
   {
-    "objectID": "sections/1_basic_commands.html#logical-comparisons",
-    "href": "sections/1_basic_commands.html#logical-comparisons",
+    "objectID": "sections/01_basic_commands.html#logical-comparisons",
+    "href": "sections/01_basic_commands.html#logical-comparisons",
     "title": "Basic Commands",
     "section": "Logical Comparisons",
     "text": "Logical Comparisons\nWe can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of TRUE whenever the tested condition is satisified and FALSE when the tested condition is not satisfied.\nThe simplest logical test is an equality check. To check if two objects are equal, we use the ‘equality operator’, ==.\n\n## Define some objects to play with\ny &lt;- 5\nx &lt;- 7\nw &lt;- 5\n\n### Check equality\ny == x\n\n[1] FALSE\n\ny == w\n\n[1] TRUE\n\n\nWe can also check the usual greater-than/less-than conditions with &gt;, &lt;, &gt;=, &lt;=.\n\ny &gt; x  # greater than\n\n[1] FALSE\n\ny &gt;= x # greater than or equal to\n\n[1] FALSE\n\ny &lt; x  # less than\n\n[1] TRUE\n\ny &lt;= x # less than or equal to\n\n[1] TRUE\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nWhat values will the following four expressions return?\n\n Question Solution\n\n\n\ny &gt; w\ny &gt;= w\ny &lt; w\ny &lt;= w\n\n\n\n\ny &gt; w\n\n[1] FALSE\n\ny &gt;= w\n\n[1] TRUE\n\ny &lt; w\n\n[1] FALSE\n\ny &lt;= w\n\n[1] TRUE\n\n\n\n\n\n\n\n\nWe can negate any logical condition by prepending the ‘!’ character\n\ny &gt; x\n\n[1] FALSE\n\n!y &gt; x\n\n[1] TRUE\n\ny == w\n\n[1] TRUE\n\n!y == w\n\n[1] FALSE\n\n\nRather than negating an equality check, we will typically use the special “not-equal” operator, !=.\n\ny == w\n\n[1] TRUE\n\ny != w\n\n[1] FALSE\n\n\nWe can create more complex logical conditions with the AND and OR operators: & and |.\n\ny == w & y &lt; x\n\n[1] TRUE\n\ny == w & y &gt; x\n\n[1] FALSE\n\ny == w | y &gt; x\n\n[1] TRUE\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.\n\nHint: Use x %% 7 to calculate the remainder after dividing x by 7.\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n(6 %% 7) == 0\n\n[1] FALSE\n\n\nIf the remainder of dividing weeks by 7 is zero, we know that the value of weeks is evenly divisible by 7."
   },
   {
-    "objectID": "sections/1_basic_commands.html#order-of-operations",
-    "href": "sections/1_basic_commands.html#order-of-operations",
+    "objectID": "sections/01_basic_commands.html#order-of-operations",
+    "href": "sections/01_basic_commands.html#order-of-operations",
     "title": "Basic Commands",
     "section": "Order of Operations",
     "text": "Order of Operations\nWhen parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical operation according to the usual PEMDAS ordering.\nNotice how the following two expressions produce different results.\n\nIn the first line, we first divide x by w and then add y to the result.\nIn the second line, we first add x to y and then divide the result by w.\n\n\ny + x / w\n\n[1] 6.4\n\n(y + x) / w\n\n[1] 2.4\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nWhy do the following two expressions produce different answers?\n\n Question Solution\n\n\n\ny^(1/2)\n\n[1] 2.236068\n\ny^1/2\n\n[1] 2.5\n\n\n\n\n\ny^(1/2) == sqrt(y)\n\n[1] TRUE\n\ny^1/2 == y/2\n\n[1] TRUE\n\n\n\nIn the first case, we’re raising y to the power of \\(\\frac{1}{2}\\).\nIn the second case, we’re first raising y to the power of 1 (which does nothing) and then dividing the result by 2."
   },
   {
-    "objectID": "sections/1_basic_commands.html#interacting-with-the-environment",
-    "href": "sections/1_basic_commands.html#interacting-with-the-environment",
+    "objectID": "sections/01_basic_commands.html#interacting-with-the-environment",
+    "href": "sections/01_basic_commands.html#interacting-with-the-environment",
     "title": "Basic Commands",
     "section": "Interacting with the Environment",
     "text": "Interacting with the Environment\nThe ‘environment’ is a loosely organized set of all the objects that R currently has stored in working memory.\nWe can use the ls() function to list the contents of the current environment.\n\nls()\n\n [1] \"age\"            \"begin_buttons\"  \"create_buttons\" \"first_buttons\" \n [5] \"foo\"            \"w\"              \"weeks\"          \"x\"             \n [9] \"y\"              \"z\"             \n\n\nThe rm() function will remove an object from the environment.\nThe following code will remove x from the environment.\n\nrm(x) # Remove 'x' from the environment\nls()  # Check the results\n\n[1] \"age\"            \"begin_buttons\"  \"create_buttons\" \"first_buttons\" \n[5] \"foo\"            \"w\"              \"weeks\"          \"y\"             \n[9] \"z\"             \n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse the rm() function to remove the age object that you created above from your environment, and use ls() to check your work.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nrm(age)\nls()\n\n[1] \"begin_buttons\"  \"create_buttons\" \"first_buttons\"  \"foo\"           \n[5] \"w\"              \"weeks\"          \"y\"              \"z\""
   },
   {
-    "objectID": "sections/3_help.html",
-    "href": "sections/3_help.html",
+    "objectID": "sections/03_help.html",
+    "href": "sections/03_help.html",
     "title": "Getting Help",
     "section": "",
     "text": "Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation (AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for the if_else() function from the dplyr package.\nContinue\n\nNext Topic Restart Topic"
   },
   {
-    "objectID": "sections/3_help.html#help-file-sections",
-    "href": "sections/3_help.html#help-file-sections",
+    "objectID": "sections/03_help.html#help-file-sections",
+    "href": "sections/03_help.html#help-file-sections",
     "title": "Getting Help",
     "section": "Help File Sections",
     "text": "Help File Sections\nNot all R help files include all possible sections. The most common and useful are shown in the example above.\n\nDescription\n\nA brief description of the function.\n\nUsage\n\nShows how to call the function\n\n\n\nThe functions name\nThe name of all the function arguments\nThe order of the function arguments\nAny default values defined for function arguments\n\n\nArguments\n\nBriefly explains each function argument\n\nDetails\n\nProvides additional details of function arguments or the functions behavior\n\nValue\n\nDescribes the object returned by the function\n\nExamples\n\nExecutible R code demonstrating the functions use"
   },
   {
-    "objectID": "sections/3_help.html#accessing-help-files",
-    "href": "sections/3_help.html#accessing-help-files",
+    "objectID": "sections/03_help.html#accessing-help-files",
+    "href": "sections/03_help.html#accessing-help-files",
     "title": "Getting Help",
     "section": "Accessing Help Files",
     "text": "Accessing Help Files\nThe simplest way to access a function’s help file is to prepend the function name (without parentheses) with the ? character. The following code will pull up the documentation for the lm() function.\n\n?lm\n\nYou can achieve the same effect by providing the function name to the help() function.\n\nhelp(lm)\nhelp(\"lm\")\n\nA function’s help file is provided by the package that provides the function. So, you cannot access the help file for functions provided by unloaded packages.\nThe following code will produce an error because you haven’t loaded the dplyr function that provides arrange().\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function. To do so, either use the namespace resolution operator, ::, or provide a value for the package argument in the help() function.\nThe following code should run without errors, because we’ve told R to search for the arrange() help file in the dplyr package\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nPractice\n\n\n\n\nAccess the help file for the vector() function.\n\nHow many arguments does the vector() function take?\nWhat is the default value of the mode argument?\n\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n?vector\n\n\nThe vector() function takes 2 arguments: mode and length.\nThe default argument for mode is “logical”."
