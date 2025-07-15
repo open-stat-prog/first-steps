@@ -47,15 +47,15 @@ For example, the following list shows some common analyses for which you would t
 suitable packages).
 
 - Treating missing data using multiple imputation
-   - [mice](https://cran.r-project.org/web/packages/mice/index.html)
-   - [Amelia](https://cran.r-project.org/web/packages/Amelia/index.html)
-   - [mi](https://cran.r-project.org/web/packages/mi/index.html)
+  - [mice](https://cran.r-project.org/web/packages/mice/index.html)
+  - [Amelia](https://cran.r-project.org/web/packages/Amelia/index.html)
+  - [mi](https://cran.r-project.org/web/packages/mi/index.html)
 - Structural equation modeling
   - [lavaan](https://cran.r-project.org/web/packages/lavaan/index.html)
   - [OpenMx](https://cran.r-project.org/web/packages/OpenMx/index.html)
 - Multilevel regression modeling
-   - [lme4](https://cran.r-project.org/web/packages/lme4/index.html)
-   - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
+  - [lme4](https://cran.r-project.org/web/packages/lme4/index.html)
+  - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
 - For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
 packages are virtually obligatory.
 
@@ -163,8 +163,8 @@ The `library()` function can only load one package at a time, so you need to cal
 multiple packages.
 
 ```{r}
-library(mice)
-library(lavaan)
+library(dplyr)
+library(ggplot2)
 ```
 
 Running the following code should produce a simple plot, because we've loaded the **ggplot2** package before trying to
