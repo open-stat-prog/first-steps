@@ -1,0 +1,8 @@
+---
+title: "Knowledge Quiz: Basic Commands"
+output: exams2forms::webquiz
+---
+
+```{r quiz1, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms::exams2forms(here::here("quizzes", "questions", "assignment.Rmd"), n = 1)
+```

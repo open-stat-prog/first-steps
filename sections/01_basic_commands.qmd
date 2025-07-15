@@ -4,10 +4,7 @@ format:
   html: 
     toc: true
     section-divs: true
-    include-after-body: 
-      - text: |
-          <script src="/js/progressive-reveal.js"></script>
-          <script src="/js/bootstrapify.js"></script>
+    include-after-body: ../js/webex.js
 engine: knitr
 filters:
   - webr
@@ -21,16 +18,8 @@ webr:
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
-library(exams)
-library(exams2forms)
 
 source(here::here("R", "helpers.R"))
-
-## Define an asis engine that will evaluate inline code within an asis block:
-knit_engines$set(asis = function(options) {
-  if(options$echo && options$eval) knit_child(text = options$code)
-}
-)
 
 opts_chunk$set(message = FALSE,
                warning = FALSE,
@@ -418,34 +407,15 @@ ls()
 
 ::::::
 
-:::::: {.pr-chunk}
-
-::: quiz
-
-**Which of the following commands represents the preferred way to assign the value `7` to the object `y`?**
-
 ```{r quiz1}
-#| eval: FALSE
 #| echo: FALSE
-# x <- c(
-#   "y <- 7",
-#   "y = 7",
-#   "7 -> y",
-#   "y == 7"
-# )
-# check_question(
-#   answer = x[1],
-#   options = x,
-#   type = "radio", 
-#   button_label = "Submit Answer", 
-#   q_id = 1,
-#   right = "Correct!",
-#   wrong = c("Bad1", "Bad2", "Bad3")
-# )
-```
-:::
+#| results: "asis"
 
-::::::
+exams2forms::exams2forms(
+  file = "assignment.Rmd",
+  edir = here::here("quizzes", "questions")
+)
+```
 
 ```{r}
 #| echo: false

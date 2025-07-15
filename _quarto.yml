@@ -15,7 +15,12 @@ format:
     css:
       - html/custom.scss
       - html/styles.css
+      - html/webex.css
     toc: true
+    include-after-body: 
+      - text: |
+          <script src="/js/progressive-reveal.js"></script>
+          <script src="/js/bootstrapify.js"></script>
 
 webr:
   channel-type: "post-message"
@@ -35,4 +40,3 @@ engine: knitr
 filters:
   - webr
   - custom-callout
-
