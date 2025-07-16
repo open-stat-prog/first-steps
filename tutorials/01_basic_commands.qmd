@@ -1,19 +1,5 @@
 ---
 title: "Basic Commands"
-format:
-  html: 
-    toc: true
-    section-divs: true
-    include-after-body: ../js/webex.js
-engine: knitr
-filters:
-  - webr
-webr:
-  cell-options:
-    editor-font-scale: 0.85
-    fig-width: 6
-    fig-height: 3.7
-    out-width: "70%"
 ---
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
@@ -24,8 +10,8 @@ source(here::here("R", "helpers.R"))
 opts_chunk$set(message = FALSE,
                warning = FALSE,
                fig.align = "center",
-               fig.path = "_fig/1_basic_commands-",
-               cache.path = "_cache/1_basic_commands-")
+               fig.path = "_figures/01_basic_commands-",
+               cache.path = "_cache/01_basic_commands-")
 ```
 
 ## Comments
@@ -44,6 +30,8 @@ In the following code, the expression `1:10` is "commented out", so R doesn't ev
 ```{webr-r}
 #1:10
 ```
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -90,6 +78,8 @@ to keep in mind when you're working with larger datasets: you can quickly flood 
 your data, if you're not careful.
 
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -158,8 +148,6 @@ to use the `log10()` function.
 
 :::
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::: practice
 
 ## Practice
@@ -171,12 +159,12 @@ in whole weeks.
    - Disregard partial years (i.e., assume every year counted in `age` contains 52 whole weeks).
 
 :::: {.panel-tabset}
-## {{< fa code >}}&ensp;Interactive Editor
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 At time-of-writing, I'm 38 years old. So, these would be my `age` and `weeks` objects.
 
@@ -188,9 +176,9 @@ weeks <- 38 * 52
 
 :::
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -222,8 +210,6 @@ y < x  # less than
 y <= x # less than or equal to
 ```
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::: practice
 
 ## Practice
@@ -231,7 +217,7 @@ y <= x # less than or equal to
 What values will the following four expressions return?
 
 :::: {.panel-tabset}
-## {{< fa circle-question >}}&ensp;Question
+## {{< var tab_title.question >}}
 
 ```{r, eval = FALSE}
 y > w
@@ -240,7 +226,7 @@ y < w
 y <= w
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 ```{r}
 y > w
@@ -251,8 +237,6 @@ y <= w
 ::::
 
 :::
-
-<!--------------------------------------------------------------------------------------------------------------------->
 
 We can negate any logical condition by prepending the '!' character
 
@@ -279,8 +263,6 @@ y == w & y > x
 y == w | y > x
 ```
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::: practice
 
 ## Practice
@@ -288,15 +270,18 @@ y == w | y > x
 Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the 'weeks' object
 you created above is evenly divisible by 7.
 
-- *Hint:* Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
 
 :::: {.panel-tabset}
-## {{< fa code >}}&ensp;Interactive Editor
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.hint >}}
+
+Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
+
+## {{< var tab_title.solution >}}
 
 ```{r}
 (6 %% 7) == 0
@@ -307,9 +292,9 @@ If the remainder of dividing `weeks` by 7 is zero, we know that the value of `we
 
 :::
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -328,8 +313,6 @@ y + x / w
 (y + x) / w
 ```
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::: practice
 
 ## Practice
@@ -337,14 +320,14 @@ y + x / w
 Why do the following two expressions produce different answers?
 
 :::: {.panel-tabset}
-## {{< fa circle-question >}}&ensp;Question
+## {{< var tab_title.question >}}
 
 ```{r}
 y^(1/2)
 y^1/2
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 ```{r}
 y^(1/2) == sqrt(y)
@@ -357,9 +340,9 @@ y^1/2 == y/2
 
 :::
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -382,8 +365,6 @@ rm(x) # Remove 'x' from the environment
 ls()  # Check the results
 ```
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::: practice
 
 ## Practice
@@ -392,12 +373,12 @@ Use the `rm()` function to remove the `age` object that you created above from y
 your work.
 
 :::: {.panel-tabset}
-## {{< fa code >}}&ensp;Interactive Editor
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 ```{r}
 rm(age)
@@ -407,22 +388,12 @@ ls()
 
 :::
 
-<!--------------------------------------------------------------------------------------------------------------------->
-
 ::::::
 
-```{r quiz1}
-#| echo: FALSE
-#| results: "asis"
-
-exams2forms::exams2forms(
-  file = "assignment.Rmd",
-  edir = here::here("quizzes", "questions")
-)
-```
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ```{r}
 #| echo: false
 #| results: asis
-create_buttons("02_packages.html")
+create_buttons("/quizzes/01_basic_commands.html")
 ```

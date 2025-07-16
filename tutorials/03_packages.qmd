@@ -1,23 +1,7 @@
 ---
 title: "Add-On Packages"
-format:
-  html: 
-    toc: true
-    section-divs: true
-    include-after-body: 
-      - text: |
-          <script src="/js/progressive-reveal.js"></script>
-          <script src="/js/bootstrapify.js"></script>
-engine: knitr
-filters:
-  - webr
 webr:
   packages: ['dplyr', 'ggplot2']
-  cell-options:
-    editor-font-scale: 0.85
-    fig-width: 6
-    fig-height: 3.7
-    out-width: "70%"
 ---
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
@@ -25,18 +9,12 @@ library(knitr)
 
 source(here::here("R", "helpers.R"))
 
-## Define an asis engine that will evaluate inline code within an asis block:
-knit_engines$set(asis = function(options) {
-  if(options$echo && options$eval) knit_child(text = options$code)
-}
-)
-
 opts_chunk$set(eval = FALSE,
                message = FALSE,
                warning = FALSE,
                fig.align = "center",
-               fig.path = "_figures/2_packages-",
-               cache.path = "_cache/2_packages-")
+               fig.path = "_figures/03_packages-",
+               cache.path = "_cache/03_packages-")
 ```
 
 When you install R, you're only installing the core set of functionality. You can already do quite a lot with this
@@ -58,6 +36,8 @@ suitable packages).
   - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
 - For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
 packages are virtually obligatory.
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -118,12 +98,12 @@ anything for the `lib` argument).
 
 :::: {.panel-tabset}
 
-## {{< fa code >}}&ensp;Interactive Editor
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 ```{r}
 install.packages(c("ggplot2", "dplyr", "haven"))
@@ -134,6 +114,8 @@ install.packages(c("ggplot2", "dplyr", "haven"))
 :::
 
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -167,8 +149,8 @@ library(dplyr)
 library(ggplot2)
 ```
 
-Running the following code should produce a simple plot, because we've loaded the **ggplot2** package before trying to
-use the functions it provides.
+Running the following code should now produce a simple plot, because we've loaded the **ggplot2** package before trying
+to use the functions it provides.
 
 ```{webr-r}
 library(ggplot2)
@@ -178,9 +160,11 @@ ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()
 
 ::::::
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 ```{r}
 #| eval: true
 #| echo: false
 #| results: asis
-create_buttons("03_help.html")
+create_buttons("04_help.html")
 ```

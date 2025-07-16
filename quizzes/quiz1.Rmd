@@ -1,8 +1,14 @@
 ---
 title: "Knowledge Quiz: Basic Commands"
-output: exams2forms::webquiz
+output:
+  html_document:
+    css: "/html/webex.css"
+    include-after-body: "/js/webex.js"
 ---
 
 ```{r quiz1, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms::exams2forms(here::here("quizzes", "questions", "assignment.Rmd"), n = 1)
+exams2forms::exams2forms(
+  file = "assignment.Rmd",
+  edir = here::here("quizzes", "questions")
+)
 ```

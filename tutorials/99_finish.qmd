@@ -1,0 +1,20 @@
+---
+title: "The End"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+opts_chunk$set(eval = FALSE,
+               message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_figures/99_finish-",
+               cache.path = "_cache/99_finish-")
+```
+
+![](/assets/images/clapping_penguine.gif){fig-alt="A Clapping, Cartoon Penguine"}
+
+Congratulations! You've finished this module!

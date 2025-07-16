@@ -1,0 +1,31 @@
+---
+title: "Knowledge Quiz: Basic Commands"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+opts_chunk$set(message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_figures/01_basic_commands-quiz-",
+               cache.path = "_cache/01_basic_commands-quiz-")
+```
+
+```{r quiz1}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = "assignment.Rmd",
+  edir = here::here("quizzes", "questions")
+)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+create_buttons("/tutorials/02_functions.html")
+```

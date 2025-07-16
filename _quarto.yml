@@ -21,6 +21,7 @@ format:
       - text: |
           <script src="/js/progressive-reveal.js"></script>
           <script src="/js/bootstrapify.js"></script>
+          <script src="/js/webex.js"></script>
 
 webr:
   channel-type: "post-message"

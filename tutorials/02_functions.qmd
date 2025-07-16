@@ -1,0 +1,142 @@
+---
+title: "R Functions"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+opts_chunk$set(message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_figures/02_functions-",
+               cache.path = "_cache/02_functions-")
+```
+
+## Motivation
+
+Essentially all of your R-based analyses will revolved around calling *functions* to manipulate the contents of *objects*
+stored in the environment and saving those modified objects as new objects.
+
+Suppose I want to calculate the average of the first five positive integers, $\{1, 2, 3, 4, 5\}$. I could directly apply
+the formula for the mean using nothing but basic arithmetic operators.
+
+```{webr-r}
+(1 + 2 + 3 + 4 + 5) / 5
+```
+
+Of course, we won't get very far with any real-world data analysis if we need to explicitly write out the formula for
+every single estimate we make. So, we typically call a pre-existing function to do the estimation. The following code
+calls the `mean()` function to calculate the average of the values contained in the numeric vector, $[1, 2, 3, 4, 5]$, 
+that we've created with the `:` operator (which is also a kind of function).
+
+```{webr-r}
+mean(1:5)
+```
+
+## Recognizing R Functions In the Wild
+
+You will almost always be able to quickly identify the functions in R code by the fixed pattern: `FUNCTION_NAME()`. That
+is, an R function is called by writing the function name followed imediately by an opening paranthesis. The following list
+shows some commonly encounted R functions.
+
+- `c()`
+- `list()`
+- `ls()`
+- `summary()`
+- `mean()`
+- `lm()`
+
+So, anytime you see a word followed by parenthesis in some R code, you know you've found a function call.
+
+## How Functions Work
+
+In most cases, R functions work in the same way as mathematical functions:
+
+1. Accept some input
+1. Perform some operation on the input
+1. Return the results of the operation
+
+For example, the following equation represents a linear function of $x$. 
+
+$$
+f(x) = 1.5 + 2x
+$$
+
+For any value of $x$ that we provide as input, $f(x)$ will first multiply that value by 3 and then add 1.5 to the
+resulting product. So, if we let $x = 3$, we get $f(3) = 7.5$.
+
+$$
+\begin{align*}
+f(3) &= 1.5 + 2 \times 3\\
+&= 7.5
+\end{align*}
+$$
+
+The `mean()` function that we used to motivate these ideas operates through the same conceptual process. In terms of a
+mathematical function, you can think of the R function call `mean(1:5)` as supplying the input $x = [1, 2, 3, 4, 5]$ to
+a function, $f(x)$, that computes the arithmetic mean of the values in $x$.
+
+If we let $n$ represent the number of values in $x$, we could notate the mathematical representation of the `mean()`
+function as follows.
+
+$$
+\begin{align}
+f(x) = \frac{1}{n}\sum_{i = 1}^{n} x_i
+\end{align}
+$$ {#eq-mean}
+
+In programming jargon, we would call @eq-mean the *definition* of the mean function. That is, we've defined a tool that 
+we can use to compute the mean of any given set of values, but we haven't yet used that tool to compute an actual mean.
+
+To use our defined function to compute a mean, we need to apply $f(x)$ to some input, say, $a = [1, \ldots, 5]$. After
+replacing the variable $x$ on the right hand side of @eq-mean with the input data $a$, we can compute the mean, $f(a)$.
+
+$$
+\begin{align*}
+f(a) &= \frac{1 + 2 + 3 + 4 + 5}{5}\\
+&= 3
+\end{align*}
+$$
+
+Doing the analagous calculation in R would look like the following.
+
+```{r}
+a <- 1:5
+mean(a)
+```
+
+In most of your R analyses, you won't need to worry about defining the functions you use: that work has already been done
+by the developers who wrote the packages you're using. You will usually only have to worry about preparing the inputs,
+calling an appropriate function, and processing the function's output. 
+
+## Function Arguments
+
+When you call an R function, you will specify the function inputs by defining values for the function's *arguments*. R
+function arguments are named, and most R functions have multiple arguments. You specify the argument values by writing
+a comma-separated list of name-value pairs between the parentheses of the function call. For example, the following code
+creates a vector of 100 random normal deviates, `dat`, and computes the trimmed mean of `dat` excluding the most extreme
+10% of the values.
+
+```{r}
+dat <- rnorm(n = 100)
+mean(x = dat, trim = 0.05)
+```
+
+There are some nuances to how we specify the arguments when we call an R function. Most importantly, we don't always
+need to explicitly write out the argument's name, and we don't necessarily need to provide a value for all arguments.
+Before we can make much headway on these finer points, however, we need to answer a couple unresolved questions:
+
+1. Where are all these mysterious R functions defined, and how do I access new functions? 
+1. How do I know a function's arguments and what values to specify for those arguments? 
+
+In the next two tutorials, you will learn about R packages (the source of most R functions) and R's documentation system
+(the means by which you will learn how to use new functions). We will revisit the finer points of calling R functions 
+when we discuss documentation.
+
+```{r}
+#| echo: false
+#| results: asis
+create_buttons("/tutorials/03_packages.html")
+```

@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,6 +100,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 
 <link rel="stylesheet" href="../html/custom.scss">
 <link rel="stylesheet" href="../html/styles.css">
+<link rel="stylesheet" href="../html/webex.css">
 </head>
 
 <body class="nav-fixed">
@@ -160,17 +163,17 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<div id="webex-6019e456d17fb4181e02989e6654d5b6" class="webex-radiogroup" data-answer="bQAdCUkFGQY5">
-<label><input type="radio" autocomplete="off" name="6019e456d17fb4181e02989e6654d5b6"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="6019e456d17fb4181e02989e6654d5b6"><span><code>y |&gt; 7</code></span></label><label><input type="radio" autocomplete="off" name="6019e456d17fb4181e02989e6654d5b6"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="6019e456d17fb4181e02989e6654d5b6"><span><code>y &lt; 7</code></span></label>
+<div id="webex-a114f482334b431a9aabc6a36e20d7bc" class="webex-radiogroup" data-answer="OgEdBEoEFANu">
+<label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y = 7</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>7 &lt;- y</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y &lt;- 7</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
 <ul>
+<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
+<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
 <li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
-<li>This is a misuse of the native R pipe operator.</li>
 <li>Correct</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is less than <code>7</code>.</li>
 </ul>
 </div>
 </div>
@@ -601,6 +604,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <script src="../js/progressive-reveal.js"></script>
 <script src="../js/bootstrapify.js"></script>
+<script src="../js/webex.js"></script>
 
 
 

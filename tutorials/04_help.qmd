@@ -1,23 +1,7 @@
 ---
 title: "Getting Help"
-format:
-  html: 
-    toc: true
-    section-divs: true
-    include-after-body: 
-      - text: |
-          <script src="/js/progressive-reveal.js"></script>
-          <script src="/js/bootstrapify.js"></script>
-engine: knitr
-filters:
-  - webr
 webr:
   packages: ['dplyr']
-  cell-options:
-    editor-font-scale: 0.85
-    fig-width: 6
-    fig-height: 3.7
-    out-width: "70%"
 ---
 
 ```{r setup, include = FALSE, message = FALSE, warning = FALSE}
@@ -25,18 +9,12 @@ library(knitr)
 
 source(here::here("R", "helpers.R"))
 
-## Define an asis engine that will evaluate inline code within an asis block:
-knit_engines$set(asis = function(options) {
-  if(options$echo && options$eval) knit_child(text = options$code)
-}
-)
-
 opts_chunk$set(eval = FALSE,
                message = FALSE,
                warning = FALSE,
                fig.align = "center",
-               fig.path = "_figures/3_help-",
-               cache.path = "_cache/3_help-")
+               fig.path = "_figures/04_help-",
+               cache.path = "_cache/04_help-")
 ```
 
 Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation
@@ -75,6 +53,8 @@ Value
 
 Examples
 : Executible R code demonstrating the functions use
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 :::::: {.pr-chunk}
 
@@ -124,12 +104,12 @@ help(arrange, package = "dplyr")
    - What is the default value of the `mode` argument?
 
 :::: {.panel-tabset}
-## {{< fa code >}}&ensp;Interactive Editor
+## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< fa circle-check >}}&ensp;Solution
+## {{< var tab_title.solution >}}
 
 ```{r, eval = TRUE, echo = TRUE, include = TRUE}
 ?vector
@@ -143,6 +123,8 @@ help(arrange, package = "dplyr")
 :::
 
 ::::::
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ```{r}
 #| eval: true

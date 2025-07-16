@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,19 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-quiz.callout {
   border-left-color: violet;
 }
@@ -91,6 +80,19 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f19d' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -158,14 +160,26 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 
 <p>Welcome to the <em>First Steps</em> module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage. The module content is broken into three tutorials:</p>
 <ul>
-<li><a href="./sections/01_basic_commands.html">Basic Commands</a></li>
-<li><a href="./sections/02_packages.html">Add-On Packages</a></li>
-<li><a href="./sections/03_help.html">Getting Help</a></li>
+<li><a href="./tutorials/01_basic_commands.html">Basic Commands</a>
+<ul>
+<li><a href="./quizzes/01_basic_commands.html">Knowledge Quiz</a></li>
+</ul></li>
+<li><a href="./tutorials/02_functions.html">Functions</a></li>
+<li><a href="./tutorials/03_packages.html">Add-On Packages</a></li>
+<li><a href="./tutorials/04_help.html">Getting Help</a></li>
 </ul>
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
 <section id="basic-commands" class="level3">
 <h3 class="anchored" data-anchor-id="basic-commands">Basic Commands</h3>
+<ol type="1">
+<li>Blah</li>
+<li>Blah, blah</li>
+<li>Blah, blah, blah</li>
+</ol>
+</section>
+<section id="functions" class="level3">
+<h3 class="anchored" data-anchor-id="functions">Functions</h3>
 <ol type="1">
 <li>Blah</li>
 <li>Blah, blah</li>
@@ -189,7 +203,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </ol>
 <p>Click the button below to get started with the first tutorial.</p>
 <section id="buttons">
-<a id="beginButton" class="btn btn-danger" href="./sections/01_basic_commands.html" role="button"> Begin Exercises </a>
+<a id="beginButton" class="btn btn-danger" href="./tutorials/01_basic_commands.html" role="button"> Begin Exercises </a>
 </section>
 
 
@@ -620,6 +634,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <script src="./js/progressive-reveal.js"></script>
 <script src="./js/bootstrapify.js"></script>
+<script src="./js/webex.js"></script>
 
 
 
