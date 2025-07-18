@@ -1,0 +1,110 @@
+---
+title: "Help File Sections"
+webr:
+  packages:
+    - dplyr
+---
+
+```{r setup, echo = FALSE, include = FALSE}
+library(printr)
+```
+
+R help files can contain diverse information: some are only a few lines long while others contain dozens of pages of 
+information. Not all R help files include all possible sections, but there are a few core sections that tend to show up
+pretty consistently due to their general usefulness.
+
+## Description 
+
+```{=html}
+
+{{< include /assets/docs/arrange_description.html >}}
+
+```
+
+As the name implies, the *Description* section provides a brief, human-readable description of the functions purpose.
+
+## Usage
+
+```{=html}
+
+{{< include /assets/docs/arrange_usage.html >}}
+
+```
+
+The *Usage* section shows the fully parameterized function call. In other words, how to call the function. In particular,
+this section provides several crucial pieces of information.
+
+- The name used to call the function
+- The name of all the function arguments
+- The order of the function arguments
+- Any default values defined for function arguments
+
+## Arguments
+
+```{=html}
+
+{{< include /assets/docs/arrange_arguments.html >}}
+
+```
+
+The *Arguments* section briefly explains each function argument. As you might suspect, the arguments section will probably
+be the one you reference most frequently since the information contained herein explains the purpose or each function
+argument and what type of values you are able to specify for each argument.
+
+## Details
+
+```{=html}
+
+{{< include /assets/docs/arrange_details.html >}}
+
+```
+
+The *Details* section expands on the information listed in the *Arguments* section to provide additional details of
+function arguments or the functions behavior
+
+## Value
+
+```{=html}
+
+{{< include /assets/docs/arrange_value.html >}}
+
+```
+
+The *Value* section describes the type of object returned by the function.
+
+## Examples
+
+```{=html}
+
+{{< include /assets/docs/arrange_examples.html >}}
+
+```
+
+The *Examples* section contains executible R code that demonstrates the function's primary use-cases.
+
+::: practice
+
+## Practice
+
+Run the first line of example code from the *Examples* section of the `arrange()` documentation shown above.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.hint >}}
+
+You can copy and paste the first line of code directly from the examples section into the editor window.
+
+## {{< var tab_title.solution >}}
+
+```{r}
+library(dplyr)
+
+arrange(mtcars, cyl, disp)
+```
+::::
+
+:::

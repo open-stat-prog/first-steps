@@ -1,0 +1,55 @@
+---
+title: "Environments"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center")
+```
+
+## What is an "Environment"
+
+The 'environment' is a loosely organized set of all the objects that R currently has stored in working memory.
+
+## Interacting with the Environment
+
+We can use the `ls()` function to list the contents of the current environment.
+
+```{r}
+ls()
+```
+
+The `rm()` function will remove an object from the environment.
+
+The following code will remove `x` from the environment.
+
+```{r}
+rm(x) # Remove 'x' from the environment
+ls()  # Check the results
+```
+
+::: practice
+
+## Practice
+
+Use the `rm()` function to remove the `age` object that you created above from your environment, and use `ls()` to check
+your work.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+rm(age)
+ls()
+```
+::::
+
+:::

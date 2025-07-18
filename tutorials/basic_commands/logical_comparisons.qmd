@@ -1,0 +1,130 @@
+---
+title: "Logical Comparisons"
+---
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+
+source(here::here("R", "helpers.R"))
+
+opts_chunk$set(message = FALSE,
+               warning = FALSE,
+               fig.align = "center",
+               fig.path = "_figures/01_basic_commands-",
+               cache.path = "_cache/01_basic_commands-")
+```
+
+We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical
+vector takes the value of `TRUE` whenever the tested condition is satisified and `FALSE` when the tested condition is
+not satisfied.
+
+## Equality
+
+The simplest logical test is an equality check. To check if two objects are equal, we use the 'equality operator', `==`.
+
+```{r}
+## Define some objects to play with
+y <- 5
+x <- 7
+w <- 5
+
+### Check equality
+y == x
+y == w
+```
+
+## Greater/Lesser
+
+We can also check the usual greater-than/less-than conditions with `>`, `<`, `>=`, `<=`.
+
+```{r}
+y > x  # greater than
+y >= x # greater than or equal to
+y < x  # less than
+y <= x # less than or equal to
+```
+
+::: practice
+
+## Practice
+
+What values will the following four expressions return?
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+```{r, eval = FALSE}
+y > w
+y >= w
+y < w
+y <= w
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+y > w
+y >= w
+y < w
+y <= w
+```
+::::
+
+:::
+
+## Logical Negation
+
+We can negate any logical condition by prepending the '!' character
+
+```{r}
+y > x
+!y > x
+
+y == w
+!y == w
+```
+
+Rather than negating an equality check, we will typically use the special "not-equal" operator, `!=`.
+
+```{r}
+y == w
+y != w
+```
+
+## Combining Conditions
+
+We can create more complex logical conditions with the AND and OR operators: `&` and `|`.
+
+```{r}
+y == w & y < x
+y == w & y > x
+y == w | y > x
+```
+
+::: practice
+
+## Practice
+
+Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the 'weeks' object
+you created above is evenly divisible by 7.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.hint >}}
+
+Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
+
+## {{< var tab_title.solution >}}
+
+```{r}
+(6 %% 7) == 0
+```
+
+If the remainder of dividing `weeks` by 7 is zero, we know that the value of `weeks` is evenly divisible by 7.
+::::
+
+:::

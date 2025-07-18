@@ -4,10 +4,40 @@ project:
 
 website:
   title: "First Steps"
+  page-navigation: true
+  back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
         text: Home
+  sidebar:
+    style: "floating"
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: "Overview"
+      - section: tutorials/basic_commands/index.qmd
+        text: "Basic Commands"
+        contents:
+        - href: tutorials/basic_commands/fundamentals.qmd
+        - href: tutorials/basic_commands/mathematical_operators.qmd
+        - href: tutorials/basic_commands/logical_comparisons.qmd
+        - href: tutorials/basic_commands/environments.qmd
+        - href: quizzes/01_basic_commands.qmd
+          text: "Knowledge Quiz"
+      - href: tutorials/functions.qmd
+        text: "Functions"
+      - section: tutorials/packages/index.qmd
+        text: "Packages"
+        contents:
+          - href: tutorials/packages/installing.qmd
+          - href: tutorials/packages/loading.qmd
+      - section: tutorials/help/index.qmd
+        text: "Documentation"
+        contents:
+          - href: tutorials/help/sections.qmd
+          - href: tutorials/help/access.qmd
+          - href: tutorials/help/default_arguments.qmd
 
 format:
   html:
@@ -19,12 +49,21 @@ format:
     toc: true
     include-after-body: 
       - text: |
-          <script src="/js/progressive-reveal.js"></script>
+          # <script src="/js/progressive-reveal.js"></script>
           <script src="/js/bootstrapify.js"></script>
           <script src="/js/webex.js"></script>
 
+engine: knitr
+
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+    fig-align: center
+
 webr:
   channel-type: "post-message"
+  autoload-packages: false
 
 custom-callout:
   practice:
@@ -35,8 +74,6 @@ custom-callout:
     title: "Knowledge Quiz"
     icon-symbol: "fa-mortar-board"
     color: "violet"
-
-engine: knitr
 
 filters:
   - webr
