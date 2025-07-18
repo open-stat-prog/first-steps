@@ -9,7 +9,7 @@ format:
 source(here::here("R", "helpers.R"))
 ```
 Welcome to the *First Steps* module. In this module, you will take the first steps in your R programming journey by
-learning the basics of R usage. The module content is broken into three tutorials:
+learning the basics of R usage. The module content is broken into four tutorials:
 
 - [Basic Commands](/tutorials/01_basic_commands.qmd)
    - [Knowledge Quiz](/quizzes/01_basic_commands.qmd)
