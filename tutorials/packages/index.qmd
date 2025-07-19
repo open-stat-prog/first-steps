@@ -1,0 +1,23 @@
+---
+title: "Add-On Packages"
+---
+
+When you install R, you're only installing the core set of functionality. You can already do quite a lot with this
+baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided
+by add-on *packages* to complete most real-world data analyses.
+
+For example, the following list shows some common analyses for which you would typically use add-on packages (and some
+suitable packages).
+
+- Treating missing data using multiple imputation
+  - [mice](https://cran.r-project.org/web/packages/mice/index.html)
+  - [Amelia](https://cran.r-project.org/web/packages/Amelia/index.html)
+  - [mi](https://cran.r-project.org/web/packages/mi/index.html)
+- Structural equation modeling
+  - [lavaan](https://cran.r-project.org/web/packages/lavaan/index.html)
+  - [OpenMx](https://cran.r-project.org/web/packages/OpenMx/index.html)
+- Multilevel regression modeling
+  - [lme4](https://cran.r-project.org/web/packages/lme4/index.html)
+  - [nlme](https://cran.r-project.org/web/packages/nlme/index.html)
+- For all but the most trivial data processing, manipulation, and visualization, the [tidyverse](https://www.tidyverse.org/)
+packages are virtually obligatory.

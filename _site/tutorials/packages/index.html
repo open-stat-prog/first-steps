@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment – First Steps</title>
+<title>Add-On Packages – First Steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../tutorials/packages/installing.html" rel="next">
+<link href="../../tutorials/functions.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -135,7 +137,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/packages/index.html">Packages</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -202,13 +204,13 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Packages</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
@@ -257,71 +259,54 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a>
-  <ul class="collapse">
-  <li><a href="#answerlist" id="toc-answerlist" class="nav-link" data-scroll-target="#answerlist">Answerlist</a></li>
-  </ul></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
-  <ul class="collapse">
-  <li><a href="#answerlist-1" id="toc-answerlist-1" class="nav-link" data-scroll-target="#answerlist-1">Answerlist</a></li>
-  </ul></li>
-  <li><a href="#meta-information" id="toc-meta-information" class="nav-link" data-scroll-target="#meta-information">Meta-information</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Add-On Packages</h1>
+</div>
 
 
 
-<section id="question" class="level1">
-<h1>Question</h1>
-<p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<section id="answerlist" class="level2">
-<h2 class="anchored" data-anchor-id="answerlist">Answerlist</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on <em>packages</em> to complete most real-world data analyses.</p>
+<p>For example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).</p>
 <ul>
-<li><code>y &lt;- 7</code></li>
-<li><code>y &lt;- 6</code></li>
-<li><code>y = 7</code></li>
-<li><code>7 &lt;- y</code></li>
-<li><code>7 -&gt; y</code></li>
-<li><code>y == 7</code></li>
-<li><code>y |&gt; 7</code></li>
-<li><code>y &lt; 7</code></li>
-<li><code>y + 7</code></li>
-</ul>
-</section>
-</section>
-<section id="solution" class="level1">
-<h1>Solution</h1>
-<p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
-<section id="answerlist-1" class="level2">
-<h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
+<li>Treating missing data using multiple imputation
 <ul>
-<li>Correct</li>
-<li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
-<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
-<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
-<li>This is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is equal to the <code>7</code>.</li>
-<li>This is a misuse of the native R pipe operator.</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is less than <code>7</code>.</li>
-<li>This command adds the value of <code>y</code> to the value of <code>7</code> and prints the result.</li>
+<li><a href="https://cran.r-project.org/web/packages/mice/index.html">mice</a></li>
+<li><a href="https://cran.r-project.org/web/packages/Amelia/index.html">Amelia</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mi/index.html">mi</a></li>
+</ul></li>
+<li>Structural equation modeling
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan</a></li>
+<li><a href="https://cran.r-project.org/web/packages/OpenMx/index.html">OpenMx</a></li>
+</ul></li>
+<li>Multilevel regression modeling
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/lme4/index.html">lme4</a></li>
+<li><a href="https://cran.r-project.org/web/packages/nlme/index.html">nlme</a></li>
+</ul></li>
+<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="https://www.tidyverse.org/">tidyverse</a> packages are virtually obligatory.</li>
 </ul>
-</section>
-</section>
-<section id="meta-information" class="level1">
-<h1>Meta-information</h1>
-<p>exname: Assignment Operator extype: schoice exsolution: 100000000 exshuffle: 4</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -744,6 +729,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/functions.html" class="pagination-link" aria-label="Functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Functions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/packages/installing.html" class="pagination-link" aria-label="Installing Packages">
+        <span class="nav-page-text">Installing Packages</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 # <script src="../../js/progressive-reveal.js"></script>
 <script src="../../js/bootstrapify.js"></script>

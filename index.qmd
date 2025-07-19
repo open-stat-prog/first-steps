@@ -11,11 +11,11 @@ source(here::here("R", "helpers.R"))
 Welcome to the *First Steps* module. In this module, you will take the first steps in your R programming journey by
 learning the basics of R usage. The module content is broken into four tutorials:
 
-- [Basic Commands](/tutorials/01_basic_commands.qmd)
+- [Basic Commands](/tutorials/basic_commands.qmd)
    - [Knowledge Quiz](/quizzes/01_basic_commands.qmd)
-- [Functions](/tutorials/02_functions.qmd)
-- [Add-On Packages](/tutorials/03_packages.qmd)
-- [Getting Help](/tutorials/04_help.qmd)
+- [Functions](/tutorials/functions.qmd)
+- [Add-On Packages](/tutorials/packages.qmd)
+- [Getting Help](/tutorials/help.qmd)
 
 ## Learning Goals
 
@@ -48,5 +48,5 @@ Click the button below to get started with the first tutorial.
 ```{r}
 #| echo: false
 #| results: asis
-begin_buttons("/tutorials/01_basic_commands.html")
+begin_buttons("/tutorials/basic_commands.html")
 ```

@@ -134,9 +134,3 @@ Before we can make much headway on these finer points, however, we need to answe
 In the next two tutorials, you will learn about R packages (the source of most R functions) and R's documentation system
 (the means by which you will learn how to use new functions). We will revisit the finer points of calling R functions 
 when we discuss documentation.
-
-```{r}
-#| echo: false
-#| results: asis
-create_buttons("/tutorials/03_packages.html")
-```

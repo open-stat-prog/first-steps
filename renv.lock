@@ -1381,6 +1381,32 @@
       "NeedsCompilation": "no",
       "Repository": "CRAN"
     },
+    "printr": {
+      "Package": "printr",
+      "Version": "0.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Automatically Print R Objects to Appropriate Formats According to the 'knitr' Output Format",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")) )",
+      "Description": "Extends the S3 generic function knit_print() in 'knitr' to automatically print some objects using an appropriate format such as Markdown or LaTeX. For example, data frames are automatically printed as tables, and the help() pages can also be rendered in 'knitr' documents.",
+      "Imports": [
+        "knitr (>= 1.31)"
+      ],
+      "Suggests": [
+        "tools",
+        "rmarkdown"
+      ],
+      "License": "GPL",
+      "URL": "https://yihui.org/printr/",
+      "BugReports": "https://github.com/yihui/printr/issues",
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.2.3",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>)",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -1532,8 +1558,9 @@
         "bslib (>= 0.2.5.1)",
         "evaluate (>= 0.13)",
         "fontawesome (>= 0.5.0)",
-        "htmltools",
+        "htmltools (>= 0.5.1)",
         "jquerylib",
+        "jsonlite",
         "knitr (>= 1.43)",
         "methods",
         "tinytex (>= 0.31)",

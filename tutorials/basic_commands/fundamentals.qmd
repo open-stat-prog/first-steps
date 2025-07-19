@@ -1,0 +1,115 @@
+---
+title: "Fundamental Interactions"
+---
+
+## R as a Calculator
+
+Among the simplest possible commands you could execute would be using R as a very over-powered pocket calculator. In the
+examples shown below, we evaluate a few simple arithmetic expressions involving two integer values.
+ 
+```{r}
+## Add 2 and 2
+2 + 2
+
+## Subtract 6 from 14
+14 - 6
+
+## Multiply 3 and 4
+3 * 4
+
+## Divide 225 by 15
+225 / 15
+```
+
+::: practice
+
+## Practice
+
+1. Calculate the number of whole days left in the month.
+1. Calculate the number of weeks left in the month.
+   - Account for partial weeks with a decimal-valued answer.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+At time-of-writing, it's 18 July. Since July has 31 days, we get `r 31 - 18` days remaining in the month.
+
+```{r}
+31 - 18
+```
+
+To find the number of remaining weeks, I'll just divide the answer from above by 7.
+
+```{r}
+13 / 7
+```
+::::
+
+:::
+
+## Comments
+
+The comment character in R is `#`. Each commented line must be preceded by a `#` symbol. There are no block comments in
+R. Comments are not evaluated when you run your code
+
+Run the following R code to generate two integer vectors and print the results.
+
+```{webr-r}
+1:10
+2:8
+```
+
+In the following code, the expression `1:10` is "commented out", so R doesn't evaluate that line. So, running the code
+will only print the second vector.
+
+```{webr-r}
+#1:10
+2:8
+```
+
+## Assignment
+
+To do anything useful, we need to create objects that hold data. We 'assign' values to objects via the 'assignment'
+operator, `<-`.
+
+The following code assigns the values `7`, `2.5`, and `"foo"` to the objects `x`, `y`, and `z`, respectively.
+
+```{r}
+x <- 7
+y <- 2.5
+z <- "foo"
+```
+
+Notice the lack of printed output. These three commands create three new objects in your environment (`x`, `y`, `z`)
+that store the assigned data values (`7`, `2.5`, `"foo"`). However, we haven't yet asked R to do anything with those
+stored values, so we don't see any printed output.
+
+To view the contents of an object, we can evaluate the object's name without assignment.
+
+Run the following code to print the values saved as `x` and `y`.
+
+```{webr-r}
+x
+y
+```
+
+We can also create new objects by assigning them the values of existing objects.
+
+The following code creates a new object, `w`, that takes the value of the existing object `z`. When we print the value
+of `w`, you can see that it has the same value as `z`.
+
+```{r}
+w <- z
+w
+z
+```
+
+When we create `w` above, we are not replacing `z` with `w`: we're making a copy of `z` and calling that copy `w`. So, 
+both `w` and `z` are still available. In almost all cases, R will copy objects during assignment. This behavior is good
+to keep in mind when you're working with larger datasets: you can quickly flood your memory with unnecessary copies of 
+your data, if you're not careful.

@@ -1,0 +1,18 @@
+---
+title: "Basic Commands"
+---
+
+At it's most purely distilled level, all the R programming and data analysis that you will ever do reduces to evaluating
+sequences of expressions. Viewed through one more layer of abstraction, the purpose of these expressions will be to
+implement some aspect of just two tasks:
+
+1. Create a new R object
+1. Process an existing R object
+
+That's it: everything you will ever do with R can be conceptualized as some combination of those two tasks. Of course,
+I'm being intentionally pedantic. Although, the statement above is technically true, the practical complexity that can 
+arise from programmatically creating and processing abstract objects is virtually limitless.
+
+In this tutorial, we'll begin at the beginning by introducing the basic building blocks of all your future R analyses.
+We start by covering the most fundamental commands in the R programming language: the core set of commands from which
+originates all the myriad complexity R has to offer.

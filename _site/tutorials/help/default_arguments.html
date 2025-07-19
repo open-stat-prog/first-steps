@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment – First Steps</title>
+<title>Default Function Arguments – First Steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../tutorials/help/access.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,19 +104,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-quiz.callout {
   border-left-color: violet;
 }
@@ -95,8 +117,50 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
   content: '\f19d' !important;
   background-image: none;
 }
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../html/custom.scss">
 <link rel="stylesheet" href="../../html/styles.css">
@@ -135,7 +199,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/help/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../tutorials/help/default_arguments.html">Default Function Arguments</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -227,11 +291,11 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
       <div class="sidebar-item-container"> 
             <a href="../../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
@@ -246,7 +310,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Default Function Arguments</span></a>
   </div>
 </li>
@@ -262,63 +326,361 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a>
-  <ul class="collapse">
-  <li><a href="#answerlist" id="toc-answerlist" class="nav-link" data-scroll-target="#answerlist">Answerlist</a></li>
-  </ul></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
-  <ul class="collapse">
-  <li><a href="#answerlist-1" id="toc-answerlist-1" class="nav-link" data-scroll-target="#answerlist-1">Answerlist</a></li>
-  </ul></li>
-  <li><a href="#meta-information" id="toc-meta-information" class="nav-link" data-scroll-target="#meta-information">Meta-information</a></li>
+  <li><a href="#argument-ordering" id="toc-argument-ordering" class="nav-link active" data-scroll-target="#argument-ordering">Argument Ordering</a></li>
+  <li><a href="#default-values" id="toc-default-values" class="nav-link" data-scroll-target="#default-values">Default Values</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/help/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../tutorials/help/default_arguments.html">Default Function Arguments</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Default Function Arguments</h1>
+</div>
 
 
 
-<section id="question" class="level1">
-<h1>Question</h1>
-<p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<section id="answerlist" class="level2">
-<h2 class="anchored" data-anchor-id="answerlist">Answerlist</h2>
-<ul>
-<li><code>y &lt;- 7</code></li>
-<li><code>y &lt;- 6</code></li>
-<li><code>y = 7</code></li>
-<li><code>7 &lt;- y</code></li>
-<li><code>7 -&gt; y</code></li>
-<li><code>y == 7</code></li>
-<li><code>y |&gt; 7</code></li>
-<li><code>y &lt; 7</code></li>
-<li><code>y + 7</code></li>
-</ul>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>As we alluded to in the <a href="../../tutorials/functions.html">Functions Section</a>, the <em>Usage</em> section of an R documentation file provides two very important pieces of information about a function’s arguments.</p>
+<ol type="1">
+<li>The order in which the arguments are specified in the function definition.</li>
+<li>The default values of arguments for which defaults are defined.</li>
+</ol>
+<section id="argument-ordering" class="level2">
+<h2 class="anchored" data-anchor-id="argument-ordering">Argument Ordering</h2>
+<p>When you call an R function, you do not have to explicitly write out the argument names, if you supply the argument values in the order that the arguments are specified in the function definition. That’s a mouthful, so let’s look at the <code>matrix()</code> function for a concrete example.</p>
+<div class="cell" data-layout-align="center" data-printr.help.sections="[&quot;description&quot;,&quot;usage&quot;,&quot;arguments&quot;]">
+<div class="cell-output-display">
+<div class="r-help-page"><div class="container"><main>
+
+
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td>matrix</td>
+<td style="text-align: right;">R Documentation</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="anchored">Matrices</h2>
+
+<h3 class="anchored">Description</h3>
+
+<p><code>matrix</code> creates a matrix from the given set of values.
+</p>
+<p><code>as.matrix</code> attempts to turn its argument into a matrix.
+</p>
+<p><code>is.matrix</code> tests if its argument is a (strict) matrix.
+</p>
+
+
+<h3 class="anchored">Usage</h3>
+
+<pre><code class="language-R">matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,
+       dimnames = NULL)
+
+as.matrix(x, ...)
+## S3 method for class 'data.frame'
+as.matrix(x, rownames.force = NA, ...)
+
+is.matrix(x)
+</code></pre>
+
+
+<h3 class="anchored">Arguments</h3>
+
+
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true" role="presentation">
+<tbody>
+<tr class="odd">
+<td><code id="data">data</code></td>
+<td><p>an optional data vector (including a list or <code>expression</code> vector). Non-atomic classed <span class="rlang"><strong>R</strong></span> objects are coerced by <code>as.vector</code> and all attributes discarded.</p></td>
+</tr>
+<tr class="even">
+<td><code id="nrow">nrow</code></td>
+<td><p>the desired number of rows.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="ncol">ncol</code></td>
+<td><p>the desired number of columns.</p></td>
+</tr>
+<tr class="even">
+<td><code id="byrow">byrow</code></td>
+<td><p>logical. If <code>FALSE</code> (the default) the matrix is filled by columns, otherwise the matrix is filled by rows.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="dimnames">dimnames</code></td>
+<td><p>a <code>dimnames</code> attribute for the matrix: <code>NULL</code> or a <code>list</code> of length 2 giving the row and column names respectively. An empty list is treated as <code>NULL</code>, and a list of length one as row names. The list can be named, and the list names will be used as names for the dimensions.</p></td>
+</tr>
+<tr class="even">
+<td><code id="x">x</code></td>
+<td><p>an <span class="rlang"><strong>R</strong></span> object.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="...">...</code></td>
+<td><p>additional arguments to be passed to or from methods.</p></td>
+</tr>
+<tr class="even">
+<td><code id="rownames.force">rownames.force</code></td>
+<td><p>logical indicating if the resulting matrix should have character (rather than <code>NULL</code>) <code>rownames</code>. The default, <code>NA</code>, uses <code>NULL</code> rownames if the data frame has ‘automatic’ row.names or for a zero-row data frame.</p></td>
+</tr>
+</tbody>
+</table>
+
+
+</main>
+
+</div>
+</div>
+</div>
+</div>
+<p>The usage section of <code>matrix()</code>’s help file tells use that the function takes five arguments:</p>
+<ol type="1">
+<li><code>data</code></li>
+<li><code>nrow</code></li>
+<li><code>ncol</code></li>
+<li><code>byrow</code></li>
+<li><code>dimnames</code></li>
+</ol>
+<p>Furthermore, we see that these five arguments are specified in the order shown above.</p>
+<p>If we explicitly write out the names for all the arguments in our function call, we can specify the argument values in any order. Hence, the following three lines will produce equivalent results, for example.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>If we provide the argument values in the order they are specified in the function definition, we do not need to write out the argument names. So, the following function call will produce the same result as the three above.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">FALSE</span>, <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We can also mix these two approaches, but we have to provide all unamed argument values first, and provide them in the correct order. The following function calls will also produce the same results as above.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">FALSE</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We cannot, however, switch the order of any unnamed argument values. The following code will not reproduce the matrix created above.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Flip the 'nrow' and 'ncol' arguments</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">FALSE</span>, <span class="at">dimnames =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
-</section>
-<section id="solution" class="level1">
-<h1>Solution</h1>
-<p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
-<section id="answerlist-1" class="level2">
-<h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
-<ul>
-<li>Correct</li>
-<li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
-<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
-<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
-<li>This is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is equal to the <code>7</code>.</li>
-<li>This is a misuse of the native R pipe operator.</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is less than <code>7</code>.</li>
-<li>This command adds the value of <code>y</code> to the value of <code>7</code> and prints the result.</li>
-</ul>
-</section>
-</section>
-<section id="meta-information" class="level1">
-<h1>Meta-information</h1>
-<p>exname: Assignment Operator extype: schoice exsolution: 100000000 exshuffle: 4</p>
+<section id="default-values" class="level2">
+<h2 class="anchored" data-anchor-id="default-values">Default Values</h2>
+<p>When the <em>Usage</em> section shows a value assigned to a function argument, the value shown is the <em>default value</em> for that function argument. For the <code>matrix()</code> function, all five arguments have default values.</p>
+<ol type="1">
+<li><code>data = NA</code></li>
+<li><code>nrow = 1</code></li>
+<li><code>ncol = 1</code></li>
+<li><code>byrow = FALSE</code></li>
+<li><code>dimnames = NULL</code></li>
+</ol>
+<p>When a function argument has a defined default value, we do not need to specify a value for that argument in our function call: if we don’t provide an argument value, the argument takes the default value shown in the documentation.</p>
+<p>So, we could technically call the <code>matrix()</code> function without specifying any arguments.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Though, the results are rather boring. Since our function call is entirely parameterized by the default arguments, we get a <span class="math inline">\(1 \times 1\)</span> matrix containing a single missing datum.</p>
+<p>In practice, we will almost always specify some argument values, but we will frequently accept some of the default values, as well. The following is a typical example of calling the <code>matrix()</code> function.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>In the above function call, I’ve employed two common shortcuts:</p>
+<ol type="1">
+<li>I didn’t name the first argument.</li>
+<li>I only specified values for the two arguments that I wanted to adjust.</li>
+</ol>
 
 
 </section>
@@ -744,6 +1106,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/help/access.html" class="pagination-link" aria-label="Accessing Help Files">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Accessing Help Files</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 # <script src="../../js/progressive-reveal.js"></script>
 <script src="../../js/bootstrapify.js"></script>

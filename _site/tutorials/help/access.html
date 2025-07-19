@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R Functions – First Steps</title>
+<title>Accessing Help Files – First Steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,24 +57,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../tutorials/help/default_arguments.html" rel="next">
+<link href="../../tutorials/help/sections.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -380,14 +382,14 @@ iframe.qwebr-output-code-browse {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = [''];
+globalThis.qwebrInstallRPackagesList = ['dplyr'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
 
 // Check to see if we have an empty array, if we do set to skip the installation.
 globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1);
-globalThis.qwebrAutoloadRPackages = true;
+globalThis.qwebrAutoloadRPackages = false;
 
 // Display a startup message?
 globalThis.qwebrShowStartupMessage = true;
@@ -398,11 +400,11 @@ globalThis.qwebrCustomizedWebROptions = {
   "baseURL": "https://webr.r-wasm.org/v0.5.2/",
   "serviceWorkerUrl": "",
   "homedir": "/home/web_user", 
-  "channelType": "ChannelType.PostMessage"
+  "channelType": "ChannelType.Automatic"
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"(1 + 2 + 3 + 4 + 5) / 5","id":1,"options":{"results":"markup","label":"unnamed-chunk-1","comment":"","context":"interactive","out-width":"700px","out-height":"","editor-font-scale":"1","fig-cap":"","warning":"true","autorun":"false","read-only":"false","classes":"","message":"true","dpi":72,"editor-quick-suggestions":"false","fig-height":5,"editor-word-wrap":"true","output":"true","fig-width":7,"editor-max-height":""}},{"code":"mean(1:5)","id":2,"options":{"results":"markup","label":"unnamed-chunk-2","comment":"","context":"interactive","out-width":"700px","out-height":"","editor-font-scale":"1","fig-cap":"","warning":"true","autorun":"false","read-only":"false","classes":"","message":"true","dpi":72,"editor-quick-suggestions":"false","fig-height":5,"editor-word-wrap":"true","output":"true","fig-width":7,"editor-max-height":""}}];
+globalThis.qwebrCellDetails = [{"code":"?dplyr::arrange","id":1,"options":{"fig-cap":"","context":"interactive","out-height":"","fig-width":7,"dpi":72,"editor-word-wrap":"true","label":"unnamed-chunk-1","fig-height":5,"output":"true","autorun":"false","comment":"","results":"markup","editor-quick-suggestions":"false","warning":"true","editor-font-scale":"1","message":"true","editor-max-height":"","classes":"","out-width":"700px","read-only":"false"}},{"code":"help(arrange, package = \"dplyr\")","id":2,"options":{"fig-cap":"","context":"interactive","out-height":"","fig-width":7,"dpi":72,"editor-word-wrap":"true","label":"unnamed-chunk-2","fig-height":5,"output":"true","autorun":"false","comment":"","results":"markup","editor-quick-suggestions":"false","warning":"true","editor-font-scale":"1","message":"true","editor-max-height":"","classes":"","out-width":"700px","read-only":"false"}},{"code":"","id":3,"options":{"fig-cap":"","context":"interactive","out-height":"","fig-width":7,"dpi":72,"editor-word-wrap":"true","label":"unnamed-chunk-3","fig-height":5,"output":"true","autorun":"false","comment":"","results":"markup","editor-quick-suggestions":"false","warning":"true","editor-font-scale":"1","message":"true","editor-max-height":"","classes":"","out-width":"700px","read-only":"false"}}];
 
 </script>
 <script type="module">
@@ -1684,49 +1686,20 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 }
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../html/custom.scss">
-<link rel="stylesheet" href="../html/styles.css">
-<link rel="stylesheet" href="../html/webex.css">
+<link rel="stylesheet" href="../../html/custom.scss">
+<link rel="stylesheet" href="../../html/styles.css">
+<link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">First Steps</span>
     </a>
   </div>
@@ -1737,7 +1710,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -1746,22 +1719,135 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/help/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../tutorials/help/access.html">Accessing Help Files</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
-  <li><a href="#recognizing-r-functions-in-the-wild" id="toc-recognizing-r-functions-in-the-wild" class="nav-link" data-scroll-target="#recognizing-r-functions-in-the-wild">Recognizing R Functions In the Wild</a></li>
-  <li><a href="#how-functions-work" id="toc-how-functions-work" class="nav-link" data-scroll-target="#how-functions-work">How Functions Work</a></li>
-  <li><a href="#function-arguments" id="toc-function-arguments" class="nav-link" data-scroll-target="#function-arguments">Function Arguments</a></li>
-  </ul>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/basic_commands/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic Commands</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamental Interactions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/mathematical_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/logical_comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logical Comparisons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Packages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/packages/loading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Help File Sections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/access.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Accessing Help Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Default Function Arguments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -2050,9 +2136,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/help/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../tutorials/help/access.html">Accessing Help Files</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">R Functions</h1>
+<h1 class="title">Accessing Help Files</h1>
 </div>
 
 
@@ -2069,102 +2155,285 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="motivation" class="level2">
-<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
-<p>Essentially all of your R-based analyses will revolved around calling <em>functions</em> to manipulate the contents of <em>objects</em> stored in the environment and saving those modified objects as new objects.</p>
-<p>Suppose I want to calculate the average of the first five positive integers, <span class="math inline">\(\{1, 2, 3, 4, 5\}\)</span>. I could directly apply the formula for the mean using nothing but basic arithmetic operators.</p>
+<p>The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the <code>?</code> character. The following code will pull up the documentation for the <code>lm()</code> function.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can achieve the same effect by providing the function name to the <code>help()</code> function.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function’s help file comes from the package that provides the function. So, you typically cannot access the help file for a function until you’ve loaded the package that provides that function.</p>
+<p>For example, the following code will produce an error because we’re trying to access the documentation for <code>arrange()</code>, but we haven’t yet loaded the <strong>dplyr</strong> package that provides the <code>arrange()</code> function.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>?arrange</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>No documentation for 'arrange' in specified packages and libraries:
+you could try '??arrange'</code></pre>
+</div>
+</div>
+<p>We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function (and, hence, where to look for the help file). To do so, either use the <em>namespace resolution operator</em>, <code>::</code>, or provide a value for the <code>package</code> argument in the <code>help()</code> function.</p>
+<p>The following two code chunks should run without errors, because we’ve told R to search for the <code>arrange()</code> documentation in the <strong>dplyr</strong> package</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Of course, we won’t get very far with any real-world data analysis if we need to explicitly write out the formula for every single estimate we make. So, we typically call a pre-existing function to do the estimation. The following code calls the <code>mean()</code> function to calculate the average of the values contained in the numeric vector, <span class="math inline">\([1, 2, 3, 4, 5]\)</span>, that we’ve created with the <code>:</code> operator (which is also a kind of function).</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="recognizing-r-functions-in-the-wild" class="level2">
-<h2 class="anchored" data-anchor-id="recognizing-r-functions-in-the-wild">Recognizing R Functions In the Wild</h2>
-<p>You will almost always be able to quickly identify the functions in R code by the fixed pattern: <code>FUNCTION_NAME()</code>. That is, an R function is called by writing the function name followed imediately by an opening paranthesis. The following list shows some commonly encounted R functions.</p>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Access the help file for the <code>vector()</code> function.</p>
+<ol type="1">
+<li>How many arguments does the <code>vector()</code> function take?</li>
+<li>What is the default value of the <code>mode</code> argument?</li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>The <code>vector()</code> function is provided by the <strong>base</strong> package, which is loaded everytime you start R. So, you should be able to access the help file without loading any additional packages.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>According to the <em>Usage</em> section of <code>vector()</code>’s documentation,</p>
+<ol type="1">
+<li>The <code>vector()</code> function takes 2 arguments: <code>mode</code> and <code>length</code>.</li>
+<li>The default argument for <code>mode</code> is “logical”.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>?vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="r-help-page"><div class="container"><main>
+
+
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td>vector</td>
+<td style="text-align: right;">R Documentation</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="anchored">Vectors - Creation, Coercion, etc</h2>
+
+<h3 class="anchored">Description</h3>
+
+<p>A <em>vector</em> in <span class="rlang"><b>R</b></span> is either an atomic vector i.e., one of the atomic
+types, see ‘Details’, or of type (<code>typeof</code>) or mode
+<code>list</code> or <code>expression</code>.
+</p>
+<p><code>vector</code> produces a ‘simple’ vector of the given length and
+mode, where a ‘simple’ vector has no attribute, i.e., fulfills
+<code>is.null(attributes(.))</code>.
+</p>
+<p><code>as.vector</code>, a generic, attempts to coerce its argument into a
+vector of mode <code>mode</code> (the default is to coerce to whichever
+vector mode is most convenient): if the result is atomic
+(<code>is.atomic</code>), all attributes are removed.
+For <code>mode="any"</code>, see ‘Details’.
+</p>
+<p><code>is.vector(x)</code> returns <code>TRUE</code> if <code>x</code> is a vector of the
+specified mode having no attributes <em>other than names</em>.
+For <code>mode="any"</code>, see ‘Details’.
+
+</p>
+
+
+<h3 class="anchored">Usage</h3>
+
+<pre><code class="language-R">vector(mode = "logical", length = 0)
+as.vector(x, mode = "any")
+is.vector(x, mode = "any")
+</code></pre>
+
+
+<h3 class="anchored">Arguments</h3>
+
+
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true" role="presentation">
+<tbody>
+<tr class="odd">
+<td><code id="mode">mode</code></td>
+<td><p>character string naming an atomic mode or <code>"list"</code> or <code>"expression"</code> or (except for <code>vector</code>) <code>"any"</code>. Currently, <code>is.vector()</code> allows any type (see <code>typeof</code>) for <code>mode</code>, and when mode is not <code>"any"</code>, <code>is.vector(x, mode)</code> is almost the same as <code>typeof(x) == mode</code>.</p></td>
+</tr>
+<tr class="even">
+<td><code id="length">length</code></td>
+<td><p>a non-negative integer specifying the desired length. For a long vector, i.e., <code>length &gt; .Machine$integer.max</code>, it has to be of type <code>"double"</code>. Supplying an argument of length other than one is an error.</p></td>
+</tr>
+<tr class="odd">
+<td><code id="x">x</code></td>
+<td><p>an <span class="rlang"><strong>R</strong></span> object.</p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h3 class="anchored">Details</h3>
+
+<p>The atomic modes are <code>"logical"</code>, <code>"integer"</code>,
+<code>"numeric"</code> (synonym <code>"double"</code>), <code>"complex"</code>,
+<code>"character"</code> and <code>"raw"</code>.
+</p>
+<p>If <code>mode = "any"</code>, <code>is.vector</code> may return <code>TRUE</code> for
+the atomic modes, <code>list</code> and <code>expression</code>.
+For any <code>mode</code>, it will return <code>FALSE</code> if <code>x</code> has any
+attributes except names.  (This is incompatible with S.)  On the other
+hand, <code>as.vector</code> removes <em>all</em> attributes including names
+for results of atomic mode.
+</p>
+<p>For <code>mode = "any"</code>, and atomic vectors <code>x</code>, <code>as.vector(x)</code>
+strips all <code>attributes</code> (including <code>names</code>),
+returning a simple atomic vector. <br>
+However, when <code>x</code> is of type <code>"list"</code> or
+<code>"expression"</code>, <code>as.vector(x)</code> currently returns the
+argument <code>x</code> unchanged, unless there is an <code>as.vector</code> method
+for <code>class(x)</code>.
+</p>
+<p>Note that factors are <em>not</em> vectors; <code>is.vector</code> returns
+<code>FALSE</code> and <code>as.vector</code> converts a factor to a character
+vector for <code>mode = "any"</code>.
+</p>
+
+
+<h3 class="anchored">Value</h3>
+
+<p>For <code>vector</code>, a vector of the given length and mode.  Logical
+vector elements are initialized to <code>FALSE</code>, numeric vector
+elements to <code>0</code>, character vector elements to <code>""</code>, raw
+vector elements to <code>nul</code> bytes and list/expression elements to
+<code>NULL</code>.
+</p>
+<p>For <code>as.vector</code>, a vector (atomic or of type list or expression).
+All attributes are removed from the result if it is of an atomic mode,
+but not in general for a list or expression result.  The default method handles 24
+input types and 12 values of <code>type</code>: the details of most
+coercions are undocumented and subject to change.
+</p>
+<p>For <code>is.vector</code>, <code>TRUE</code> or <code>FALSE</code>.
+<code>is.vector(x, mode = "numeric")</code> can be true for vectors of types
+<code>"integer"</code> or <code>"double"</code> whereas <code>is.vector(x, mode =
+  "double")</code> can only be true for those of type <code>"double"</code>.
+</p>
+
+
+<h3 class="anchored">Methods for <code>as.vector()</code></h3>
+
+<p>Writers of methods for <code>as.vector</code> need to take care to
+follow the conventions of the default method.  In particular
+</p>
+
 <ul>
-<li><code>c()</code></li>
-<li><code>list()</code></li>
-<li><code>ls()</code></li>
-<li><code>summary()</code></li>
-<li><code>mean()</code></li>
-<li><code>lm()</code></li>
-</ul>
-<p>So, anytime you see a word followed by parenthesis in some R code, you know you’ve found a function call.</p>
-</section>
-<section id="how-functions-work" class="level2">
-<h2 class="anchored" data-anchor-id="how-functions-work">How Functions Work</h2>
-<p>In most cases, R functions work in the same way as mathematical functions:</p>
-<ol type="1">
-<li>Accept some input</li>
-<li>Perform some operation on the input</li>
-<li>Return the results of the operation</li>
-</ol>
-<p>For example, the following equation represents a linear function of <span class="math inline">\(x\)</span>.</p>
-<p><span class="math display">\[
-f(x) = 1.5 + 2x
-\]</span></p>
-<p>For any value of <span class="math inline">\(x\)</span> that we provide as input, <span class="math inline">\(f(x)\)</span> will first multiply that value by 3 and then add 1.5 to the resulting product. So, if we let <span class="math inline">\(x = 3\)</span>, we get <span class="math inline">\(f(3) = 7.5\)</span>.</p>
-<p><span class="math display">\[
-\begin{align*}
-f(3) &amp;= 1.5 + 2 \times 3\\
-&amp;= 7.5
-\end{align*}
-\]</span></p>
-<p>The <code>mean()</code> function that we used to motivate these ideas operates through the same conceptual process. In terms of a mathematical function, you can think of the R function call <code>mean(1:5)</code> as supplying the input <span class="math inline">\(x = [1, 2, 3, 4, 5]\)</span> to a function, <span class="math inline">\(f(x)\)</span>, that computes the arithmetic mean of the values in <span class="math inline">\(x\)</span>.</p>
-<p>If we let <span class="math inline">\(n\)</span> represent the number of values in <span class="math inline">\(x\)</span>, we could notate the mathematical representation of the <code>mean()</code> function as follows.</p>
-<p><span id="eq-mean"><span class="math display">\[
-\begin{align}
-f(x) = \frac{1}{n}\sum_{i = 1}^{n} x_i
-\end{align}
-\tag{1}\]</span></span></p>
-<p>In programming jargon, we would call <a href="#eq-mean" class="quarto-xref">Equation&nbsp;1</a> the <em>definition</em> of the mean function. That is, we’ve defined a tool that we can use to compute the mean of any given set of values, but we haven’t yet used that tool to compute an actual mean.</p>
-<p>To use our defined function to compute a mean, we need to apply <span class="math inline">\(f(x)\)</span> to some input, say, <span class="math inline">\(a = [1, \ldots, 5]\)</span>. After replacing the variable <span class="math inline">\(x\)</span> on the right hand side of <a href="#eq-mean" class="quarto-xref">Equation&nbsp;1</a> with the input data <span class="math inline">\(a\)</span>, we can compute the mean, <span class="math inline">\(f(a)\)</span>.</p>
-<p><span class="math display">\[
-\begin{align*}
-f(a) &amp;= \frac{1 + 2 + 3 + 4 + 5}{5}\\
-&amp;= 3
-\end{align*}
-\]</span></p>
-<p>Doing the analagous calculation in R would look like the following.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
-<p>In most of your R analyses, you won’t need to worry about defining the functions you use: that work has already been done by the developers who wrote the packages you’re using. You will usually only have to worry about preparing the inputs, calling an appropriate function, and processing the function’s output.</p>
-</section>
-<section id="function-arguments" class="level2">
-<h2 class="anchored" data-anchor-id="function-arguments">Function Arguments</h2>
-<p>When you call an R function, you will specify the function inputs by defining values for the function’s <em>arguments</em>. R function arguments are named, and most R functions have multiple arguments. You specify the argument values by writing a comma-separated list of name-value pairs between the parentheses of the function call. For example, the following code creates a vector of 100 random normal deviates, <code>dat</code>, and computes the trimmed mean of <code>dat</code> excluding the most extreme 10% of the values.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> dat, <span class="at">trim =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.024512</code></pre>
-</div>
-</div>
-<p>There are some nuances to how we specify the arguments when we call an R function. Most importantly, we don’t always need to explicitly write out the argument’s name, and we don’t necessarily need to provide a value for all arguments. Before we can make much headway on these finer points, however, we need to answer a couple unresolved questions:</p>
-<ol type="1">
-<li>Where are all these mysterious R functions defined, and how do I access new functions?</li>
-<li>How do I know a function’s arguments and what values to specify for those arguments?</li>
-</ol>
-<p>In the next two tutorials, you will learn about R packages (the source of most R functions) and R’s documentation system (the means by which you will learn how to use new functions). We will revisit the finer points of calling R functions when we discuss documentation.</p>
-<div class="cell" data-layout-align="center">
-<section id="buttons">
-<button id="continueButton" class="btn btn-primary float-start me-2">
-Continue
-</button>
-<a id="nextTopicButton" class="btn btn-danger disabled" href="../tutorials/03_packages.html" role="button">Next Topic</a> <button id="resetButton" class="btn btn-outline-warning float-end">Restart Topic</button>
-</section>
-</div>
+<li><p> Argument <code>mode</code> can be <code>"any"</code>, any of the atomic
+modes, <code>"list"</code>, <code>"expression"</code>, <code>"symbol"</code>,
+<code>"pairlist"</code> or one of the aliases <code>"double"</code> and <code>"name"</code>.
+</p>
+</li>
+<li><p> The return value should be of the appropriate mode.  For
+<code>mode = "any"</code> this means an atomic vector or list or expression.
+</p>
+</li>
+<li><p> Attributes should be treated appropriately: in particular when
+the result is an atomic vector there should be no attributes, not
+even names.
+</p>
+</li>
+<li> <p><code>is.vector(as.vector(x, m), m)</code> should be true for any
+mode <code>m</code>, including the default <code>"any"</code>.
+</p>
+<p>Currently this is not fulfilled in <span class="rlang"><b>R</b></span> when <code>m == "any"</code> and
+<code>x</code> is of type <code>list</code> or <code>expression</code> with
+attributes in addition to <code>names</code> — typically the case for
+(S3 or S4) objects (see <code>is.object</code>) which are lists
+internally.
+</p>
+</li></ul>
 
 
-</section>
 
-</main> <!-- /main -->
+<h3 class="anchored">Note</h3>
+
+<p><code>as.vector</code> and <code>is.vector</code> are quite distinct from the
+meaning of the formal class <code>"vector"</code> in the <span class="pkg">methods</span>
+package, and hence <code>as(x, "vector")</code> and
+<code>is(x, "vector")</code>.
+</p>
+<p>Note that <code>as.vector(x)</code> is not necessarily a null operation if
+<code>is.vector(x)</code> is true: any names will be removed from an atomic
+vector. 
+
+</p>
+<p>Non-vector <code>mode</code>s <code>"symbol"</code> (synonym <code>"name"</code>) and
+<code>"pairlist"</code> are accepted but have long been undocumented: they
+are used to implement <code>as.name</code> and
+<code>as.pairlist</code>, and those functions should preferably be
+used directly.  None of the description here applies to those
+<code>mode</code>s: see the help for the preferred forms.
+</p>
+
+
+<h3 class="anchored">References</h3>
+
+<p>Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)
+<em>The New S Language</em>.
+Wadsworth &amp; Brooks/Cole.
+</p>
+
+
+<h3 class="anchored">See Also</h3>
+
+<p><code>c</code>, <code>is.numeric</code>, <code>is.list</code>, etc.
+</p>
+
+
+<h3 class="anchored">Examples</h3>
+
+<pre><code class="language-R">df &lt;- data.frame(x = 1:3, y = 5:7)
+## Error:
+try(as.vector(data.frame(x = 1:3, y = 5:7), mode = "numeric"))
+
+x &lt;- c(a = 1, b = 2)
+is.vector(x)
+as.vector(x)
+all.equal(x, as.vector(x)) ## FALSE
+
+
+###-- All the following are TRUE:
+is.list(df)
+! is.vector(df)
+! is.vector(df, mode = "list")
+
+is.vector(list(), mode = "list")
+</code></pre>
+
+</main>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -2585,10 +2854,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/help/sections.html" class="pagination-link" aria-label="Help File Sections">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Help File Sections</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/help/default_arguments.html" class="pagination-link" aria-label="Default Function Arguments">
+        <span class="nav-page-text">Default Function Arguments</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<script src="../js/progressive-reveal.js"></script>
-<script src="../js/bootstrapify.js"></script>
-<script src="../js/webex.js"></script>
+# <script src="../../js/progressive-reveal.js"></script>
+<script src="../../js/bootstrapify.js"></script>
+<script src="../../js/webex.js"></script>
 <script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(

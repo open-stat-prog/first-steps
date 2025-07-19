@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./tutorials/basic_commands/index.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,7 +104,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <link rel="stylesheet" href="html/webex.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,10 +131,132 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./tutorials/basic_commands/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic Commands</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamental Interactions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/basic_commands/mathematical_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/basic_commands/logical_comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logical Comparisons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/basic_commands/environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Packages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/packages/loading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./tutorials/help/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Help File Sections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/help/access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Help Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Default Function Arguments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -160,13 +283,13 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 
 <p>Welcome to the <em>First Steps</em> module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage. The module content is broken into four tutorials:</p>
 <ul>
-<li><a href="./tutorials/01_basic_commands.html">Basic Commands</a>
+<li><a href="./tutorials/basic_commands.qmd">Basic Commands</a>
 <ul>
 <li><a href="./quizzes/01_basic_commands.html">Knowledge Quiz</a></li>
 </ul></li>
-<li><a href="./tutorials/02_functions.html">Functions</a></li>
-<li><a href="./tutorials/03_packages.html">Add-On Packages</a></li>
-<li><a href="./tutorials/04_help.html">Getting Help</a></li>
+<li><a href="./tutorials/functions.html">Functions</a></li>
+<li><a href="./tutorials/packages.qmd">Add-On Packages</a></li>
+<li><a href="./tutorials/help.qmd">Getting Help</a></li>
 </ul>
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
@@ -202,15 +325,17 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <li>Blah, blah, blah</li>
 </ol>
 <p>Click the button below to get started with the first tutorial.</p>
+<div class="cell" data-layout-align="center">
 <section id="buttons">
-<a id="beginButton" class="btn btn-danger" href="./tutorials/01_basic_commands.html" role="button"> Begin Exercises </a>
+<a id="beginButton" class="btn btn-danger" href="./tutorials/basic_commands.html" role="button"> Begin Exercises </a>
 </section>
+</div>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -631,8 +756,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./tutorials/basic_commands/index.html" class="pagination-link" aria-label="Basic Commands">
+        <span class="nav-page-text">Basic Commands</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<script src="./js/progressive-reveal.js"></script>
+# <script src="./js/progressive-reveal.js"></script>
 <script src="./js/bootstrapify.js"></script>
 <script src="./js/webex.js"></script>
 

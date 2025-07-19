@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Add-On Packages – First Steps</title>
+<title>Logical Comparisons – First Steps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,24 +57,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../tutorials/basic_commands/environments.html" rel="next">
+<link href="../../tutorials/basic_commands/mathematical_operators.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -380,7 +382,7 @@ iframe.qwebr-output-code-browse {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['dplyr', 'ggplot2'];
+globalThis.qwebrInstallRPackagesList = [''];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -398,11 +400,11 @@ globalThis.qwebrCustomizedWebROptions = {
   "baseURL": "https://webr.r-wasm.org/v0.5.2/",
   "serviceWorkerUrl": "",
   "homedir": "/home/web_user", 
-  "channelType": "ChannelType.Automatic"
+  "channelType": "ChannelType.PostMessage"
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","options":{"fig-cap":"","output":"true","classes":"","editor-quick-suggestions":"false","dpi":72,"context":"interactive","message":"true","out-width":"700px","fig-height":5,"label":"unnamed-chunk-1","autorun":"false","comment":"","results":"markup","read-only":"false","warning":"true","fig-width":7,"out-height":"","editor-word-wrap":"true","editor-max-height":"","editor-font-scale":"1"},"id":1},{"code":"ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"fig-cap":"","output":"true","classes":"","editor-quick-suggestions":"false","dpi":72,"context":"interactive","message":"true","out-width":"700px","fig-height":5,"label":"unnamed-chunk-2","autorun":"false","comment":"","results":"markup","read-only":"false","warning":"true","fig-width":7,"out-height":"","editor-word-wrap":"true","editor-max-height":"","editor-font-scale":"1"},"id":2},{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"fig-cap":"","output":"true","classes":"","editor-quick-suggestions":"false","dpi":72,"context":"interactive","message":"true","out-width":"700px","fig-height":5,"label":"unnamed-chunk-3","autorun":"false","comment":"","results":"markup","read-only":"false","warning":"true","fig-width":7,"out-height":"","editor-word-wrap":"true","editor-max-height":"","editor-font-scale":"1"},"id":3}];
+globalThis.qwebrCellDetails = [{"code":"","options":{"warning":"true","message":"true","fig-height":5,"results":"markup","fig-width":7,"fig-cap":"","editor-max-height":"","context":"interactive","comment":"","read-only":"false","editor-font-scale":"1","dpi":72,"out-width":"700px","classes":"","editor-quick-suggestions":"false","autorun":"false","output":"true","editor-word-wrap":"true","out-height":"","label":"unnamed-chunk-1"},"id":1}];
 
 </script>
 <script type="module">
@@ -1656,19 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-quiz.callout {
-  border-left-color: violet;
-}
-div.callout-quiz.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-quiz .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f19d' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1682,22 +1671,35 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
+div.callout-quiz.callout {
+  border-left-color: violet;
+}
+div.callout-quiz.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-quiz .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f19d' !important;
+  background-image: none;
+}
 </style>
 
 
-<link rel="stylesheet" href="../html/custom.scss">
-<link rel="stylesheet" href="../html/styles.css">
-<link rel="stylesheet" href="../html/webex.css">
+<link rel="stylesheet" href="../../html/custom.scss">
+<link rel="stylesheet" href="../../html/styles.css">
+<link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">First Steps</span>
     </a>
   </div>
@@ -1708,7 +1710,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -1717,18 +1719,142 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Basic Commands</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/logical_comparisons.html">Logical Comparisons</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/basic_commands/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic Commands</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamental Interactions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/mathematical_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/logical_comparisons.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Logical Comparisons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/basic_commands/environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Packages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/packages/loading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Help File Sections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Help Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Default Function Arguments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link active" data-scroll-target="#installing-packages">Installing Packages</a></li>
-  <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading Packages</a></li>
+  <li><a href="#equality" id="toc-equality" class="nav-link active" data-scroll-target="#equality">Equality</a></li>
+  <li><a href="#greaterlesser" id="toc-greaterlesser" class="nav-link" data-scroll-target="#greaterlesser">Greater/Lesser</a></li>
+  <li><a href="#logical-negation" id="toc-logical-negation" class="nav-link" data-scroll-target="#logical-negation">Logical Negation</a></li>
+  <li><a href="#combining-conditions" id="toc-combining-conditions" class="nav-link" data-scroll-target="#combining-conditions">Combining Conditions</a></li>
   </ul>
 </nav>
     </div>
@@ -2019,9 +2145,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Basic Commands</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/logical_comparisons.html">Logical Comparisons</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Add-On Packages</h1>
+<h1 class="title">Logical Comparisons</h1>
 </div>
 
 
@@ -2038,51 +2164,47 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on <em>packages</em> to complete most real-world data analyses.</p>
-<p>For example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).</p>
-<ul>
-<li>Treating missing data using multiple imputation
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/mice/index.html">mice</a></li>
-<li><a href="https://cran.r-project.org/web/packages/Amelia/index.html">Amelia</a></li>
-<li><a href="https://cran.r-project.org/web/packages/mi/index.html">mi</a></li>
-</ul></li>
-<li>Structural equation modeling
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan</a></li>
-<li><a href="https://cran.r-project.org/web/packages/OpenMx/index.html">OpenMx</a></li>
-</ul></li>
-<li>Multilevel regression modeling
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/lme4/index.html">lme4</a></li>
-<li><a href="https://cran.r-project.org/web/packages/nlme/index.html">nlme</a></li>
-</ul></li>
-<li>For all but the most trivial data processing, manipulation, and visualization, the <a href="https://www.tidyverse.org/">tidyverse</a> packages are virtually obligatory.</li>
-</ul>
-<!--------------------------------------------------------------------------------------------------------------------->
-<section id="installing-packages" class="level2 pr-chunk">
-<h2 class="anchored" data-anchor-id="installing-packages">Installing Packages</h2>
-<p>Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the <code>install.packages()</code> function. The following code will install the <strong>psych</strong> package.</p>
+<p>We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of <code>TRUE</code> whenever the tested condition is satisified and <code>FALSE</code> when the tested condition is not satisfied.</p>
+<section id="equality" class="level2">
+<h2 class="anchored" data-anchor-id="equality">Equality</h2>
+<p>The simplest logical test is an equality check. To check if two objects are equal, we use the ‘equality operator’, <code>==</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install one package</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"psych"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Define some objects to play with</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="do">### Check equality</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
 </div>
-<p>If you want to install more than one package, you simply using the concatenation function, <code>c()</code>, to define a character vector giving the names of your desired packages, as shown in the following code.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the default CRAN mirror to install two packages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"mice"</span>, <span class="st">"lavaan"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
 </div>
-<p>In the ordinary use-case, <code>install.packages()</code> will download the data needed to install a given package from the <em>Comprehensive R Archive Network</em> (CRAN). CRAN is a global network of servers (so-called CRAN mirrors) that each host a complete copy of the database of the available R packages (as well as the Base R components).</p>
-<p>Usually, you don’t need to tell R which of these CRAN mirrors to use because RStudio defines a default mirror that gets used whenever you call <code>install.pacakges()</code>. However, if you want to explicitly specify a different CRAN mirror, you can do so via the <code>repos</code> argument.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify the CRAN mirror a priori</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"lattice"</span>, <span class="st">"gridExtra"</span>), <span class="at">repos =</span> <span class="st">"http://cloud.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Similarly, you don’t usually have to tell R where you want to install new packages. If your user doesn’t have write permissions for the default library location, R will ask if you want to install the packages in a different location for which you should have suitable permissions.</p>
-<p>Sometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for employees). In such cases—or anytime you want to explicitly define the package library location—you can define the package library via the <code>lib</code> argument.</p>
+</section>
+<section id="greaterlesser" class="level2">
+<h2 class="anchored" data-anchor-id="greaterlesser">Greater/Lesser</h2>
+<p>We can also check the usual greater-than/less-than conditions with <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>, <span class="at">lib =</span> <span class="st">"../software"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> x  <span class="co"># greater than</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> x <span class="co"># greater than or equal to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> x  <span class="co"># less than</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> x <span class="co"># less than or equal to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
 </div>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2094,22 +2216,36 @@ Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Use the <code>install.packages()</code> function to install the following packages in the default location (i.e., don’t specify anything for the <code>lib</code> argument).</p>
-<ul>
-<li><code>ggplot2</code></li>
-<li><code>dplyr</code></li>
-<li><code>haven</code></li>
-</ul>
+<p>What values will the following four expressions return?</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="qwebr-insertion-location-1"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> w</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> w</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> w</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"haven"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2117,40 +2253,95 @@ Practice
 </div>
 </div>
 </section>
-<!--------------------------------------------------------------------------------------------------------------------->
-<section id="loading-packages" class="level2 pr-chunk">
-<h2 class="anchored" data-anchor-id="loading-packages">Loading Packages</h2>
-<p>Once you’ve installed a new package, you’re nearly ready to start using the functionality provided by that package, but there’s still one final step: you must <em>load</em> the package into your active R session.</p>
-<p>If you run the following code, you will get an error because we’re trying to using the <code>ggplot()</code>, <code>aes()</code>, and <code>geom_boxplot()</code> functions that are provided by the <strong>ggplot2</strong> package, but we haven’t yet loaded that package.</p>
-<div id="qwebr-insertion-location-2"></div>
+<section id="logical-negation" class="level2">
+<h2 class="anchored" data-anchor-id="logical-negation">Logical Negation</h2>
+<p>We can negate any logical condition by prepending the ‘!’ character</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p>Rather than negating an equality check, we will typically use the special “not-equal” operator, <code>!=</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">!=</span> w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</section>
+<section id="combining-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="combining-conditions">Combining Conditions</h2>
+<p>We can create more complex logical conditions with the AND and OR operators: <code>&amp;</code> and <code>|</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&lt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">|</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>An R package is really just a small piece of software. Like any other software, you only need to install a given R package once (just like you only need to install RStudio once), but you’ll need to load the package every time you want to use it in a new R session (like you need to open RStudio every time you want to use it).</p>
-<p>We load R packages with the <code>library()</code> function.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The <code>library()</code> function can only load one package at a time, so you need to call <code>library()</code> multiple times to load multiple packages.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Use <code>x %% 7</code> to calculate the remainder after dividing <code>x</code> by <code>7</code>.</p>
 </div>
-<p>Running the following code should now produce a simple plot, because we’ve loaded the <strong>ggplot2</strong> package before trying to use the functions it provides.</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">6</span> <span class="sc">%%</span> <span class="dv">7</span>) <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p>If the remainder of dividing <code>weeks</code> by 7 is zero, we know that the value of <code>weeks</code> is evenly divisible by 7.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 </section>
-<!--------------------------------------------------------------------------------------------------------------------->
-<div class="cell" data-layout-align="center">
-<section id="buttons">
-<button id="continueButton" class="btn btn-primary float-start me-2">
-Continue
-</button>
-<a id="nextTopicButton" class="btn btn-danger disabled" href="04_help.html" role="button">Next Topic</a> <button id="resetButton" class="btn btn-outline-warning float-end">Restart Topic</button>
-</section>
-</div>
 
-
-
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -2571,10 +2762,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/basic_commands/mathematical_operators.html" class="pagination-link" aria-label="Mathematical Operators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Mathematical Operators</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/basic_commands/environments.html" class="pagination-link" aria-label="Environments">
+        <span class="nav-page-text">Environments</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<script src="../js/progressive-reveal.js"></script>
-<script src="../js/bootstrapify.js"></script>
-<script src="../js/webex.js"></script>
+# <script src="../../js/progressive-reveal.js"></script>
+<script src="../../js/bootstrapify.js"></script>
+<script src="../../js/webex.js"></script>
 <script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(

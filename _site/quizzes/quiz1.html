@@ -103,7 +103,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 <link rel="stylesheet" href="../html/webex.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,7 +121,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
@@ -130,10 +130,132 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Knowledge Quiz: Basic Commands</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../tutorials/basic_commands/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic Commands</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamental Interactions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/basic_commands/mathematical_operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/basic_commands/logical_comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logical Comparisons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/basic_commands/environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Packages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/packages/loading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Help File Sections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/help/access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Help Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Default Function Arguments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
@@ -160,27 +282,29 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </header>
 
 
+<div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<div id="webex-a114f482334b431a9aabc6a36e20d7bc" class="webex-radiogroup" data-answer="OgEdBEoEFANu">
-<label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y = 7</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>7 &lt;- y</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="a114f482334b431a9aabc6a36e20d7bc"><span><code>y &lt;- 7</code></span></label>
+<div id="webex-c90cb64a96882d23d6cd2021a1e51283" class="webex-radiogroup" data-answer="OAkcU04HGFFk">
+<label><input type="radio" autocomplete="off" name="c90cb64a96882d23d6cd2021a1e51283"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="c90cb64a96882d23d6cd2021a1e51283"><span><code>y |&gt; 7</code></span></label><label><input type="radio" autocomplete="off" name="c90cb64a96882d23d6cd2021a1e51283"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="c90cb64a96882d23d6cd2021a1e51283"><span><code>7 -&gt; y</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
 <ul>
-<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
-<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
 <li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
+<li>This is a misuse of the native R pipe operator.</li>
 <li>Correct</li>
+<li>This is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.</li>
 </ul>
 </div>
 </div>
+</div>
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -602,7 +726,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script src="../js/progressive-reveal.js"></script>
+# <script src="../js/progressive-reveal.js"></script>
 <script src="../js/bootstrapify.js"></script>
 <script src="../js/webex.js"></script>
 
