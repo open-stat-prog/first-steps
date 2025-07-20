@@ -1,0 +1,17 @@
+---
+title: "Knowledge Quiz: Getting Help"
+---
+
+```{r help_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "argument_order.Rmd",
+    "default_arguments1.Rmd",
+    "default_arguments2.Rmd"
+  ),
+  edir = here::here("quizzes", "help", "questions")
+)
+```

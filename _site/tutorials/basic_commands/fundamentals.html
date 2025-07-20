@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"","options":{"message":"true","label":"unnamed-chunk-1","fig-height":5,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","autorun":"false","editor-quick-suggestions":"false","results":"markup","output":"true","read-only":"false","warning":"true","dpi":72,"comment":"","fig-cap":"","out-width":"700px","editor-max-height":"","classes":"","fig-width":7,"out-height":""}},{"id":2,"code":"1:10\n2:8","options":{"message":"true","label":"unnamed-chunk-2","fig-height":5,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","autorun":"false","editor-quick-suggestions":"false","results":"markup","output":"true","read-only":"false","warning":"true","dpi":72,"comment":"","fig-cap":"","out-width":"700px","editor-max-height":"","classes":"","fig-width":7,"out-height":""}},{"id":3,"code":"#1:10\n2:8","options":{"message":"true","label":"unnamed-chunk-3","fig-height":5,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","autorun":"false","editor-quick-suggestions":"false","results":"markup","output":"true","read-only":"false","warning":"true","dpi":72,"comment":"","fig-cap":"","out-width":"700px","editor-max-height":"","classes":"","fig-width":7,"out-height":""}},{"id":4,"code":"x\ny","options":{"message":"true","label":"unnamed-chunk-4","fig-height":5,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","autorun":"false","editor-quick-suggestions":"false","results":"markup","output":"true","read-only":"false","warning":"true","dpi":72,"comment":"","fig-cap":"","out-width":"700px","editor-max-height":"","classes":"","fig-width":7,"out-height":""}}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"","options":{"comment":"","dpi":72,"output":"true","warning":"true","results":"markup","context":"interactive","read-only":"false","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","autorun":"false","fig-height":5,"fig-width":7,"fig-cap":"","message":"true","label":"unnamed-chunk-1","classes":"","editor-font-scale":"1","out-width":"700px","editor-max-height":""}},{"id":2,"code":"1:10\n2:8","options":{"comment":"","dpi":72,"output":"true","warning":"true","results":"markup","context":"interactive","read-only":"false","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","autorun":"false","fig-height":5,"fig-width":7,"fig-cap":"","message":"true","label":"unnamed-chunk-2","classes":"","editor-font-scale":"1","out-width":"700px","editor-max-height":""}},{"id":3,"code":"#1:10\n2:8","options":{"comment":"","dpi":72,"output":"true","warning":"true","results":"markup","context":"interactive","read-only":"false","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","autorun":"false","fig-height":5,"fig-width":7,"fig-cap":"","message":"true","label":"unnamed-chunk-3","classes":"","editor-font-scale":"1","out-width":"700px","editor-max-height":""}},{"id":4,"code":"x\ny","options":{"comment":"","dpi":72,"output":"true","warning":"true","results":"markup","context":"interactive","read-only":"false","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","autorun":"false","fig-height":5,"fig-width":7,"fig-cap":"","message":"true","label":"unnamed-chunk-4","classes":"","editor-font-scale":"1","out-width":"700px","editor-max-height":""}}];
 
 </script>
 <script type="module">
@@ -1658,6 +1658,32 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
+div.callout-adv_reading.callout {
+  border-left-color: red;
+}
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-link.callout {
+  border-left-color: orange;
+}
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1671,17 +1697,17 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-quiz.callout {
+div.callout-reading.callout {
   border-left-color: violet;
 }
-div.callout-quiz.callout-style-default > .callout-header {
+div.callout-reading.callout-style-default > .callout-header {
   background-color: rgb(from violet r g b / 13%);
 }
-div.callout-quiz .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f19d' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -1692,7 +1718,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1777,27 +1803,44 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quizzes/basic_commands/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Functions</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Packages</span></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">tutorials/functions/index.qmd</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/functions/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/functions/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knoweldge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Packages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link">
@@ -1816,11 +1859,11 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
       <div class="sidebar-item-container"> 
             <a href="../../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
@@ -1841,6 +1884,12 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusion</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -1858,7 +1907,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
 <script type="module" id="qwebr-monaco-editor-init">
 
@@ -2163,9 +2212,24 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="r-as-a-calculator" class="level2">
+<section id="r-as-a-calculator" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="r-as-a-calculator">R as a Calculator</h2>
-<p>Among the simplest possible commands you could execute would be using R as a very over-powered pocket calculator. In the examples shown below, we evaluate a few simple arithmetic expressions involving two integer values.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-reading callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://r4ds.hadley.nz/workflow-basics.html#coding-basics">R4DS 2.1: Coding Basics</a></p>
+</div>
+</div>
+</div></div><p>Among the simplest possible commands you could execute would be using R as a very over-powered pocket calculator. In the examples shown below, we evaluate a few simple arithmetic expressions involving two integer values.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add 2 and 2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2233,9 +2297,24 @@ Practice
 </div>
 </div>
 </section>
-<section id="comments" class="level2">
+<section id="comments" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>The comment character in R is <code>#</code>. Each commented line must be preceded by a <code>#</code> symbol. There are no block comments in R. Comments are not evaluated when you run your code</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-reading callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://r4ds.hadley.nz/workflow-basics.html#comments">R4DS 2.2: Comments</a></p>
+</div>
+</div>
+</div></div><p>The comment character in R is <code>#</code>. Each commented line must be preceded by a <code>#</code> symbol. There are no block comments in R. Comments are not evaluated when you run your code</p>
 <p>Run the following R code to generate two integer vectors and print the results.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -2243,8 +2322,38 @@ Practice
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="assignment" class="level2">
+<section id="assignment" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-reading callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://r4ds.hadley.nz/workflow-basics.html#sec-whats-in-a-name">R4DS 2.3: Object Names</a></p>
+</div>
+</div>
+</div><div class="">
+<div class="callout callout-style-default callout-adv_reading callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Advanced Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://adv-r.hadley.nz/names-values.html#binding-basics">Advanced R 2.2: Binding Basics</a></p>
+</div>
+</div>
+</div></div>
 <p>To do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, <code>&lt;-</code>.</p>
 <p>The following code assigns the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
 <div class="cell" data-layout-align="center">
@@ -2382,6 +2491,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

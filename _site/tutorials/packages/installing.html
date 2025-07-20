@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"editor-font-scale":"1","fig-cap":"","context":"interactive","output":"true","warning":"true","editor-max-height":"","editor-quick-suggestions":"false","label":"unnamed-chunk-1","read-only":"false","dpi":72,"fig-width":7,"classes":"","out-width":"700px","message":"true","results":"markup","comment":"","editor-word-wrap":"true","autorun":"false","out-height":"","fig-height":5},"code":"","id":1}];
+globalThis.qwebrCellDetails = [{"code":"","options":{"editor-quick-suggestions":"false","out-height":"","warning":"true","results":"markup","fig-height":5,"message":"true","out-width":"700px","context":"interactive","editor-font-scale":"1","comment":"","read-only":"false","label":"unnamed-chunk-1","fig-cap":"","dpi":72,"output":"true","autorun":"false","classes":"","editor-word-wrap":"true","editor-max-height":"","fig-width":7},"id":1}];
 
 </script>
 <script type="module">
@@ -1658,6 +1658,32 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
+div.callout-link.callout {
+  border-left-color: orange;
+}
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1671,17 +1697,17 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-quiz.callout {
-  border-left-color: violet;
+div.callout-adv_reading.callout {
+  border-left-color: red;
 }
-div.callout-quiz.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-quiz .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.callout-titled .callout-icon::before {
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f19d' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -1777,27 +1803,44 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/01_basic_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quizzes/basic_commands/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/functions.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tutorials/functions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/functions/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function Basics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/functions/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knoweldge Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../tutorials/packages/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Packages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/packages/installing.html" class="sidebar-item-text sidebar-link active">
@@ -1816,11 +1859,11 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
       <div class="sidebar-item-container"> 
             <a href="../../tutorials/help/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/help/sections.html" class="sidebar-item-text sidebar-link">
@@ -1841,6 +1884,12 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusion</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -1854,6 +1903,7 @@ div.callout-quiz.callout-style-default .callout-icon::before, div.callout-quiz.c
   <li><a href="#package-repositories" id="toc-package-repositories" class="nav-link active" data-scroll-target="#package-repositories">Package Repositories</a>
   <ul class="collapse">
   <li><a href="#alternative-repositories" id="toc-alternative-repositories" class="nav-link" data-scroll-target="#alternative-repositories">Alternative Repositories</a></li>
+  <li><a href="#installing-development-versions" id="toc-installing-development-versions" class="nav-link" data-scroll-target="#installing-development-versions">Installing Development Versions</a></li>
   </ul></li>
   <li><a href="#package-libraries" id="toc-package-libraries" class="nav-link" data-scroll-target="#package-libraries">Package Libraries</a></li>
   </ul>
@@ -2185,12 +2235,19 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 <section id="alternative-repositories" class="level3">
 <h3 class="anchored" data-anchor-id="alternative-repositories">Alternative Repositories</h3>
-<p>Although doing so is not usually necessary, you can also download R packages from several other repositories, in addition to CRAN. The following are some population non-CRAN package repositories.</p>
+<p>Although doing so is not usually necessary, you can also download R packages from other repositories, in addition to CRAN. The following are some population non-CRAN package repositories.</p>
 <ul>
-<li>Bioconductor</li>
-<li>R-Universe</li>
-<li>Posit Package Manager</li>
+<li><a href="https://www.bioconductor.org/packages/release/BiocViews.html#___Software">Bioconductor</a></li>
+<li><a href="https://r-universe.dev/search">R-Universe</a></li>
 </ul>
+</section>
+<section id="installing-development-versions" class="level3">
+<h3 class="anchored" data-anchor-id="installing-development-versions">Installing Development Versions</h3>
+<p>Most R package development is done by distributed development teams who collaborate using cloud-based code repository services like <a href="https://github.com">GitHub</a>, <a href="https://gitlab.com">GitLab</a>, or <a href="https://bitbucket.com">BitBucket</a>. The <a href="https://cran.r-project.org/web/packages/remotes/index.html"><strong>remotes</strong></a> package provides several functions that install packages from these code repositories.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the development version of the mice package from GitHub</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"amices/mice"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="package-libraries" class="level2">
@@ -2198,8 +2255,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <p>Similarly, you don’t usually have to tell R where you want to install new packages. If your user doesn’t have write permissions for the default library location, R will ask if you want to install the packages in a different location for which you should have suitable permissions.</p>
 <p>Sometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for employees). In such cases—or anytime you want to explicitly define the package library location—you can define the package library via the <code>lib</code> argument.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>, <span class="at">lib =</span> <span class="st">"../software"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify a non-standard directory into which the packages will be installed</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"mvtnorm"</span>, <span class="at">lib =</span> <span class="st">"../software"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2226,7 +2283,7 @@ Practice
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"haven"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>, <span class="st">"haven"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2344,6 +2401,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

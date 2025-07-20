@@ -1,0 +1,13 @@
+---
+title: "Knowledge Quiz: Add-On Packages"
+---
+
+```{r packages_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = "install_calls.Rmd",
+  edir = here::here("quizzes", "packages", "questions")
+)
+```

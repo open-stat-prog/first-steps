@@ -1,0 +1,40 @@
+Question
+========
+Which of the following options represent R function calls?
+
+Answerlist
+----------
+* `rnorm(n = 100)`
+* `mean(x, trim = 0.1, na.rm = TRUE)`
+* `.libPaths()`
+* `"foo"`
+* `bar`
+* `y`
+* `TRUE`
+* `3.14159`
+* `Inf`
+* `NA`
+
+Solution
+========
+You can recognize a valid function call by the pattern: `FUNCTION_NAME()`.
+
+Answerlist
+----------
+* Correct. This function call would generate 100 random standard normal deviates.
+* Correct. This function call would calculate the trimmed mean of `x`, ignoring any missing values.
+* Correct. This function call will list the library paths where R will install packages on your system.
+* This is a length-one character vector.
+* This is a symbol (i.e., the name of an object).
+* This is a symbol (i.e., the name of an object).
+* This is a length-one logical vector.
+* This is a length-one numeric vector.
+* This is R's infinite value code.
+* This is R's missing value code.
+
+Meta-information
+================
+exname: Recognize Function Calls
+extype: mchoice
+exsolution: 1110000000
+exshuffle: 6

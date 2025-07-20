@@ -2,7 +2,7 @@
 title: "Default Function Arguments"
 ---
 
-```{r setup, echo = FALSE, include = FALSE}
+```{r setup, echo = FALSE, include = FALSE, cache = FALSE}
 library(printr)
 ```
 
@@ -20,6 +20,9 @@ values in the order that the arguments are specified in the function definition.
 
 ```{r, echo = FALSE, printr.help.sections = c("description", "usage", "arguments")}
 ?matrix
+```
+
+```{r, echo = FALSE, include = FALSE}
 detach("package:printr", unload = TRUE)
 ```
 

@@ -1,0 +1,29 @@
+```{r prep, echo = FALSE, results = "hide", cache = FALSE}
+## Create four possible arithmetic expressions
+x <- c(
+  "(7 - 3) * 4 - 2",
+  "(2 * 3 + 4) / 2",
+  "2 + 4 * 3 - 8",
+  "(2 + 4) * 3 - 8"
+)
+
+## Sample one expression to use for the question
+q <- sample(x, 1)
+a <- eval(rlang::parse_expr(q))
+```
+
+Question
+========
+What value will the following R code produce?
+
+`r q`
+
+Solution
+========
+By applying the appropriate order of operations, we get `r a`.
+
+Meta-information
+================
+exname: Arithmetic
+extype: num
+exsolution: `r a`

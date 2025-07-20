@@ -9,6 +9,16 @@ webr:
 The simplest way to access a function's help file is to prepend the function name (without parentheses) with the `?`
 character. The following code will pull up the documentation for the `lm()` function.
 
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 8: Getting Help](https://r4ds.hadley.nz/workflow-help.html)
+
+::::
+
+:::
+
 ```{r, eval = FALSE}
 ?lm
 ```

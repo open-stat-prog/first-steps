@@ -1,0 +1,17 @@
+---
+title: "Knowledge Quiz: Basic Commands"
+---
+
+```{r basics_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "assignment.Rmd",
+    "arithmetic.Rmd",
+    "logical.Rmd"
+  ),
+  edir = here::here("quizzes", "basic_commands", "questions")
+)
+```

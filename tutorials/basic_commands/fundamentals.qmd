@@ -4,6 +4,16 @@ title: "Fundamental Interactions"
 
 ## R as a Calculator
 
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.1: Coding Basics](https://r4ds.hadley.nz/workflow-basics.html#coding-basics)
+
+::::
+
+:::
+
 Among the simplest possible commands you could execute would be using R as a very over-powered pocket calculator. In the
 examples shown below, we evaluate a few simple arithmetic expressions involving two integer values.
  
@@ -54,6 +64,16 @@ To find the number of remaining weeks, I'll just divide the answer from above by
 
 ## Comments
 
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.2: Comments](https://r4ds.hadley.nz/workflow-basics.html#comments)
+
+::::
+
+:::
+
 The comment character in R is `#`. Each commented line must be preceded by a `#` symbol. There are no block comments in
 R. Comments are not evaluated when you run your code
 
@@ -73,6 +93,26 @@ will only print the second vector.
 ```
 
 ## Assignment
+
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.3: Object Names](https://r4ds.hadley.nz/workflow-basics.html#sec-whats-in-a-name)
+
+::::
+
+:::
+
+::: {.column-margin}
+
+:::: adv_reading
+
+[Advanced R 2.2: Binding Basics](https://adv-r.hadley.nz/names-values.html#binding-basics)
+
+::::
+
+:::
 
 To do anything useful, we need to create objects that hold data. We 'assign' values to objects via the 'assignment'
 operator, `<-`.
@@ -113,3 +153,4 @@ When we create `w` above, we are not replacing `z` with `w`: we're making a copy
 both `w` and `z` are still available. In almost all cases, R will copy objects during assignment. This behavior is good
 to keep in mind when you're working with larger datasets: you can quickly flood your memory with unnecessary copies of 
 your data, if you're not careful.
+

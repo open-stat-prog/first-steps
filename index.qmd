@@ -3,50 +3,57 @@ title: "First Steps"
 format:
   html: 
     toc: false
+    page_navigation: false
 ---
 
 ```{r include = FALSE}
 source(here::here("R", "helpers.R"))
 ```
+
 Welcome to the *First Steps* module. In this module, you will take the first steps in your R programming journey by
 learning the basics of R usage. The module content is broken into four tutorials:
 
-- [Basic Commands](/tutorials/basic_commands.qmd)
-   - [Knowledge Quiz](/quizzes/01_basic_commands.qmd)
-- [Functions](/tutorials/functions.qmd)
-- [Add-On Packages](/tutorials/packages.qmd)
-- [Getting Help](/tutorials/help.qmd)
+1. [Basic Commands](/tutorials/basic_commands/index.qmd)
+1. [R Functions](/tutorials/functions/index.qmd)
+1. [Add-On Packages](/tutorials/packages/index.qmd)
+1. [Getting Help](/tutorials/help/index.qmd)
+
+Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. After you complete
+each tutorial, you will have the opportunity to complete a knowledge quiz to check your learning.
 
 ## Learning Goals
 
+After completing this module, you will be able to:
+
 ### Basic Commands
 
-1. Blah
-1. Blah, blah
-1. Blah, blah, blah
+1. Create simple R objects
+1. Conduct simple mathematical calculations involving R objects
+1. Conduct simple logical comparisons between R objects
 
-### Functions
+### R Functions
 
-1. Blah
-1. Blah, blah
-1. Blah, blah, blah
+1. Recognize the R functions in a section of R code
+1. Give a conceptual overview of how R functions operate
+1. Call R functions to perform calculations on R objects
 
 ### Add-On Packages
 
-1. Blah
-1. Blah, blah
-1. Blah, blah, blah
+1. Explain the procedure required to install, load, and use an R package
+1. Install new R packages from a remote package repository
+1. Load an R package
+1. Use the functions provided by add-on packages
 
 ### Getting Help
 
-1. Blah
-1. Blah, blah
-1. Blah, blah, blah
+1. Access the documentation for functions provided by installed packages
+1. Explain the purpose of the sections in an R help file
+1. Use the information in an R help file to learn how to use an unfamiliar R function
 
 Click the button below to get started with the first tutorial.
 
 ```{r}
 #| echo: false
 #| results: asis
-begin_buttons("/tutorials/basic_commands.html")
+begin_buttons("/tutorials/basic_commands/index.html")
 ```

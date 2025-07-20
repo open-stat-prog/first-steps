@@ -2,18 +2,6 @@
 title: "Logical Comparisons"
 ---
 
-```{r setup, include = FALSE, message = FALSE, warning = FALSE}
-library(knitr)
-
-source(here::here("R", "helpers.R"))
-
-opts_chunk$set(message = FALSE,
-               warning = FALSE,
-               fig.align = "center",
-               fig.path = "_figures/01_basic_commands-",
-               cache.path = "_cache/01_basic_commands-")
-```
-
 We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical
 vector takes the value of `TRUE` whenever the tested condition is satisified and `FALSE` when the tested condition is
 not satisfied.

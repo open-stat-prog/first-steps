@@ -1,0 +1,22 @@
+---
+title: "R Functions"
+---
+
+Essentially all of your R-based analyses will revolved around calling *functions* to manipulate the contents of *objects*
+stored in the environment and saving those modified objects as new objects.
+
+Suppose I want to calculate the average of the first five positive integers, $\{1, 2, 3, 4, 5\}$. I could directly apply
+the formula for the mean using nothing but basic arithmetic operators.
+
+```{r}
+(1 + 2 + 3 + 4 + 5) / 5
+```
+
+Of course, we won't get very far with any real-world data analysis if we need to explicitly write out the formula for
+every single estimate we make. So, we typically call a pre-existing function to do the estimation. The following code
+calls the `mean()` function to calculate the average of the values contained in the numeric vector, $[1, 2, 3, 4, 5]$, 
+that we've created with the `:` operator (which is also a kind of function).
+
+```{r}
+mean(1:5)
+```

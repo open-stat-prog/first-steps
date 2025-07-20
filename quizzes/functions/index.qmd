@@ -1,0 +1,13 @@
+---
+title: "Knowledge Quiz: Functions"
+---
+
+```{r functions_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = "function_calls.Rmd",
+  edir = here::here("quizzes", "functions", "questions")
+)
+```

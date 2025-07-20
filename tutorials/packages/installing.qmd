@@ -38,12 +38,23 @@ install.packages(c("lattice", "gridExtra"), repos = "http://cloud.r-project.org"
 
 ### Alternative Repositories
 
-Although doing so is not usually necessary, you can also download R packages from several other repositories, in
-addition to CRAN. The following are some population non-CRAN package repositories.
+Although doing so is not usually necessary, you can also download R packages from other repositories, in addition to
+CRAN. The following are some population non-CRAN package repositories.
 
-- Bioconductor
-- R-Universe
-- Posit Package Manager
+- [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html#___Software)
+- [R-Universe](https://r-universe.dev/search)
+
+### Installing Development Versions
+
+Most R package development is done by distributed development teams who collaborate using cloud-based code repository
+services like [GitHub](https://github.com), [GitLab](https://gitlab.com), or [BitBucket](https://bitbucket.com). The 
+[**remotes**](https://cran.r-project.org/web/packages/remotes/index.html) package provides several functions that
+install packages from these code repositories.
+
+```{r}
+## Install the development version of the mice package from GitHub
+remotes::install_github("amices/mice")
+```
 
 ## Package Libraries
 

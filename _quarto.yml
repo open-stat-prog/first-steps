@@ -23,21 +23,31 @@ website:
         - href: tutorials/basic_commands/mathematical_operators.qmd
         - href: tutorials/basic_commands/logical_comparisons.qmd
         - href: tutorials/basic_commands/environments.qmd
-        - href: quizzes/01_basic_commands.qmd
+        - href: quizzes/basic_commands/index.qmd
           text: "Knowledge Quiz"
-      - href: tutorials/functions.qmd
+      - section: tutorials/functions/index.qmd
         text: "Functions"
+        contents:
+          - href: tutorials/functions/functions.qmd
+          - href: quizzes/functions/index.qmd
+            text: "Knoweldge Quiz"
       - section: tutorials/packages/index.qmd
         text: "Packages"
         contents:
           - href: tutorials/packages/installing.qmd
           - href: tutorials/packages/loading.qmd
+          - href: quizzes/packages/index.qmd
+            text: "Knowledge Quiz"
       - section: tutorials/help/index.qmd
         text: "Documentation"
         contents:
           - href: tutorials/help/sections.qmd
           - href: tutorials/help/access.qmd
           - href: tutorials/help/default_arguments.qmd
+          - href: quizzes/help/index.qmd
+            text: "Knowledge Quiz"
+      - href: tutorials/99_finish.qmd
+        text: "Conclusion"
 
 format:
   html:
@@ -47,6 +57,8 @@ format:
       - html/styles.css
       - html/webex.css
     toc: true
+    link-external-icon: true
+    link-external-newwindow: true
     include-after-body: 
       - text: |
           # <script src="/js/progressive-reveal.js"></script>
@@ -70,10 +82,22 @@ custom-callout:
     title: "Practice"
     icon-symbol: "fa-gears"
     color: "green"
-  quiz:
-    title: "Knowledge Quiz"
-    icon-symbol: "fa-mortar-board"
+  # quiz:
+  #   title: "Knowledge Quiz"
+  #   icon-symbol: "fa-mortar-board"
+  #   color: "violet"
+  reading:
+    title: "Reading"
+    icon-symbol: "fa-book-open"
     color: "violet"
+  adv_reading:
+    title: "Advanced Reading"
+    icon-symbol: "fa-book-open"
+    color: "red"
+  link:
+    title: "External Resources"
+    icon-symbol: "fa-link"
+    color: "orange"
 
 filters:
   - webr
