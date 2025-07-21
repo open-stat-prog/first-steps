@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><title>R: Order rows using column values</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+  <script type="text/javascript">
+    const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+    function processMathHTML() {
+      var l = document.getElementsByClassName('reqn');
+      for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+      return;
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" onload="processMathHTML();"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="/html/R.css" /> -->
+</head>
+<body><div class="container"><main>
+
+  <h3>Value</h3>
+
+  <p>An object of the same type as <code>.data</code>. The output has the following properties:</p>
+
+  <ul>
+    <li>
+      <p> All rows appear in the output, but (usually) in a different place.</p>
+    </li>
+    <li>
+      <p> Columns are not modified.</p>
+    </li>
+    <li>
+      <p> Groups are not modified.</p>
+    </li>
+    <li>
+      <p> Data frame attributes are preserved.</p>
+    </li>
+  </ul>
+
+</main></div></body>
+</html>
