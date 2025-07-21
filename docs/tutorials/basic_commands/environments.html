@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"warning":"true","read-only":"false","results":"markup","comment":"","fig-width":7,"fig-height":5,"out-width":"700px","autorun":"true","context":"setup","out-height":"","editor-font-scale":"1","fig-cap":"","message":"true","label":"unnamed-chunk-1","editor-quick-suggestions":"false","dpi":72,"classes":"","editor-word-wrap":"true","editor-max-height":"","output":"true"},"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38"},{"id":2,"options":{"warning":"true","read-only":"false","results":"markup","comment":"","fig-width":7,"fig-height":5,"out-width":"700px","autorun":"false","context":"interactive","out-height":"","editor-font-scale":"1","fig-cap":"","message":"true","label":"unnamed-chunk-2","editor-quick-suggestions":"false","dpi":72,"classes":"","editor-word-wrap":"true","editor-max-height":"","output":"true"},"code":""}];
+globalThis.qwebrCellDetails = [{"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","id":1,"options":{"out-height":"","fig-width":7,"message":"true","fig-cap":"","out-width":"700px","autorun":"true","editor-word-wrap":"true","fig-height":5,"editor-max-height":"","read-only":"false","classes":"","warning":"true","editor-font-scale":"1","label":"unnamed-chunk-1","output":"true","results":"markup","dpi":72,"context":"setup","editor-quick-suggestions":"false","comment":""}},{"code":"","id":2,"options":{"out-height":"","fig-width":7,"message":"true","fig-cap":"","out-width":"700px","autorun":"false","editor-word-wrap":"true","fig-height":5,"editor-max-height":"","read-only":"false","classes":"","warning":"true","editor-font-scale":"1","label":"unnamed-chunk-2","output":"true","results":"markup","dpi":72,"context":"interactive","editor-quick-suggestions":"false","comment":""}}];
 
 </script>
 <script type="module">
@@ -1658,17 +1658,17 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-link.callout {
-  border-left-color: orange;
+div.callout-adv_reading.callout {
+  border-left-color: red;
 }
-div.callout-link.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -1684,6 +1684,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-link.callout {
+  border-left-color: orange;
+}
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1695,19 +1708,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-adv_reading.callout {
-  border-left-color: red;
-}
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>

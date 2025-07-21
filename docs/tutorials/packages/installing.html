@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"label":"unnamed-chunk-1","output":"true","context":"interactive","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","fig-height":5,"editor-max-height":"","read-only":"false","warning":"true","editor-font-scale":"1","autorun":"false","results":"markup","comment":"","fig-cap":"","classes":"","dpi":72,"fig-width":7,"message":"true"}}];
+globalThis.qwebrCellDetails = [{"options":{"output":"true","label":"unnamed-chunk-1","editor-max-height":"","editor-font-scale":"1","fig-cap":"","results":"markup","editor-quick-suggestions":"false","fig-width":7,"out-height":"","comment":"","message":"true","editor-word-wrap":"true","context":"interactive","classes":"","dpi":72,"fig-height":5,"read-only":"false","warning":"true","out-width":"700px","autorun":"false"},"id":1,"code":""}];
 
 </script>
 <script type="module">
@@ -1658,6 +1658,19 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
+div.callout-adv_reading.callout {
+  border-left-color: red;
+}
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-link.callout {
   border-left-color: orange;
 }
@@ -1671,14 +1684,14 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-adv_reading.callout {
-  border-left-color: red;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -1695,19 +1708,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 </style>
