@@ -6,8 +6,8 @@ title: "Default Function Arguments"
 library(printr)
 ```
 
-As we alluded to in the [Functions Section](/tutorials/functions.qmd), the *Usage* section of an R documentation file
-provides two very important pieces of information about a function's arguments.
+As we alluded to in the [Functions Section](/tutorials/functions/functions.qmd), the *Usage* section of an R documentation
+file provides two very important pieces of information about a function's arguments.
 
 1. The order in which the arguments are specified in the function definition.
 1. The default values of arguments for which defaults are defined.

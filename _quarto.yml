@@ -7,6 +7,8 @@ website:
   page-navigation: true
   back-to-top-navigation: true
   navbar:
+    background: primary
+    foreground: dark
     left:
       - href: index.qmd
         text: Home
@@ -48,20 +50,28 @@ website:
             text: "Knowledge Quiz"
       - href: tutorials/99_finish.qmd
         text: "Conclusion"
+  page-footer:
+    left: |
+      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
+    right: 
+      - text: 2025, Open-Stat-Prog
+      - icon: github
+        href: https://github.com/open-stat-prog
+    background: primary
 
 format:
   html:
-    theme: cosmo
-    css:
+    theme:
+      - solar
       - html/custom.scss
-      - html/styles.css
+    css:
+      # - html/styles.css
       - html/webex.css
     toc: true
     link-external-icon: true
     link-external-newwindow: true
     include-after-body: 
       - text: |
-          # <script src="/js/progressive-reveal.js"></script>
           <script src="/js/bootstrapify.js"></script>
           <script src="/js/webex.js"></script>
 

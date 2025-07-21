@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"?dplyr::arrange","options":{"context":"interactive","out-width":"700px","read-only":"false","editor-font-scale":"1","autorun":"false","message":"true","classes":"","warning":"true","label":"unnamed-chunk-1","comment":"","fig-width":7,"editor-max-height":"","dpi":72,"editor-quick-suggestions":"false","fig-cap":"","results":"markup","output":"true","fig-height":5,"editor-word-wrap":"true","out-height":""},"id":1},{"code":"help(arrange, package = \"dplyr\")","options":{"context":"interactive","out-width":"700px","read-only":"false","editor-font-scale":"1","autorun":"false","message":"true","classes":"","warning":"true","label":"unnamed-chunk-2","comment":"","fig-width":7,"editor-max-height":"","dpi":72,"editor-quick-suggestions":"false","fig-cap":"","results":"markup","output":"true","fig-height":5,"editor-word-wrap":"true","out-height":""},"id":2},{"code":"","options":{"context":"interactive","out-width":"700px","read-only":"false","editor-font-scale":"1","autorun":"false","message":"true","classes":"","warning":"true","label":"unnamed-chunk-3","comment":"","fig-width":7,"editor-max-height":"","dpi":72,"editor-quick-suggestions":"false","fig-cap":"","results":"markup","output":"true","fig-height":5,"editor-word-wrap":"true","out-height":""},"id":3}];
+globalThis.qwebrCellDetails = [{"code":"?dplyr::arrange","options":{"warning":"true","context":"interactive","out-height":"","editor-word-wrap":"true","dpi":72,"results":"markup","message":"true","comment":"","fig-width":7,"editor-quick-suggestions":"false","read-only":"false","output":"true","classes":"","fig-cap":"","fig-height":5,"editor-max-height":"","out-width":"700px","label":"unnamed-chunk-1","editor-font-scale":"1","autorun":"false"},"id":1},{"code":"help(arrange, package = \"dplyr\")","options":{"warning":"true","context":"interactive","out-height":"","editor-word-wrap":"true","dpi":72,"results":"markup","message":"true","comment":"","fig-width":7,"editor-quick-suggestions":"false","read-only":"false","output":"true","classes":"","fig-cap":"","fig-height":5,"editor-max-height":"","out-width":"700px","label":"unnamed-chunk-2","editor-font-scale":"1","autorun":"false"},"id":2},{"code":"","options":{"warning":"true","context":"interactive","out-height":"","editor-word-wrap":"true","dpi":72,"results":"markup","message":"true","comment":"","fig-width":7,"editor-quick-suggestions":"false","read-only":"false","output":"true","classes":"","fig-cap":"","fig-height":5,"editor-max-height":"","out-width":"700px","label":"unnamed-chunk-3","editor-font-scale":"1","autorun":"false"},"id":3}];
 
 </script>
 <script type="module">
@@ -1713,8 +1713,6 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
 </style>
 
 
-<link rel="stylesheet" href="../../html/custom.scss">
-<link rel="stylesheet" href="../../html/styles.css">
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
@@ -1853,6 +1851,12 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
  <span class="menu-text">Loading Packages</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/packages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1880,6 +1884,12 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/help/default_arguments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Default Function Arguments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quizzes/help/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -2938,7 +2948,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-# <script src="../../js/progressive-reveal.js"></script>
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://uu.nl"><img src="../../assets/images/UU_logo_2021_EN_BLACK.png" class="img-fluid" alt="UU" width="200"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ 2025, Open-Stat-Prog
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/open-stat-prog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 <script src="../../js/bootstrapify.js"></script>
 <script src="../../js/webex.js"></script>
 <script type="module">

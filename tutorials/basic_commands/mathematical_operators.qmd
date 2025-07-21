@@ -2,7 +2,7 @@
 title: "Mathematical Operators"
 ---
 
-## Arithmetic
+## Arithmetic `y <- exp(8^2)`
 
 All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored
 in those objects are used to evaluate the expression.
