@@ -1,0 +1,155 @@
+---
+title: "Mathematical Operators"
+---
+
+## Arithmetic
+
+All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored
+in those objects are used to evaluate the expression.
+
+The following code will add, subtract, multiply, and divide the values stored as `y` and `x`.
+
+```{r}
+## First, define a few objects to use below.
+x <- 2.5
+y <- 7
+z <- 5
+
+## Show some basic arithmetic operations
+y + x
+y - x
+y * x
+y / x
+```
+
+## Powers & Roots
+
+We use the caret character, `^`, to specify exponents. The following code will square and cube the value of `y`.
+
+```{r}
+y^2
+y^3
+```
+
+The `sqrt()` function returns the square root of it's argument (i.e., the value we specify inside the parentheses). The
+following code calculates the square root of `y`.
+
+```{r}
+sqrt(y)
+```
+
+For other roots, we can use fractional exponents.
+
+```{r}
+y^(1/3) # cube root of y
+y^(1/4) # quartic root of y
+```
+
+## Other Common Operators
+
+R also includes many special functions for the most common mathematical operations.
+
+```{r}
+log(y)   # natural logarithm of y
+log10(y) # log base 10 of y
+log2(y)  # log base 2 of y
+
+exp(x) # exponentiate x
+
+y %% x # modulo: remainder after dividing y by x
+
+foo <- -3.14159
+
+round(foo, 3) # round 'foo' to 3 decimal places
+floor(foo)    # round 'foo' down to the nearest whole number
+ceiling(foo)  # round 'foo' up to the nearest whole number
+
+abs(foo) # absolute value of 'foo'
+```
+
+::: {.column-margin}
+
+:::: {.callout-note}
+
+Note that `log(y)` calculates the *natural logarithm* of `y`, $\ln(y)$. If you want the "ordinary" base-10 log, you need
+to use the `log10()` function.
+
+::::
+
+:::
+
+::: practice
+
+## Practice
+
+1. Create an object called `age` that takes the value of your age in whole years.
+1. Use the `age` object you created in above to create a second object called `weeks` that takes the value of your age
+in whole weeks.
+   - Assume 52 weeks in each year.
+   - Disregard partial years (i.e., assume every year counted in `age` contains 52 whole weeks).
+1. Print the value of `weeks`.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+At time-of-writing, I'm 38 years old. So, these would be my `age` and `weeks` objects.
+
+```{r}
+age   <- 38
+weeks <- 38 * 52
+weeks
+```
+::::
+
+:::
+
+## Order of Operations
+
+When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
+operation according to the usual PEMDAS ordering.
+
+Notice how the following two expressions produce different results.
+
+- In the first line, we first divide `x` by `z` and then add `y` to the result.
+- In the second line, we first add `x` to `y` and then divide the result by `z`.
+
+```{r}
+y + x / z
+(y + x) / z
+```
+
+::: practice
+
+## Practice
+
+Why do the following two expressions produce different answers?
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+```{r}
+y^(1/2)
+y^1/2
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+y^(1/2)
+sqrt(y)
+```
+In the first case, we're raising `y` to the power of $\frac{1}{2}$.
+
+```{r}
+y^1/2
+y/2
+```
+In the second case, we're first raising `y` to the power of 1 (which does nothing) and then dividing the result by 2.
+::::
+
+:::

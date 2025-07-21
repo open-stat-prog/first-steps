@@ -1,0 +1,100 @@
+---
+title: "Installing Packages"
+knitr:
+  opts_chunk:
+    eval: false
+---
+
+Fortunately, installing packages is very simple. In most cases, you only need to specify the name of the package that
+you want to install in the `install.packages()` function. The following code will install the **psych** package.
+
+```{r}
+## Use the default CRAN mirror to install one package
+install.packages("psych")
+```
+
+If you want to install more than one package, you simply using the concatenation function, `c()`, to define a character
+vector giving the names of your desired packages, as shown in the following code.
+
+```{r}
+## Use the default CRAN mirror to install two packages
+install.packages(c("mice", "lavaan"))
+```
+
+## Package Repositories
+
+In the ordinary use-case, `install.packages()` will download the data needed to install a given package from the 
+*Comprehensive R Archive Network* (CRAN). CRAN is a global network of servers (so-called CRAN mirrors) that each host a
+complete copy of the database of the available R packages (as well as the Base R components).
+
+Usually, you don't need to tell R which of these CRAN mirrors to use because RStudio defines a default mirror that gets
+used whenever you call `install.pacakges()`. However, if you want to explicitly specify a different CRAN mirror, you can
+do so via the `repos` argument.
+
+```{r}
+## Specify the CRAN mirror a priori
+install.packages(c("lattice", "gridExtra"), repos = "http://cloud.r-project.org")
+```
+
+### Alternative Repositories
+
+Although doing so is not usually necessary, you can also download R packages from other repositories, in addition to
+CRAN. The following are some population non-CRAN package repositories.
+
+- [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html#___Software)
+- [R-Universe](https://r-universe.dev/search)
+
+### Installing Development Versions
+
+Most R package development is done by distributed development teams who collaborate using cloud-based code repository
+services like [GitHub](https://github.com), [GitLab](https://gitlab.com), or [BitBucket](https://bitbucket.com). The 
+[**remotes**](https://cran.r-project.org/web/packages/remotes/index.html) package provides several functions that
+install packages from these code repositories.
+
+```{r}
+## Install the development version of the mice package from GitHub
+remotes::install_github("amices/mice")
+```
+
+## Package Libraries
+
+Similarly, you don't usually have to tell R where you want to install new packages. If your user doesn't have write 
+permissions for the default library location, R will ask if you want to install the packages in a different location for
+which you should have suitable permissions.
+
+Sometimes, this automatic procedure fails (e.g., on employer-administered computers with strict security settings for
+employees). In such cases---or anytime you want to explicitly define the package library location---you can define the
+package library via the `lib` argument.
+
+```{r}
+## Specify a non-standard directory into which the packages will be installed
+install.packages("mvtnorm", lib = "../software")
+```
+
+::: practice
+
+## Practice
+
+Use the `install.packages()` function to install the following packages in the default location (i.e., don't specify
+anything for the `lib` argument).
+
+- `ggplot2`
+- `dplyr`
+- `haven`
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+install.packages(c("ggplot2", "dplyr", "haven"))
+```
+
+::::
+
+:::

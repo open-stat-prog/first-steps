@@ -1,0 +1,26 @@
+---
+title: "Knowledge Quiz: Basic Commands"
+---
+
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
+```{r basics_quiz}
+#| echo: FALSE
+#| results: "asis"
+
+exams2forms::exams2forms(
+  file = list(
+    "assignment.Rmd",
+    "arithmetic.Rmd",
+    "logical.Rmd"
+  ),
+  edir = here::here("quizzes", "basic_commands", "questions")
+)
+```

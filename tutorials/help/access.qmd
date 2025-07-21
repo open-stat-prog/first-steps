@@ -1,0 +1,97 @@
+---
+title: "Accessing Help Files"
+webr:
+  packages:
+    - dplyr
+  autoload-packages: false
+---
+
+The simplest way to access a function's help file is to prepend the function name (without parentheses) with the `?`
+character. The following code will pull up the documentation for the `lm()` function.
+
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 8: Getting Help](https://r4ds.hadley.nz/workflow-help.html)
+
+::::
+
+:::
+
+```{r, eval = FALSE}
+?lm
+```
+
+You can achieve the same effect by providing the function name to the `help()` function.
+
+```{r, eval = FALSE}
+help(lm)
+help("lm")
+```
+
+A function's help file comes from the package that provides the function. So, you typically cannot access the help file
+for a function until you've loaded the package that provides that function.
+
+For example, the following code will produce an error because we're trying to access the documentation for `arrange()`,
+but we haven't yet loaded the **dplyr** package that provides the `arrange()` function.
+
+```{r, error = TRUE}
+?arrange
+```
+
+We can still access the help files for functions provided by an unloaded package, though. We just have to tell R which
+package provides the function (and, hence, where to look for the help file). To do so, either use the *namespace
+resolution operator*, `::`, or provide a value for the `package` argument in the `help()` function.
+
+The following two code chunks should run without errors, because we've told R to search for the `arrange()` documentation
+in the **dplyr** package
+
+```{webr-r}
+?dplyr::arrange
+```
+
+```{webr-r}
+help(arrange, package = "dplyr")
+```
+
+::: practice
+
+## Practice
+
+Access the help file for the `vector()` function.
+
+1. How many arguments does the `vector()` function take?
+1. What is the default value of the `mode` argument?
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.hint >}}
+
+The `vector()` function is provided by the **base** package, which is loaded every time you start R. So, you should be
+able to access the help file without loading any additional packages.
+
+## {{< var tab_title.solution >}}
+
+According to the *Usage* section of `vector()`'s documentation,
+
+1. The `vector()` function takes 2 arguments: `mode` and `length`.
+1. The default argument for `mode` is "logical".
+
+```{r, echo = FALSE, include = FALSE}
+library(printr)
+```
+
+```{r}
+?vector
+```
+
+::::
+
+:::
+
+<!--------------------------------------------------------------------------------------------------------------------->

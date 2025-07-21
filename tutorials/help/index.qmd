@@ -1,0 +1,12 @@
+---
+title: "Package Documentation"
+---
+
+Every R function provided by a Core R package or an add-on package distributed through CRAN must come with documentation
+(AKA, a help file). This documentation always follows the same general structure. Below, you see the documentation for 
+the `arrange()` function from the **dplyr** package.
+
+```{r, echo = FALSE}
+library(printr)
+?dplyr::arrange
+```

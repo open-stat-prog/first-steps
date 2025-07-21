@@ -1,0 +1,46 @@
+---
+title: "Loading Packages"
+webr:
+  packages:
+    - ggplot2
+knitr:
+  opts_chunk:
+    eval: false
+---
+
+Once you've installed a new package, you're nearly ready to start using the functionality provided by that package, but
+there's still one final step: you must *load* the package into your active R session.
+
+The following code produces an error because we're trying to using the `ggplot()`, `aes()`, and `geom_boxplot()`
+functions that are provided by the **ggplot2** package, but we haven't yet loaded that package.
+
+```{r, eval = TRUE, error = TRUE}
+ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()
+```
+
+An R package is really just a small piece of software. Like any other software, you only need to install a given R 
+package once (just like you only need to install RStudio once), but you'll need to load the package every time you want
+to use it in a new R session (like you need to open RStudio every time you want to use it).
+
+We load R packages with the `library()` function.
+
+```{r}
+library(dplyr)
+```
+
+The `library()` function can only load one package at a time, so you need to call `library()` multiple times to load 
+multiple packages.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+Running the following code should now produce a simple plot, because we're loaded the **ggplot2** package before trying
+to use the functions it provides.
+
+```{webr-r}
+library(ggplot2)
+
+ggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()
+```
