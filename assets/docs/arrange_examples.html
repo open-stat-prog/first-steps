@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><title>R: Order rows using column values</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+  <script type="text/javascript">
+    const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+    function processMathHTML() {
+      var l = document.getElementsByClassName('reqn');
+      for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+      return;
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" onload="processMathHTML();"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="/html/R.css" /> -->
+</head>
+<body><div class="container"><main>
+
+  <h3>Examples</h3>
+
+  <pre><code class='language-R'>arrange(mtcars, cyl, disp)
+arrange(mtcars, desc(disp))
+
+# grouped arrange ignores groups
+by_cyl &lt;- mtcars %&gt;% group_by(cyl)
+by_cyl %&gt;% arrange(desc(wt))
+# Unless you specifically ask:
+by_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)
+
+# use embracing when wrapping in a function;
+# see ?rlang::args_data_masking for more details
+tidy_eval_arrange &lt;- function(.data, var) {
+  .data %&gt;%
+    arrange({{ var }})
+}
+tidy_eval_arrange(mtcars, mpg)
+
+# Use `across()` or `pick()` to select columns with tidy-select
+iris %&gt;% arrange(pick(starts_with("Sepal")))
+iris %&gt;% arrange(across(starts_with("Sepal"), desc))</code></pre>
+
+</main></div></body>
+</html>
