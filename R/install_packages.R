@@ -1,6 +1,4 @@
 renv::status()
-renv::restore(exclude = "sf", repos = "https://cloud.r-project.org")
+renv::install("remotes")
 renv::update()
-renv::install("ragg", repos = "https://cloud.r-project.org")
 renv::snapshot()
-install.packages("sf", repos = "https://cloud.r-project.org")

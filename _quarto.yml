@@ -92,10 +92,6 @@ custom-callout:
     title: "Practice"
     icon-symbol: "fa-gears"
     color: "green"
-  # quiz:
-  #   title: "Knowledge Quiz"
-  #   icon-symbol: "fa-mortar-board"
-  #   color: "violet"
   reading:
     title: "Reading"
     icon-symbol: "fa-book-open"
@@ -108,6 +104,10 @@ custom-callout:
     title: "External Resources"
     icon-symbol: "fa-link"
     color: "orange"
+  # quiz:
+  #   title: "Knowledge Quiz"
+  #   icon-symbol: "fa-mortar-board"
+  #   color: "violet"
 
 filters:
   - webr

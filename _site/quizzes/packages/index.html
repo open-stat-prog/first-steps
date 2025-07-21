@@ -84,6 +84,19 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 div.callout-reading.callout {
   border-left-color: violet;
 }
@@ -110,26 +123,13 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 </style>
 
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -322,7 +322,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/packages/index.html">Packages</a></li><li class="breadcrumb-item"><a href="../../quizzes/packages/index.html">Knowledge Quiz</a></li></ol></nav>
 <div class="quarto-title">
@@ -343,21 +343,39 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </header>
 
 
-<div class="cell" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Click the check-mark button to check your answer.</li>
+<li>Click the question-mark button to see an explanation of the solution.</li>
+</ul>
+</div>
+</div>
+</div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands will install the <strong>lavaan</strong> package from CRAN?</p>
-<div id="webex-19a21fc15c0308529eb1934ead0ecc33" class="webex-checkboxgroup" data-answer="aglNAh1WTwAZU20=">
-<label><input type="checkbox" autocomplete="off" name="19a21fc15c0308529eb1934ead0ecc33"><span><code>library(lavaan)</code></span></label><label><input type="checkbox" autocomplete="off" name="19a21fc15c0308529eb1934ead0ecc33"><span><code>remotes::install_github("yrosseel/lavaan")</code></span></label><label><input type="checkbox" autocomplete="off" name="19a21fc15c0308529eb1934ead0ecc33"><span><code>install.packages("dplyr")</code></span></label><label><input type="checkbox" autocomplete="off" name="19a21fc15c0308529eb1934ead0ecc33"><span><code>install.packages("lavaan", lib = "~/R/my_packages/")</code></span></label><label><input type="checkbox" autocomplete="off" name="19a21fc15c0308529eb1934ead0ecc33"><span><code>install.packages("dplyr", repos = "https://cloud.r-project.org")</code></span></label>
+<div id="webex-acf299829deffbd3d3bcc2c9a8b7cb07" class="webex-checkboxgroup" data-answer="OlJKAhUIFAIVVDg=">
+<label><input type="checkbox" autocomplete="off" name="acf299829deffbd3d3bcc2c9a8b7cb07"><span><code>install.packages("lavaan", repos = "https://cloud.r-project.org")</code></span></label><label><input type="checkbox" autocomplete="off" name="acf299829deffbd3d3bcc2c9a8b7cb07"><span><code>library(lavaan)</code></span></label><label><input type="checkbox" autocomplete="off" name="acf299829deffbd3d3bcc2c9a8b7cb07"><span><code>install.packages("lavaan")</code></span></label><label><input type="checkbox" autocomplete="off" name="acf299829deffbd3d3bcc2c9a8b7cb07"><span><code>remotes::install_github("yrosseel/lavaan")</code></span></label><label><input type="checkbox" autocomplete="off" name="acf299829deffbd3d3bcc2c9a8b7cb07"><span><code>ls(lavaan)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>Correct: Explicitly specifying the CRAN mirror to use</li>
 <li>Wrong: Loading the package, not installing</li>
+<li>Correct: The simple case</li>
 <li>Wrong: Installing the development version of <strong>lavaan</strong> from GitHub</li>
-<li>Wrong: Installing <strong>dplyr</strong></li>
-<li>Correct: Installing from CRAN, but installing into a non-standard library location</li>
-<li>Wrong: Installing <strong>dplyr</strong></li>
+<li>Wrong: This is a misuse of the <code>ls()</code> function</li>
 </ul>
 </div>
 </div>

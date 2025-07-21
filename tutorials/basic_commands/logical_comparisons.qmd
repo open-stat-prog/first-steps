@@ -3,7 +3,7 @@ title: "Logical Comparisons"
 ---
 
 We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical
-vector takes the value of `TRUE` whenever the tested condition is satisified and `FALSE` when the tested condition is
+vector takes the value of `TRUE` whenever the tested condition is satisfied and `FALSE` when the tested condition is
 not satisfied.
 
 ## Equality
@@ -104,12 +104,18 @@ you created above is evenly divisible by 7.
 
 ## {{< var tab_title.hint >}}
 
-Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
+- Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
+- If you're getting unexpected results, consider using parentheses to ensures the intended order of operations.
+   - In R, the modulo operator, `%%`, takes precedence over arithmetic operations like multiplication.
 
 ## {{< var tab_title.solution >}}
 
+```{r, echo = FALSE, include = FALSE}
+weeks <- 38 * 52
+```
+
 ```{r}
-(6 %% 7) == 0
+(weeks %% 7) == 0
 ```
 
 If the remainder of dividing `weeks` by 7 is zero, we know that the value of `weeks` is evenly divisible by 7.

@@ -5,8 +5,8 @@ title: "Function Basics"
 ## How Functions are Named
 
 You will almost always be able to quickly identify the functions in R code by the fixed pattern: `FUNCTION_NAME()`. That
-is, an R function is called by writing the function name followed imediately by an opening paranthesis. The following list
-shows some commonly encounted R functions.
+is, an R function is called by writing the function name followed immediately by an opening parenthesis The following
+list shows some commonly encountered R functions.
 
 - `c()`
 - `list()`
@@ -67,7 +67,7 @@ f(a) &= \frac{1 + 2 + 3 + 4 + 5}{5}\\
 \end{align*}
 $$
 
-Doing the analagous calculation in R would look like the following.
+Doing the analogous calculation in R would look like the following.
 
 ```{r}
 a <- 1:5

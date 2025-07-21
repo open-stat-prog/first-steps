@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-max-height":"","read-only":"false","editor-font-scale":"1","warning":"true","output":"true","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"label":"unnamed-chunk-1","context":"interactive","message":"true","out-height":"","fig-cap":"","classes":"","editor-word-wrap":"true","fig-width":7,"autorun":"false","out-width":"700px","comment":"","results":"markup"},"code":""},{"id":2,"options":{"editor-max-height":"","read-only":"false","editor-font-scale":"1","warning":"true","output":"true","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"label":"unnamed-chunk-2","context":"interactive","message":"true","out-height":"","fig-cap":"","classes":"","editor-word-wrap":"true","fig-width":7,"autorun":"false","out-width":"700px","comment":"","results":"markup"},"code":"1:10\n2:8"},{"id":3,"options":{"editor-max-height":"","read-only":"false","editor-font-scale":"1","warning":"true","output":"true","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"label":"unnamed-chunk-3","context":"interactive","message":"true","out-height":"","fig-cap":"","classes":"","editor-word-wrap":"true","fig-width":7,"autorun":"false","out-width":"700px","comment":"","results":"markup"},"code":"#1:10\n2:8"},{"id":4,"options":{"editor-max-height":"","read-only":"false","editor-font-scale":"1","warning":"true","output":"true","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"label":"unnamed-chunk-4","context":"interactive","message":"true","out-height":"","fig-cap":"","classes":"","editor-word-wrap":"true","fig-width":7,"autorun":"false","out-width":"700px","comment":"","results":"markup"},"code":"x\ny"}];
+globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"fig-cap":"","warning":"true","fig-width":7,"message":"true","out-height":"","label":"unnamed-chunk-1","comment":"","editor-font-scale":"1","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","output":"true","fig-height":5,"classes":"","dpi":72,"autorun":"false","editor-word-wrap":"true","out-width":"700px"}},{"code":"1:10\n2:8","id":2,"options":{"fig-cap":"","warning":"true","fig-width":7,"message":"true","out-height":"","label":"unnamed-chunk-2","comment":"","editor-font-scale":"1","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","output":"true","fig-height":5,"classes":"","dpi":72,"autorun":"false","editor-word-wrap":"true","out-width":"700px"}},{"code":"#1:10\n2:8","id":3,"options":{"fig-cap":"","warning":"true","fig-width":7,"message":"true","out-height":"","label":"unnamed-chunk-3","comment":"","editor-font-scale":"1","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","output":"true","fig-height":5,"classes":"","dpi":72,"autorun":"false","editor-word-wrap":"true","out-width":"700px"}},{"code":"x <- 7\ny <- 2.5","id":4,"options":{"fig-cap":"","warning":"true","fig-width":7,"message":"true","out-height":"","label":"unnamed-chunk-4","comment":"","editor-font-scale":"1","editor-quick-suggestions":"false","context":"setup","editor-max-height":"","results":"markup","read-only":"false","output":"true","fig-height":5,"classes":"","dpi":72,"autorun":"true","editor-word-wrap":"true","out-width":"700px"}},{"code":"x\ny","id":5,"options":{"fig-cap":"","warning":"true","fig-width":7,"message":"true","out-height":"","label":"unnamed-chunk-5","comment":"","editor-font-scale":"1","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","output":"true","fig-height":5,"classes":"","dpi":72,"autorun":"false","editor-word-wrap":"true","out-width":"700px"}}];
 
 </script>
 <script type="module">
@@ -1658,19 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-link.callout {
-  border-left-color: orange;
-}
-div.callout-link.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: violet;
 }
@@ -1684,17 +1671,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-adv_reading.callout {
-  border-left-color: red;
+div.callout-link.callout {
+  border-left-color: orange;
 }
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1708,6 +1695,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-adv_reading.callout {
+  border-left-color: red;
+}
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>
@@ -2375,6 +2375,8 @@ Advanced Reading
 <p>To view the contents of an object, we can evaluate the object’s name without assignment.</p>
 <p>Run the following code to print the values saved as <code>x</code> and <code>y</code>.</p>
 <div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We can also create new objects by assigning them the values of existing objects.</p>
 <p>The following code creates a new object, <code>w</code>, that takes the value of the existing object <code>z</code>. When we print the value of <code>w</code>, you can see that it has the same value as <code>z</code>.</p>

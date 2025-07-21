@@ -80,7 +80,7 @@ The *Value* section describes the type of object returned by the function.
 
 ```
 
-The *Examples* section contains executible R code that demonstrates the function's primary use-cases.
+The *Examples* section contains executable R code that demonstrates the function's primary use-cases.
 
 ::: practice
 

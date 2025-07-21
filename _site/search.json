@@ -16,7 +16,7 @@
     "href": "tutorials/packages/index.html",
     "title": "Add-On Packages",
     "section": "",
-    "text": "When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided by add-on packages to complete most real-world data analyses.\nFor example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).\n\nTreating missing data using multiple imputation\n\nmice\nAmelia\nmi\n\nStructural equation modeling\n\nlavaan\nOpenMx\n\nMultilevel regression modeling\n\nlme4\nnlme\n\nFor all but the most trivial data processing, manipulation, and visualization, the tidyverse packages are virtually obligatory.\n\n\n\n\n Back to top",
+    "text": "When you install R, you’re only installing the core set of functionality. You can already do quite a lot with this baseline R installation (e.g., a complete linear regression analysis), but you will usually need functionality provided by add-on packages to complete most real-world data analyses.\nFor example, the following list shows some common analyses for which you would typically use add-on packages (and some suitable packages).\n\nTreating missing data using multiple imputation\n\nmice\nAmelia\nmi\n\nStructural equation modeling\n\nlavaan\nOpenMx\n\nMultilevel regression modeling\n\nlme4\nnlme\n\nFor all but the most trivial data processing, manipulation, and visualization, the tidyverse packages are virtually obligatory.\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Packages"
@@ -38,7 +38,7 @@
     "href": "tutorials/help/access.html",
     "title": "Accessing Help Files",
     "section": "",
-    "text": "The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the ? character. The following code will pull up the documentation for the lm() function.\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 8: Getting Help\n\n\n\n?lm\n\nYou can achieve the same effect by providing the function name to the help() function.\n\nhelp(lm)\nhelp(\"lm\")\n\nA function’s help file comes from the package that provides the function. So, you typically cannot access the help file for a function until you’ve loaded the package that provides that function.\nFor example, the following code will produce an error because we’re trying to access the documentation for arrange(), but we haven’t yet loaded the dplyr package that provides the arrange() function.\n\n?arrange\n\nNo documentation for 'arrange' in specified packages and libraries:\nyou could try '??arrange'\n\n\nWe can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function (and, hence, where to look for the help file). To do so, either use the namespace resolution operator, ::, or provide a value for the package argument in the help() function.\nThe following two code chunks should run without errors, because we’ve told R to search for the arrange() documentation in the dplyr package\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nPractice\n\n\n\nAccess the help file for the vector() function.\n\nHow many arguments does the vector() function take?\nWhat is the default value of the mode argument?\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThe vector() function is provided by the base package, which is loaded everytime you start R. So, you should be able to access the help file without loading any additional packages.\n\n\nAccording to the Usage section of vector()’s documentation,\n\nThe vector() function takes 2 arguments: mode and length.\nThe default argument for mode is “logical”.\n\n\n?vector\n\n\n\n\n\n\n\nvector\nR Documentation\n\n\n\n\n\nVectors - Creation, Coercion, etc\n\nDescription\n\nA vector in R is either an atomic vector i.e., one of the atomic\ntypes, see ‘Details’, or of type (typeof) or mode\nlist or expression.\n\nvector produces a ‘simple’ vector of the given length and\nmode, where a ‘simple’ vector has no attribute, i.e., fulfills\nis.null(attributes(.)).\n\nas.vector, a generic, attempts to coerce its argument into a\nvector of mode mode (the default is to coerce to whichever\nvector mode is most convenient): if the result is atomic\n(is.atomic), all attributes are removed.\nFor mode=\"any\", see ‘Details’.\n\nis.vector(x) returns TRUE if x is a vector of the\nspecified mode having no attributes other than names.\nFor mode=\"any\", see ‘Details’.\n\n\n\n\nUsage\n\nvector(mode = \"logical\", length = 0)\nas.vector(x, mode = \"any\")\nis.vector(x, mode = \"any\")\n\n\n\nArguments\n\n\n\n\n\nmode\ncharacter string naming an atomic mode or \"list\" or \"expression\" or (except for vector) \"any\". Currently, is.vector() allows any type (see typeof) for mode, and when mode is not \"any\", is.vector(x, mode) is almost the same as typeof(x) == mode.\n\n\nlength\na non-negative integer specifying the desired length. For a long vector, i.e., length &gt; .Machine$integer.max, it has to be of type \"double\". Supplying an argument of length other than one is an error.\n\n\nx\nan R object.\n\n\n\n\n\n\nDetails\n\nThe atomic modes are \"logical\", \"integer\",\n\"numeric\" (synonym \"double\"), \"complex\",\n\"character\" and \"raw\".\n\nIf mode = \"any\", is.vector may return TRUE for\nthe atomic modes, list and expression.\nFor any mode, it will return FALSE if x has any\nattributes except names.  (This is incompatible with S.)  On the other\nhand, as.vector removes all attributes including names\nfor results of atomic mode.\n\nFor mode = \"any\", and atomic vectors x, as.vector(x)\nstrips all attributes (including names),\nreturning a simple atomic vector. \nHowever, when x is of type \"list\" or\n\"expression\", as.vector(x) currently returns the\nargument x unchanged, unless there is an as.vector method\nfor class(x).\n\nNote that factors are not vectors; is.vector returns\nFALSE and as.vector converts a factor to a character\nvector for mode = \"any\".\n\n\n\nValue\n\nFor vector, a vector of the given length and mode.  Logical\nvector elements are initialized to FALSE, numeric vector\nelements to 0, character vector elements to \"\", raw\nvector elements to nul bytes and list/expression elements to\nNULL.\n\nFor as.vector, a vector (atomic or of type list or expression).\nAll attributes are removed from the result if it is of an atomic mode,\nbut not in general for a list or expression result.  The default method handles 24\ninput types and 12 values of type: the details of most\ncoercions are undocumented and subject to change.\n\nFor is.vector, TRUE or FALSE.\nis.vector(x, mode = \"numeric\") can be true for vectors of types\n\"integer\" or \"double\" whereas is.vector(x, mode =\n  \"double\") can only be true for those of type \"double\".\n\n\n\nMethods for as.vector()\n\nWriters of methods for as.vector need to take care to\nfollow the conventions of the default method.  In particular\n\n\n\n Argument mode can be \"any\", any of the atomic\nmodes, \"list\", \"expression\", \"symbol\",\n\"pairlist\" or one of the aliases \"double\" and \"name\".\n\n\n The return value should be of the appropriate mode.  For\nmode = \"any\" this means an atomic vector or list or expression.\n\n\n Attributes should be treated appropriately: in particular when\nthe result is an atomic vector there should be no attributes, not\neven names.\n\n\n is.vector(as.vector(x, m), m) should be true for any\nmode m, including the default \"any\".\n\nCurrently this is not fulfilled in R when m == \"any\" and\nx is of type list or expression with\nattributes in addition to names — typically the case for\n(S3 or S4) objects (see is.object) which are lists\ninternally.\n\n\n\n\n\nNote\n\nas.vector and is.vector are quite distinct from the\nmeaning of the formal class \"vector\" in the methods\npackage, and hence as(x, \"vector\") and\nis(x, \"vector\").\n\nNote that as.vector(x) is not necessarily a null operation if\nis.vector(x) is true: any names will be removed from an atomic\nvector. \n\n\nNon-vector modes \"symbol\" (synonym \"name\") and\n\"pairlist\" are accepted but have long been undocumented: they\nare used to implement as.name and\nas.pairlist, and those functions should preferably be\nused directly.  None of the description here applies to those\nmodes: see the help for the preferred forms.\n\n\n\nReferences\n\nBecker, R. A., Chambers, J. M. and Wilks, A. R. (1988)\nThe New S Language.\nWadsworth & Brooks/Cole.\n\n\n\nSee Also\n\nc, is.numeric, is.list, etc.\n\n\n\nExamples\n\ndf &lt;- data.frame(x = 1:3, y = 5:7)\n## Error:\ntry(as.vector(data.frame(x = 1:3, y = 5:7), mode = \"numeric\"))\n\nx &lt;- c(a = 1, b = 2)\nis.vector(x)\nas.vector(x)\nall.equal(x, as.vector(x)) ## FALSE\n\n\n###-- All the following are TRUE:\nis.list(df)\n! is.vector(df)\n! is.vector(df, mode = \"list\")\n\nis.vector(list(), mode = \"list\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "text": "The simplest way to access a function’s help file is to prepend the function name (without parentheses) with the ? character. The following code will pull up the documentation for the lm() function.\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 8: Getting Help\n\n\n\n?lm\n\nYou can achieve the same effect by providing the function name to the help() function.\n\nhelp(lm)\nhelp(\"lm\")\n\nA function’s help file comes from the package that provides the function. So, you typically cannot access the help file for a function until you’ve loaded the package that provides that function.\nFor example, the following code will produce an error because we’re trying to access the documentation for arrange(), but we haven’t yet loaded the dplyr package that provides the arrange() function.\n\n?arrange\n\nNo documentation for 'arrange' in specified packages and libraries:\nyou could try '??arrange'\n\n\nWe can still access the help files for functions provided by an unloaded package, though. We just have to tell R which package provides the function (and, hence, where to look for the help file). To do so, either use the namespace resolution operator, ::, or provide a value for the package argument in the help() function.\nThe following two code chunks should run without errors, because we’ve told R to search for the arrange() documentation in the dplyr package\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nPractice\n\n\n\nAccess the help file for the vector() function.\n\nHow many arguments does the vector() function take?\nWhat is the default value of the mode argument?\n\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThe vector() function is provided by the base package, which is loaded every time you start R. So, you should be able to access the help file without loading any additional packages.\n\n\nAccording to the Usage section of vector()’s documentation,\n\nThe vector() function takes 2 arguments: mode and length.\nThe default argument for mode is “logical”.\n\n\n?vector\n\n\n\n\n\n\n\nvector\nR Documentation\n\n\n\n\n\nVectors - Creation, Coercion, etc\n\nDescription\n\nA vector in R is either an atomic vector i.e., one of the atomic\ntypes, see ‘Details’, or of type (typeof) or mode\nlist or expression.\n\nvector produces a ‘simple’ vector of the given length and\nmode, where a ‘simple’ vector has no attribute, i.e., fulfills\nis.null(attributes(.)).\n\nas.vector, a generic, attempts to coerce its argument into a\nvector of mode mode (the default is to coerce to whichever\nvector mode is most convenient): if the result is atomic\n(is.atomic), all attributes are removed.\nFor mode=\"any\", see ‘Details’.\n\nis.vector(x) returns TRUE if x is a vector of the\nspecified mode having no attributes other than names.\nFor mode=\"any\", see ‘Details’.\n\n\n\n\nUsage\n\nvector(mode = \"logical\", length = 0)\nas.vector(x, mode = \"any\")\nis.vector(x, mode = \"any\")\n\n\n\nArguments\n\n\n\n\n\nmode\ncharacter string naming an atomic mode or \"list\" or \"expression\" or (except for vector) \"any\". Currently, is.vector() allows any type (see typeof) for mode, and when mode is not \"any\", is.vector(x, mode) is almost the same as typeof(x) == mode.\n\n\nlength\na non-negative integer specifying the desired length. For a long vector, i.e., length &gt; .Machine$integer.max, it has to be of type \"double\". Supplying an argument of length other than one is an error.\n\n\nx\nan R object.\n\n\n\n\n\n\nDetails\n\nThe atomic modes are \"logical\", \"integer\",\n\"numeric\" (synonym \"double\"), \"complex\",\n\"character\" and \"raw\".\n\nIf mode = \"any\", is.vector may return TRUE for\nthe atomic modes, list and expression.\nFor any mode, it will return FALSE if x has any\nattributes except names.  (This is incompatible with S.)  On the other\nhand, as.vector removes all attributes including names\nfor results of atomic mode.\n\nFor mode = \"any\", and atomic vectors x, as.vector(x)\nstrips all attributes (including names),\nreturning a simple atomic vector. \nHowever, when x is of type \"list\" or\n\"expression\", as.vector(x) currently returns the\nargument x unchanged, unless there is an as.vector method\nfor class(x).\n\nNote that factors are not vectors; is.vector returns\nFALSE and as.vector converts a factor to a character\nvector for mode = \"any\".\n\n\n\nValue\n\nFor vector, a vector of the given length and mode.  Logical\nvector elements are initialized to FALSE, numeric vector\nelements to 0, character vector elements to \"\", raw\nvector elements to nul bytes and list/expression elements to\nNULL.\n\nFor as.vector, a vector (atomic or of type list or expression).\nAll attributes are removed from the result if it is of an atomic mode,\nbut not in general for a list or expression result.  The default method handles 24\ninput types and 12 values of type: the details of most\ncoercions are undocumented and subject to change.\n\nFor is.vector, TRUE or FALSE.\nis.vector(x, mode = \"numeric\") can be true for vectors of types\n\"integer\" or \"double\" whereas is.vector(x, mode =\n  \"double\") can only be true for those of type \"double\".\n\n\n\nMethods for as.vector()\n\nWriters of methods for as.vector need to take care to\nfollow the conventions of the default method.  In particular\n\n\n\n Argument mode can be \"any\", any of the atomic\nmodes, \"list\", \"expression\", \"symbol\",\n\"pairlist\" or one of the aliases \"double\" and \"name\".\n\n\n The return value should be of the appropriate mode.  For\nmode = \"any\" this means an atomic vector or list or expression.\n\n\n Attributes should be treated appropriately: in particular when\nthe result is an atomic vector there should be no attributes, not\neven names.\n\n\n is.vector(as.vector(x, m), m) should be true for any\nmode m, including the default \"any\".\n\nCurrently this is not fulfilled in R when m == \"any\" and\nx is of type list or expression with\nattributes in addition to names — typically the case for\n(S3 or S4) objects (see is.object) which are lists\ninternally.\n\n\n\n\n\nNote\n\nas.vector and is.vector are quite distinct from the\nmeaning of the formal class \"vector\" in the methods\npackage, and hence as(x, \"vector\") and\nis(x, \"vector\").\n\nNote that as.vector(x) is not necessarily a null operation if\nis.vector(x) is true: any names will be removed from an atomic\nvector. \n\n\nNon-vector modes \"symbol\" (synonym \"name\") and\n\"pairlist\" are accepted but have long been undocumented: they\nare used to implement as.name and\nas.pairlist, and those functions should preferably be\nused directly.  None of the description here applies to those\nmodes: see the help for the preferred forms.\n\n\n\nReferences\n\nBecker, R. A., Chambers, J. M. and Wilks, A. R. (1988)\nThe New S Language.\nWadsworth & Brooks/Cole.\n\n\n\nSee Also\n\nc, is.numeric, is.list, etc.\n\n\n\nExamples\n\ndf &lt;- data.frame(x = 1:3, y = 5:7)\n## Error:\ntry(as.vector(data.frame(x = 1:3, y = 5:7), mode = \"numeric\"))\n\nx &lt;- c(a = 1, b = 2)\nis.vector(x)\nas.vector(x)\nall.equal(x, as.vector(x)) ## FALSE\n\n\n###-- All the following are TRUE:\nis.list(df)\n! is.vector(df)\n! is.vector(df, mode = \"list\")\n\nis.vector(list(), mode = \"list\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Documentation",
@@ -50,7 +50,7 @@
     "href": "tutorials/functions/functions.html",
     "title": "Function Basics",
     "section": "",
-    "text": "You will almost always be able to quickly identify the functions in R code by the fixed pattern: FUNCTION_NAME(). That is, an R function is called by writing the function name followed imediately by an opening paranthesis. The following list shows some commonly encounted R functions.\n\nc()\nlist()\nls()\nsummary()\nmean()\nlm()\n\nSo, anytime you see a word followed by parenthesis in some R code, you know you’ve found a function call.",
+    "text": "You will almost always be able to quickly identify the functions in R code by the fixed pattern: FUNCTION_NAME(). That is, an R function is called by writing the function name followed immediately by an opening parenthesis The following list shows some commonly encountered R functions.\n\nc()\nlist()\nls()\nsummary()\nmean()\nlm()\n\nSo, anytime you see a word followed by parenthesis in some R code, you know you’ve found a function call.",
     "crumbs": [
       "Home",
       "Functions",
@@ -62,7 +62,7 @@
     "href": "tutorials/functions/functions.html#how-functions-are-named",
     "title": "Function Basics",
     "section": "",
-    "text": "You will almost always be able to quickly identify the functions in R code by the fixed pattern: FUNCTION_NAME(). That is, an R function is called by writing the function name followed imediately by an opening paranthesis. The following list shows some commonly encounted R functions.\n\nc()\nlist()\nls()\nsummary()\nmean()\nlm()\n\nSo, anytime you see a word followed by parenthesis in some R code, you know you’ve found a function call.",
+    "text": "You will almost always be able to quickly identify the functions in R code by the fixed pattern: FUNCTION_NAME(). That is, an R function is called by writing the function name followed immediately by an opening parenthesis The following list shows some commonly encountered R functions.\n\nc()\nlist()\nls()\nsummary()\nmean()\nlm()\n\nSo, anytime you see a word followed by parenthesis in some R code, you know you’ve found a function call.",
     "crumbs": [
       "Home",
       "Functions",
@@ -74,7 +74,7 @@
     "href": "tutorials/functions/functions.html#how-functions-work",
     "title": "Function Basics",
     "section": "How Functions Work",
-    "text": "How Functions Work\nIn most cases, R functions work in the same way as mathematical functions:\n\nAccept some input\nPerform some operation on the input\nReturn the results of the operation\n\nFor example, the following equation represents a linear function of \\(x\\).\n\\[\nf(x) = 1.5 + 2x\n\\]\nFor any value of \\(x\\) that we provide as input, \\(f(x)\\) will first multiply that value by 3 and then add 1.5 to the resulting product. So, if we let \\(x = 3\\), we get \\(f(3) = 7.5\\).\n\\[\n\\begin{align*}\nf(3) &= 1.5 + 2 \\times 3\\\\\n&= 7.5\n\\end{align*}\n\\]\nThe mean() function that we used to motivate these ideas operates through the same conceptual process. In terms of a mathematical function, you can think of the R function call mean(1:5) as supplying the input \\(x = [1, 2, 3, 4, 5]\\) to a function, \\(f(x)\\), that computes the arithmetic mean of the values in \\(x\\).\nIf we let \\(n\\) represent the number of values in \\(x\\), we could notate the mathematical representation of the mean() function as follows.\n\\[\n\\begin{align}\nf(x) = \\frac{1}{n}\\sum_{i = 1}^{n} x_i\n\\end{align}\n\\tag{1}\\]\nIn programming jargon, we would call Equation 1 the definition of the mean function. That is, we’ve defined a tool that we can use to compute the mean of any given set of values, but we haven’t yet used that tool to compute an actual mean.\nTo use our defined function to compute a mean, we need to apply \\(f(x)\\) to some input, say, \\(a = [1, \\ldots, 5]\\). After replacing the variable \\(x\\) on the right hand side of Equation 1 with the input data \\(a\\), we can compute the mean, \\(f(a)\\).\n\\[\n\\begin{align*}\nf(a) &= \\frac{1 + 2 + 3 + 4 + 5}{5}\\\\\n&= 3\n\\end{align*}\n\\]\nDoing the analagous calculation in R would look like the following.\n\na &lt;- 1:5\nmean(a)\n\n[1] 3\n\n\nIn most of your R analyses, you won’t need to worry about defining the functions you use: that work has already been done by the developers who wrote the packages you’re using. You will usually only have to worry about preparing the inputs, calling an appropriate function, and processing the function’s output.",
+    "text": "How Functions Work\nIn most cases, R functions work in the same way as mathematical functions:\n\nAccept some input\nPerform some operation on the input\nReturn the results of the operation\n\nFor example, the following equation represents a linear function of \\(x\\).\n\\[\nf(x) = 1.5 + 2x\n\\]\nFor any value of \\(x\\) that we provide as input, \\(f(x)\\) will first multiply that value by 3 and then add 1.5 to the resulting product. So, if we let \\(x = 3\\), we get \\(f(3) = 7.5\\).\n\\[\n\\begin{align*}\nf(3) &= 1.5 + 2 \\times 3\\\\\n&= 7.5\n\\end{align*}\n\\]\nThe mean() function that we used to motivate these ideas operates through the same conceptual process. In terms of a mathematical function, you can think of the R function call mean(1:5) as supplying the input \\(x = [1, 2, 3, 4, 5]\\) to a function, \\(f(x)\\), that computes the arithmetic mean of the values in \\(x\\).\nIf we let \\(n\\) represent the number of values in \\(x\\), we could notate the mathematical representation of the mean() function as follows.\n\\[\n\\begin{align}\nf(x) = \\frac{1}{n}\\sum_{i = 1}^{n} x_i\n\\end{align}\n\\tag{1}\\]\nIn programming jargon, we would call Equation 1 the definition of the mean function. That is, we’ve defined a tool that we can use to compute the mean of any given set of values, but we haven’t yet used that tool to compute an actual mean.\nTo use our defined function to compute a mean, we need to apply \\(f(x)\\) to some input, say, \\(a = [1, \\ldots, 5]\\). After replacing the variable \\(x\\) on the right hand side of Equation 1 with the input data \\(a\\), we can compute the mean, \\(f(a)\\).\n\\[\n\\begin{align*}\nf(a) &= \\frac{1 + 2 + 3 + 4 + 5}{5}\\\\\n&= 3\n\\end{align*}\n\\]\nDoing the analogous calculation in R would look like the following.\n\na &lt;- 1:5\nmean(a)\n\n[1] 3\n\n\nIn most of your R analyses, you won’t need to worry about defining the functions you use: that work has already been done by the developers who wrote the packages you’re using. You will usually only have to worry about preparing the inputs, calling an appropriate function, and processing the function’s output.",
     "crumbs": [
       "Home",
       "Functions",
@@ -86,7 +86,7 @@
     "href": "tutorials/functions/functions.html#calling-functions",
     "title": "Function Basics",
     "section": "Calling Functions",
-    "text": "Calling Functions\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2.4: Calling Functions\n\n\nWhen you call an R function, you will specify the function inputs by defining values for the function’s arguments. R function arguments are named, and most R functions have multiple arguments. You specify the argument values by writing a comma-separated list of name-value pairs between the parentheses of the function call. For example, the following code creates a vector of 100 random normal deviates, dat, and computes the trimmed mean of dat excluding the most extreme 10% of the values.\n\ndat &lt;- rnorm(n = 100)\nmean(x = dat, trim = 0.05)\n\n[1] -0.1063864\n\n\nThere are some nuances to how we specify the arguments when we call an R function. Most importantly, we don’t always need to explicitly write out the argument’s name, and we don’t necessarily need to provide a value for all arguments. Before we can make much headway on these finer points, however, we need to answer a couple unresolved questions:\n\nWhere are all these mysterious R functions defined, and how do I access new functions?\nHow do I know a function’s arguments and what values to specify for those arguments?\n\nIn the next two tutorials, you will learn about R packages (the source of most R functions) and R’s documentation system (the means by which you will learn how to use new functions). We will revisit the finer points of calling R functions when we discuss documentation.",
+    "text": "Calling Functions\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2.4: Calling Functions\n\n\nWhen you call an R function, you will specify the function inputs by defining values for the function’s arguments. R function arguments are named, and most R functions have multiple arguments. You specify the argument values by writing a comma-separated list of name-value pairs between the parentheses of the function call. For example, the following code creates a vector of 100 random normal deviates, dat, and computes the trimmed mean of dat excluding the most extreme 10% of the values.\n\ndat &lt;- rnorm(n = 100)\nmean(x = dat, trim = 0.05)\n\n[1] -0.06403451\n\n\nThere are some nuances to how we specify the arguments when we call an R function. Most importantly, we don’t always need to explicitly write out the argument’s name, and we don’t necessarily need to provide a value for all arguments. Before we can make much headway on these finer points, however, we need to answer a couple unresolved questions:\n\nWhere are all these mysterious R functions defined, and how do I access new functions?\nHow do I know a function’s arguments and what values to specify for those arguments?\n\nIn the next two tutorials, you will learn about R packages (the source of most R functions) and R’s documentation system (the means by which you will learn how to use new functions). We will revisit the finer points of calling R functions when we discuss documentation.",
     "crumbs": [
       "Home",
       "Functions",
@@ -98,7 +98,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html",
     "title": "Logical Comparisons",
     "section": "",
-    "text": "We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of TRUE whenever the tested condition is satisified and FALSE when the tested condition is not satisfied.",
+    "text": "We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of TRUE whenever the tested condition is satisfied and FALSE when the tested condition is not satisfied.",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -146,7 +146,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html#combining-conditions",
     "title": "Logical Comparisons",
     "section": "Combining Conditions",
-    "text": "Combining Conditions\nWe can create more complex logical conditions with the AND and OR operators: & and |.\n\ny == w & y &lt; x\n\n[1] TRUE\n\ny == w & y &gt; x\n\n[1] FALSE\n\ny == w | y &gt; x\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nUse x %% 7 to calculate the remainder after dividing x by 7.\n\n\n\n(6 %% 7) == 0\n\n[1] FALSE\n\n\nIf the remainder of dividing weeks by 7 is zero, we know that the value of weeks is evenly divisible by 7.",
+    "text": "Combining Conditions\nWe can create more complex logical conditions with the AND and OR operators: & and |.\n\ny == w & y &lt; x\n\n[1] TRUE\n\ny == w & y &gt; x\n\n[1] FALSE\n\ny == w | y &gt; x\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the ‘weeks’ object you created above is evenly divisible by 7.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nUse x %% 7 to calculate the remainder after dividing x by 7.\nIf you’re getting unexpected results, consider using parentheses to ensures the intended order of operations.\n\nIn R, the modulo operator, %%, takes precedence over arithmetic operations like multiplication.\n\n\n\n\n\n(weeks %% 7) == 0\n\n[1] FALSE\n\n\nIf the remainder of dividing weeks by 7 is zero, we know that the value of weeks is evenly divisible by 7.",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -194,7 +194,7 @@
     "href": "tutorials/basic_commands/fundamentals.html#assignment",
     "title": "Fundamental Interactions",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2.3: Object Names\n\n\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\n\nTo do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, &lt;-.\nThe following code assigns the values 7, 2.5, and \"foo\" to the objects x, y, and z, respectively.\n\nx &lt;- 7\ny &lt;- 2.5\nz &lt;- \"foo\"\n\nNotice the lack of printed output. These three commands create three new objects in your environment (x, y, z) that store the assigned data values (7, 2.5, \"foo\"). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.\nTo view the contents of an object, we can evaluate the object’s name without assignment.\nRun the following code to print the values saved as x and y.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] \"foo\"\n\nz\n\n[1] \"foo\"\n\n\nWhen we create w above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.",
+    "text": "Assignment\n\n\n\n\n\n\n\n\nReading\n\n\n\nR4DS 2.3: Object Names\n\n\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\n\nTo do anything useful, we need to create objects that hold data. We ‘assign’ values to objects via the ‘assignment’ operator, &lt;-.\nThe following code assigns the values 7, 2.5, and \"foo\" to the objects x, y, and z, respectively.\n\nx &lt;- 7\ny &lt;- 2.5\nz &lt;- \"foo\"\n\nNotice the lack of printed output. These three commands create three new objects in your environment (x, y, z) that store the assigned data values (7, 2.5, \"foo\"). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.\nTo view the contents of an object, we can evaluate the object’s name without assignment.\nRun the following code to print the values saved as x and y.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] \"foo\"\n\nz\n\n[1] \"foo\"\n\n\nWhen we create w above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -204,9 +204,31 @@
   {
     "objectID": "tutorials/99_finish.html",
     "href": "tutorials/99_finish.html",
-    "title": "The End",
+    "title": "Conclusion",
     "section": "",
-    "text": "Congratulations! You’ve finished this module!\n\n\n\n Back to top",
+    "text": "Congratulations! You’ve completed the First Steps module!",
+    "crumbs": [
+      "Home",
+      "Conclusion"
+    ]
+  },
+  {
+    "objectID": "tutorials/99_finish.html#learning-goals",
+    "href": "tutorials/99_finish.html#learning-goals",
+    "title": "Conclusion",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nNow that you’ve completing this module, you should be able to:\n\nBasic Commands\n\nCreate simple R objects\nConduct simple mathematical calculations involving R objects\nConduct simple logical comparisons between R objects\n\n\n\nR Functions\n\nRecognize the R functions in a section of R code\nGive a conceptual overview of how R functions operate\nCall R functions to perform calculations on R objects\n\n\n\nAdd-On Packages\n\nExplain the procedure required to install, load, and use an R package\nInstall new R packages from a remote package repository\nLoad an R package\nUse the functions provided by add-on packages\n\n\n\nGetting Help\n\nAccess the documentation for functions provided by installed packages\nExplain the purpose of the sections in an R help file\nUse the information in an R help file to learn how to use an unfamiliar R function",
+    "crumbs": [
+      "Home",
+      "Conclusion"
+    ]
+  },
+  {
+    "objectID": "tutorials/99_finish.html#next-steps",
+    "href": "tutorials/99_finish.html#next-steps",
+    "title": "Conclusion",
+    "section": "Next Steps",
+    "text": "Next Steps\nIf you want to continue with your R learning journey, we recommend following the Data Types module next. Click the button below to start the next module.\n\n\n Next Module",
     "crumbs": [
       "Home",
       "Conclusion"
@@ -217,7 +239,7 @@
     "href": "quizzes/packages/index.html",
     "title": "Knowledge Quiz: Add-On Packages",
     "section": "",
-    "text": "Which of the following commands will install the lavaan package from CRAN?\n\nlibrary(lavaan)remotes::install_github(\"yrosseel/lavaan\")install.packages(\"dplyr\")install.packages(\"lavaan\", lib = \"~/R/my_packages/\")install.packages(\"dplyr\", repos = \"https://cloud.r-project.org\")\n\n\n\n\nWrong: Loading the package, not installing\nWrong: Installing the development version of lavaan from GitHub\nWrong: Installing dplyr\nCorrect: Installing from CRAN, but installing into a non-standard library location\nWrong: Installing dplyr\n\n\n\n\n\n\n\n Back to top",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich of the following commands will install the lavaan package from CRAN?\n\ninstall.packages(\"lavaan\", repos = \"https://cloud.r-project.org\")library(lavaan)install.packages(\"lavaan\")remotes::install_github(\"yrosseel/lavaan\")ls(lavaan)\n\n\n\n\nCorrect: Explicitly specifying the CRAN mirror to use\nWrong: Loading the package, not installing\nCorrect: The simple case\nWrong: Installing the development version of lavaan from GitHub\nWrong: This is a misuse of the ls() function\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
       "Packages",
@@ -239,100 +261,27 @@
     "text": "Description\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
   },
   {
-    "objectID": "quizzes/help/questions/argument_order.html",
-    "href": "quizzes/help/questions/argument_order.html",
-    "title": "Question",
+    "objectID": "quizzes/help/index.html",
+    "href": "quizzes/help/index.html",
+    "title": "Knowledge Quiz: Getting Help",
     "section": "",
-    "text": "Which section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?\n\n\n\nDescription\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
-  },
-  {
-    "objectID": "quizzes/help/questions/argument_order.html#answerlist",
-    "href": "quizzes/help/questions/argument_order.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "Description\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
-  },
-  {
-    "objectID": "quizzes/functions/questions/function_calls.html",
-    "href": "quizzes/functions/questions/function_calls.html",
-    "title": "Question",
-    "section": "",
-    "text": "Which of the following options represent R function calls?\n\n\n\nrnorm(n = 100)\nmean(x, trim = 0.1, na.rm = TRUE)\n.libPaths()\n\"foo\"\nbar\ny\nTRUE\n3.14159\nInf\nNA"
-  },
-  {
-    "objectID": "quizzes/functions/questions/function_calls.html#answerlist",
-    "href": "quizzes/functions/questions/function_calls.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "rnorm(n = 100)\nmean(x, trim = 0.1, na.rm = TRUE)\n.libPaths()\n\"foo\"\nbar\ny\nTRUE\n3.14159\nInf\nNA"
-  },
-  {
-    "objectID": "quizzes/functions/questions/function_calls.html#answerlist-1",
-    "href": "quizzes/functions/questions/function_calls.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect. This function call would generate 100 random standard normal deviates.\nCorrect. This function call would calculate the trimmed mean of x, ignoring any missing values.\nCorrect. This function call will list the library paths where R will install packages on your system.\nThis is a length-one character vector.\nThis is a symbol (i.e., the name of an object).\nThis is a symbol (i.e., the name of an object).\nThis is a length-one logical vector.\nThis is a length-one numeric vector.\nThis is R’s infinite value code.\nThis is R’s missing value code."
-  },
-  {
-    "objectID": "quizzes/basic_commands/questions/logical.html",
-    "href": "quizzes/basic_commands/questions/logical.html",
-    "title": "Question",
-    "section": "",
-    "text": "Which of the following expressions will return TRUE?\n\n\n\n\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
-  },
-  {
-    "objectID": "quizzes/basic_commands/questions/logical.html#answerlist",
-    "href": "quizzes/basic_commands/questions/logical.html#answerlist",
-    "title": "Question",
-    "section": "",
-    "text": "\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
-  },
-  {
-    "objectID": "quizzes/basic_commands/questions/logical.html#answerlist-1",
-    "href": "quizzes/basic_commands/questions/logical.html#answerlist-1",
-    "title": "Question",
-    "section": "Answerlist",
-    "text": "Answerlist\n\nTRUE: “foo” is not equal to “bar”\nTRUE: 14 is strictly less than 48\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”\nTRUE: 6 is not strictly greater than 7, and that result is negated\nTRUE: Trivially\nFALSE: Trivially\nFALSE: “foo” is not equal to “bar”\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7\nFALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivial negation\nFALSE: Trivially"
-  },
-  {
-    "objectID": "quizzes/basic_commands/questions/arithmetic.html",
-    "href": "quizzes/basic_commands/questions/arithmetic.html",
-    "title": "Question",
-    "section": "",
-    "text": "Question\nWhat value will the following R code produce?\n(2 * 3 + 4) / 2\n\n\nSolution\nBy applying the appropriate order of operations, we get 5.\n\n\nMeta-information\nexname: Arithmetic extype: num exsolution: 5\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "First Steps",
-    "section": "",
-    "text": "Welcome to the First Steps module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage. The module content is broken into four tutorials:\nEach tutorial will comprise a series of interactive lessons with practice problems embedded throughout. After you complete each tutorial, you will have the opportunity to complete a knowledge quiz to check your learning.",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?\n\nUsageArgumentsValueExamplesSee Also\n\n\n\nThe Usage section shows all the possible arguments for a function and the order in which those arguments are defined.\n\n\n\n\nWhich section of an R package help file would you reference to learn the default values for a function’s arguments.\n\nValueDescriptionArgumentsExamplesSee Also\n\n\n\nBoth the Usage and Arguments sections will show the default values for arguments that have default values defined.\n\n\n\n\nUse the following help file excerpt to answer the question below.\n\n\n\n\n\n\n\n\ncor\nR Documentation\n\n\n\n\n\nCorrelation, Variance and Covariance (Matrices)\n\nUsage\n\nvar(x, y = NULL, na.rm = FALSE, use)\n\ncov(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncor(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncov2cor(V)\n\n\n\n\n\n\n\n\nWhat is the default value for the use argument of the cor() function?\n\n\"everything\"c(\"pearson\", \"spearman\", \"kendall\")\"pearson\"NULL\"spearman\"\n\n\n\nThe default value for the use argument is \"everything\".\n\nCorrect\nWrong: These are all of the possible methods\nWrong: This is one of the possible methods\nWrong: This is the default value for y\nWrong: This is one of the possible methods\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#learning-goals",
-    "href": "index.html#learning-goals",
-    "title": "First Steps",
-    "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nBasic Commands\n\nCreate simple R objects\nConduct simple mathematical calculations involving R objects\nConduct simple logical comparisons between R objects\n\n\n\nR Functions\n\nRecognize the R functions in a section of R code\nGive a conceptual overview of how R functions operate\nCall R functions to perform calculations on R objects\n\n\n\nAdd-On Packages\n\nExplain the procedure required to install, load, and use an R package\nInstall new R packages from a remote package repository\nLoad an R package\nUse the functions provided by add-on packages\n\n\n\nGetting Help\n\nAccess the documentation for functions provided by installed packages\nExplain the purpose of the sections in an R help file\nUse the information in an R help file to learn how to use an unfamiliar R function\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Exercises",
-    "crumbs": [
-      "Home",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "quizzes/basic_commands/index.html",
-    "href": "quizzes/basic_commands/index.html",
-    "title": "Knowledge Quiz: Basic Commands",
-    "section": "",
-    "text": "Which of the following commands represents the recommended way to assign the value 7 to the object y?\n\ny &lt;- 77 &lt;- y7 -&gt; yy = 7\n\n\n\nAlthough there are three valid assignment operators: &lt;-, -&gt;, =, only the left-facing arrow is recommended by most style guides.\n\nCorrect\nThis isn’t legal R code. This command attempts to assign the value y to the variable 7, but variable names can’t begin with numbers.\nThis is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.\nWhile = is a legal assignment operator, using an equals sign for assignment is not recommended style.\n\n\n\n\n\nWhat value will the following R code produce?\n(7 - 3) * 4 - 2\n\n\n\nBy applying the appropriate order of operations, we get 14.\n\n\n\n\nWhich of the following expressions will return TRUE?\n\nTRUEFALSE!TRUE\"alice\" == \"bob\" | \"alice\" == \"alice\"!(6 &gt; 7)\"alice\" == \"bob\" & \"alice\" == \"alice\"\n\n\n\n\nTRUE: Trivially\nFALSE: Trivially\nFALSE: Trivial negation\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”\nTRUE: 6 is not strictly greater than 7, and that result is negated\nFALSE: “alice” is not equal to “bob”\n\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Basic Commands",
+      "Documentation",
       "Knowledge Quiz"
+    ]
+  },
+  {
+    "objectID": "quizzes/functions/index.html",
+    "href": "quizzes/functions/index.html",
+    "title": "Knowledge Quiz: Functions",
+    "section": "",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich of the following options represent R function calls?\n\nbarTRUENA3.14159\"foo\"rnorm(n = 100)\n\n\n\nYou can recognize a valid function call by the pattern: FUNCTION_NAME().\n\nThis is a symbol (i.e., the name of an object).\nThis is a length-one logical vector.\nThis is R’s missing value code.\nThis is a length-one numeric vector.\nThis is a length-one character vector.\nCorrect. This function call would generate 100 random standard normal deviates.\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Functions",
+      "Knoweldge Quiz"
     ]
   },
   {
@@ -357,39 +306,98 @@
     "text": "Answerlist\n\nCorrect\nThat’s the correct assignment operator, but this command assigns the wrong value.\nWhile = is a legal assignment operator, using an equals sign for assignment is not recommended style.\nThis isn’t legal R code. This command attempts to assign the value y to the variable 7, but variable names can’t begin with numbers.\nThis is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.\nThis is a logical comparison. We’re checking if the value of y is equal to the 7.\nThis is a misuse of the native R pipe operator.\nThis is a logical comparison. We’re checking if the value of y is less than 7.\nThis command adds the value of y to the value of 7 and prints the result."
   },
   {
-    "objectID": "quizzes/functions/index.html",
-    "href": "quizzes/functions/index.html",
-    "title": "Knowledge Quiz: Functions",
+    "objectID": "quizzes/basic_commands/index.html",
+    "href": "quizzes/basic_commands/index.html",
+    "title": "Knowledge Quiz: Basic Commands",
     "section": "",
-    "text": "Which of the following options represent R function calls?\n\n.libPaths()3.14159NATRUEbarrnorm(n = 100)\n\n\n\nYou can recognize a valid function call by the pattern: FUNCTION_NAME().\n\nCorrect. This function call will list the library paths where R will install packages on your system.\nThis is a length-one numeric vector.\nThis is R’s missing value code.\nThis is a length-one logical vector.\nThis is a symbol (i.e., the name of an object).\nCorrect. This function call would generate 100 random standard normal deviates.\n\n\n\n\n\n\n\n Back to top",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich of the following commands represents the recommended way to assign the value 7 to the object y?\n\ny &lt;- 77 &lt;- yy == 7y + 7y &lt;- 6\n\n\n\nAlthough there are three valid assignment operators: &lt;-, -&gt;, =, only the left-facing arrow is recommended by most style guides.\n\nCorrect\nThis isn’t legal R code. This command attempts to assign the value y to the variable 7, but variable names can’t begin with numbers.\nThis is a logical comparison. We’re checking if the value of y is equal to the 7.\nThis command adds the value of y to the value of 7 and prints the result.\nThat’s the correct assignment operator, but this command assigns the wrong value.\n\n\n\n\n\nWhat value will the following R code produce?\n(2 + 4) * 3 - 8\n\n\n\nBy applying the appropriate order of operations, we get 10.\n\n\n\n\nWhich of the following expressions will return TRUE?\n\n\"foo\" == \"bar\"!TRUETRUE & FALSE(8 + 6) &lt; (8 * 6)FALSE(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\n\n\n\nFALSE: “foo” is not equal to “bar”\nFALSE: Trivial negation\nFALSE: Trivially\nTRUE: 14 is strictly less than 48\nFALSE: Trivially\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
-      "Functions",
-      "Knoweldge Quiz"
-    ]
-  },
-  {
-    "objectID": "quizzes/help/index.html",
-    "href": "quizzes/help/index.html",
-    "title": "Knowledge Quiz: Getting Help",
-    "section": "",
-    "text": "Which section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?\n\nDetailsValueDescriptionUsageSee Also\n\n\n\nThe Usage section shows all the possible arguments for a function and the order in which those arguments are defined.\n\n\n\n\nWhich section of an R package help file would you reference to learn the default values for a function’s arguments.\n\nValueDetailsArgumentsExamplesSee Also\n\n\n\nBoth the Usage and Arguments sections will show the default values for arguments that have default values defined.\n\n\n\n\nUse the following help file excerpt to answer the question below.\n\n\n\n\n\n\n\n\ncor\nR Documentation\n\n\n\n\n\nCorrelation, Variance and Covariance (Matrices)\n\nUsage\n\nvar(x, y = NULL, na.rm = FALSE, use)\n\ncov(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncor(x, y = NULL, use = \"everything\",\n    method = c(\"pearson\", \"kendall\", \"spearman\"))\n\ncov2cor(V)\n\n\n\n\n\n\n\n\nWhat is the default value for the use argument of the cor() function?\n\nmethodThe use argument does not have a defined default value.\"everything\"c(\"pearson\", \"spearman\", \"kendall\")x\n\n\n\nThe default value for the use argument is \"everything\".\n\nWrong: This is an argument name\nWrong: There is a default value defined for use.\nCorrect\nWrong: These are all of the possible methods\nWrong: This is an argument name\n\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Documentation",
+      "Basic Commands",
       "Knowledge Quiz"
     ]
   },
   {
-    "objectID": "quizzes/help/questions/default_arguments.html",
-    "href": "quizzes/help/questions/default_arguments.html",
-    "title": "Question",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "First Steps",
     "section": "",
-    "text": "Which section of an R package help file would you reference to learn the default values for a functions arguments.\n\n\n\nDescription\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
+    "text": "Welcome to the First Steps module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage. The module content is broken into four tutorials:\nEach tutorial will comprise a series of interactive lessons with practice problems embedded throughout. After you complete each tutorial, you will have the opportunity to complete a knowledge quiz to check your learning.",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
   },
   {
-    "objectID": "quizzes/help/questions/default_arguments.html#answerlist",
-    "href": "quizzes/help/questions/default_arguments.html#answerlist",
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
+    "title": "First Steps",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nBasic Commands\n\nCreate simple R objects\nConduct simple mathematical calculations involving R objects\nConduct simple logical comparisons between R objects\n\n\n\nR Functions\n\nRecognize the R functions in a section of R code\nGive a conceptual overview of how R functions operate\nCall R functions to perform calculations on R objects\n\n\n\nAdd-On Packages\n\nExplain the procedure required to install, load, and use an R package\nInstall new R packages from a remote package repository\nLoad an R package\nUse the functions provided by add-on packages\n\n\n\nGetting Help\n\nAccess the documentation for functions provided by installed packages\nExplain the purpose of the sections in an R help file\nUse the information in an R help file to learn how to use an unfamiliar R function\n\nClick the button below to get started with the first tutorial.\n\n\n Begin Exercises",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "quizzes/basic_commands/questions/arithmetic.html",
+    "href": "quizzes/basic_commands/questions/arithmetic.html",
+    "title": "Question",
+    "section": "",
+    "text": "Question\nWhat value will the following R code produce?\n(7 - 3) * 4 - 2\n\n\nSolution\nBy applying the appropriate order of operations, we get 14.\n\n\nMeta-information\nexname: Arithmetic extype: num exsolution: 14\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "quizzes/basic_commands/questions/logical.html",
+    "href": "quizzes/basic_commands/questions/logical.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which of the following expressions will return TRUE?\n\n\n\n\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
+  },
+  {
+    "objectID": "quizzes/basic_commands/questions/logical.html#answerlist",
+    "href": "quizzes/basic_commands/questions/logical.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "\"foo\" != \"bar\"\n(8 + 6) &lt; (8 * 6)\n(8 - 1) == 7 & 7 &gt;= (14 / 2)\n\"alice\" == \"bob\" | \"alice\" == \"alice\"\n!(6 &gt; 7)\nTRUE\nFALSE\n\"foo\" == \"bar\"\n(8 - 1) == 7 & 7 &gt; (14 / 2)\n\"alice\" == \"bob\" | \"alice\" != \"alice\"\n\"alice\" == \"bob\" & \"alice\" == \"alice\"\n!TRUE\nTRUE & FALSE"
+  },
+  {
+    "objectID": "quizzes/basic_commands/questions/logical.html#answerlist-1",
+    "href": "quizzes/basic_commands/questions/logical.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nTRUE: “foo” is not equal to “bar”\nTRUE: 14 is strictly less than 48\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”\nTRUE: 6 is not strictly greater than 7, and that result is negated\nTRUE: Trivially\nFALSE: Trivially\nFALSE: “foo” is not equal to “bar”\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7\nFALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivial negation\nFALSE: Trivially"
+  },
+  {
+    "objectID": "quizzes/functions/questions/function_calls.html",
+    "href": "quizzes/functions/questions/function_calls.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which of the following options represent R function calls?\n\n\n\nrnorm(n = 100)\nmean(x, trim = 0.1, na.rm = TRUE)\n.libPaths()\n\"foo\"\nbar\ny\nTRUE\n3.14159\nInf\nNA"
+  },
+  {
+    "objectID": "quizzes/functions/questions/function_calls.html#answerlist",
+    "href": "quizzes/functions/questions/function_calls.html#answerlist",
+    "title": "Question",
+    "section": "",
+    "text": "rnorm(n = 100)\nmean(x, trim = 0.1, na.rm = TRUE)\n.libPaths()\n\"foo\"\nbar\ny\nTRUE\n3.14159\nInf\nNA"
+  },
+  {
+    "objectID": "quizzes/functions/questions/function_calls.html#answerlist-1",
+    "href": "quizzes/functions/questions/function_calls.html#answerlist-1",
+    "title": "Question",
+    "section": "Answerlist",
+    "text": "Answerlist\n\nCorrect. This function call would generate 100 random standard normal deviates.\nCorrect. This function call would calculate the trimmed mean of x, ignoring any missing values.\nCorrect. This function call will list the library paths where R will install packages on your system.\nThis is a length-one character vector.\nThis is a symbol (i.e., the name of an object).\nThis is a symbol (i.e., the name of an object).\nThis is a length-one logical vector.\nThis is a length-one numeric vector.\nThis is R’s infinite value code.\nThis is R’s missing value code."
+  },
+  {
+    "objectID": "quizzes/help/questions/argument_order.html",
+    "href": "quizzes/help/questions/argument_order.html",
+    "title": "Question",
+    "section": "",
+    "text": "Which section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?\n\n\n\nDescription\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
+  },
+  {
+    "objectID": "quizzes/help/questions/argument_order.html#answerlist",
+    "href": "quizzes/help/questions/argument_order.html#answerlist",
     "title": "Question",
     "section": "",
     "text": "Description\nUsage\nArguments\nDetails\nValue\nSee Also\nExamples"
@@ -496,8 +504,8 @@
     ]
   },
   {
-    "objectID": "tutorials/basic_commands/mathematical_operators.html#arithmetic-y---exp82",
-    "href": "tutorials/basic_commands/mathematical_operators.html#arithmetic-y---exp82",
+    "objectID": "tutorials/basic_commands/mathematical_operators.html#arithmetic",
+    "href": "tutorials/basic_commands/mathematical_operators.html#arithmetic",
     "title": "Mathematical Operators",
     "section": "",
     "text": "All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored in those objects are used to evaluate the expression.\nThe following code will add, subtract, multiply, and divide the values stored as y and x.\n\n## First, define a few objects to use below.\nx &lt;- 2.5\ny &lt;- 7\nz &lt;- 5\n\n## Show some basic arithmetic operations\ny + x\n\n[1] 9.5\n\ny - x\n\n[1] 4.5\n\ny * x\n\n[1] 17.5\n\ny / x\n\n[1] 2.8",
@@ -512,7 +520,7 @@
     "href": "tutorials/basic_commands/mathematical_operators.html#powers-roots",
     "title": "Mathematical Operators",
     "section": "Powers & Roots",
-    "text": "Powers & Roots\nWe use the carret character, ^, to specify exponents. The following code will square and cube the value of y.\n\ny^2\n\n[1] 49\n\ny^3\n\n[1] 343\n\n\nThe sqrt() function returns the square root of it’s argument (i.e., the value we specify inside the parantheses). The following code calculates the square root of y.\n\nsqrt(y)\n\n[1] 2.645751\n\n\nFor other roots, we can use fractional exponents.\n\ny^(1/3) # cube root of y\n\n[1] 1.912931\n\ny^(1/4) # quartic root of y\n\n[1] 1.626577",
+    "text": "Powers & Roots\nWe use the caret character, ^, to specify exponents. The following code will square and cube the value of y.\n\ny^2\n\n[1] 49\n\ny^3\n\n[1] 343\n\n\nThe sqrt() function returns the square root of it’s argument (i.e., the value we specify inside the parentheses). The following code calculates the square root of y.\n\nsqrt(y)\n\n[1] 2.645751\n\n\nFor other roots, we can use fractional exponents.\n\ny^(1/3) # cube root of y\n\n[1] 1.912931\n\ny^(1/4) # quartic root of y\n\n[1] 1.626577",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -524,7 +532,7 @@
     "href": "tutorials/basic_commands/mathematical_operators.html#other-common-operators",
     "title": "Mathematical Operators",
     "section": "Other Common Operators",
-    "text": "Other Common Operators\nR also includes many special functions for the most common mathematical operations.\n\nlog(y)   # natural logarithm of y\n\n[1] 1.94591\n\nlog10(y) # log base 10 of y\n\n[1] 0.845098\n\nlog2(y)  # log base 2 of y\n\n[1] 2.807355\n\nexp(x) # exponentiate x\n\n[1] 12.18249\n\ny %% x # modulo: remainder after dividing y by x\n\n[1] 2\n\nfoo &lt;- -3.14159\n\nround(foo, 3) # round 'foo' to 3 decimal places\n\n[1] -3.142\n\nfloor(foo)    # round 'foo' down to the nearest whole number\n\n[1] -4\n\nceiling(foo)  # round 'foo' up to the nearest whole number\n\n[1] -3\n\nabs(foo) # absolute value of 'foo'\n\n[1] 3.14159\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote that log(y) calculates the natural logarithm of y, \\(\\ln(y)\\). If you want the “ordinary” base-10 log, you need to use the log10() function.\n\n\n\n\n\n\n\n\nPractice\n\n\n\n\nCreate an object called age that takes the value of your age in whole years.\nUse the age object you created in above to create a second object called weeks that takes the value of your age in whole weeks.\n\nAssume 52 weeks in each year.\nDisregard partial years (i.e., assume every year counted in age contains 52 whole weeks).\n\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nAt time-of-writing, I’m 38 years old. So, these would be my age and weeks objects.\n\nage   &lt;- 38\nweeks &lt;- 38 * 52",
+    "text": "Other Common Operators\nR also includes many special functions for the most common mathematical operations.\n\nlog(y)   # natural logarithm of y\n\n[1] 1.94591\n\nlog10(y) # log base 10 of y\n\n[1] 0.845098\n\nlog2(y)  # log base 2 of y\n\n[1] 2.807355\n\nexp(x) # exponentiate x\n\n[1] 12.18249\n\ny %% x # modulo: remainder after dividing y by x\n\n[1] 2\n\nfoo &lt;- -3.14159\n\nround(foo, 3) # round 'foo' to 3 decimal places\n\n[1] -3.142\n\nfloor(foo)    # round 'foo' down to the nearest whole number\n\n[1] -4\n\nceiling(foo)  # round 'foo' up to the nearest whole number\n\n[1] -3\n\nabs(foo) # absolute value of 'foo'\n\n[1] 3.14159\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote that log(y) calculates the natural logarithm of y, \\(\\ln(y)\\). If you want the “ordinary” base-10 log, you need to use the log10() function.\n\n\n\n\n\n\n\n\nPractice\n\n\n\n\nCreate an object called age that takes the value of your age in whole years.\nUse the age object you created in above to create a second object called weeks that takes the value of your age in whole weeks.\n\nAssume 52 weeks in each year.\nDisregard partial years (i.e., assume every year counted in age contains 52 whole weeks).\n\nPrint the value of weeks.\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nAt time-of-writing, I’m 38 years old. So, these would be my age and weeks objects.\n\nage   &lt;- 38\nweeks &lt;- 38 * 52\nweeks\n\n[1] 1976",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -536,7 +544,7 @@
     "href": "tutorials/basic_commands/mathematical_operators.html#order-of-operations",
     "title": "Mathematical Operators",
     "section": "Order of Operations",
-    "text": "Order of Operations\nWhen parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical operation according to the usual PEMDAS ordering.\nNotice how the following two expressions produce different results.\n\nIn the first line, we first divide x by z and then add y to the result.\nIn the second line, we first add x to y and then divide the result by z.\n\n\ny + x / z\n\n[1] 7.5\n\n(y + x) / z\n\n[1] 1.9\n\n\n\n\n\n\n\n\nPractice\n\n\n\nWhy do the following two expressions produce different answers?\n\n Question Solution\n\n\n\ny^(1/2)\n\n[1] 2.645751\n\ny^1/2\n\n[1] 3.5\n\n\n\n\n\ny^(1/2) == sqrt(y)\n\n[1] TRUE\n\ny^1/2 == y/2\n\n[1] TRUE\n\n\n\nIn the first case, we’re raising y to the power of \\(\\frac{1}{2}\\).\nIn the second case, we’re first raising y to the power of 1 (which does nothing) and then dividing the result by 2.",
+    "text": "Order of Operations\nWhen parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical operation according to the usual PEMDAS ordering.\nNotice how the following two expressions produce different results.\n\nIn the first line, we first divide x by z and then add y to the result.\nIn the second line, we first add x to y and then divide the result by z.\n\n\ny + x / z\n\n[1] 7.5\n\n(y + x) / z\n\n[1] 1.9\n\n\n\n\n\n\n\n\nPractice\n\n\n\nWhy do the following two expressions produce different answers?\n\n Question Solution\n\n\n\ny^(1/2)\n\n[1] 2.645751\n\ny^1/2\n\n[1] 3.5\n\n\n\n\n\ny^(1/2)\n\n[1] 2.645751\n\nsqrt(y)\n\n[1] 2.645751\n\n\nIn the first case, we’re raising y to the power of \\(\\frac{1}{2}\\).\n\ny^1/2\n\n[1] 3.5\n\ny/2\n\n[1] 3.5\n\n\nIn the second case, we’re first raising y to the power of 1 (which does nothing) and then dividing the result by 2.",
     "crumbs": [
       "Home",
       "Basic Commands",
@@ -571,7 +579,7 @@
     "href": "tutorials/help/default_arguments.html#argument-ordering",
     "title": "Default Function Arguments",
     "section": "Argument Ordering",
-    "text": "Argument Ordering\nWhen you call an R function, you do not have to explicitly write out the argument names, if you supply the argument values in the order that the arguments are specified in the function definition. That’s a mouthful, so let’s look at the matrix() function for a concrete example.\n\n\n\n\n\n\n\n\nmatrix\nR Documentation\n\n\n\n\n\nMatrices\n\nDescription\n\nmatrix creates a matrix from the given set of values.\n\nas.matrix attempts to turn its argument into a matrix.\n\nis.matrix tests if its argument is a (strict) matrix.\n\n\n\nUsage\n\nmatrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,\n       dimnames = NULL)\n\nas.matrix(x, ...)\n## S3 method for class 'data.frame'\nas.matrix(x, rownames.force = NA, ...)\n\nis.matrix(x)\n\n\n\nArguments\n\n\n\n\n\ndata\nan optional data vector (including a list or expression vector). Non-atomic classed R objects are coerced by as.vector and all attributes discarded.\n\n\nnrow\nthe desired number of rows.\n\n\nncol\nthe desired number of columns.\n\n\nbyrow\nlogical. If FALSE (the default) the matrix is filled by columns, otherwise the matrix is filled by rows.\n\n\ndimnames\na dimnames attribute for the matrix: NULL or a list of length 2 giving the row and column names respectively. An empty list is treated as NULL, and a list of length one as row names. The list can be named, and the list names will be used as names for the dimensions.\n\n\nx\nan R object.\n\n\n...\nadditional arguments to be passed to or from methods.\n\n\nrownames.force\nlogical indicating if the resulting matrix should have character (rather than NULL) rownames. The default, NA, uses NULL rownames if the data frame has ‘automatic’ row.names or for a zero-row data frame.\n\n\n\n\n\n\n\n\n\n\n\nThe usage section of matrix()’s help file tells use that the function takes five arguments:\n\ndata\nnrow\nncol\nbyrow\ndimnames\n\nFurthermore, we see that these five arguments are specified in the order shown above.\nIf we explicitly write out the names for all the arguments in our function call, we can specify the argument values in any order. Hence, the following three lines will produce equivalent results, for example.\n\nmatrix(data = 1:6, nrow = 3, ncol = 2, byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(nrow = 3, ncol = 2, data = 1:6,byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(byrow = FALSE, data = 1:6, nrow = 3, ncol = 2, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nIf we provide the argument values in the order they are specified in the function definition, we do not need to write out the argument names. So, the following function call will produce the same result as the three above.\n\nmatrix(1:6, 3, 2, FALSE, NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nWe can also mix these two approaches, but we have to provide all unamed argument values first, and provide them in the correct order. The following function calls will also produce the same results as above.\n\nmatrix(1:6, 3, 2, FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(1:6, 3, 2, byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(1:6, 3, dimnames = NULL, byrow = FALSE, ncol = 2)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nWe cannot, however, switch the order of any unnamed argument values. The following code will not reproduce the matrix created above.\n\n## Flip the 'nrow' and 'ncol' arguments\nmatrix(1:6, 2, 3, FALSE, dimnames = NULL)\n\n\n\n\n1\n3\n5\n\n\n2\n4\n6",
+    "text": "Argument Ordering\nWhen you call an R function, you do not have to explicitly write out the argument names, if you supply the argument values in the order that the arguments are specified in the function definition. That’s a mouthful, so let’s look at the matrix() function for a concrete example.\n\n\n\n\n\n\n\n\nmatrix\nR Documentation\n\n\n\n\n\nMatrices\n\nDescription\n\nmatrix creates a matrix from the given set of values.\n\nas.matrix attempts to turn its argument into a matrix.\n\nis.matrix tests if its argument is a (strict) matrix.\n\n\n\nUsage\n\nmatrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,\n       dimnames = NULL)\n\nas.matrix(x, ...)\n## S3 method for class 'data.frame'\nas.matrix(x, rownames.force = NA, ...)\n\nis.matrix(x)\n\n\n\nArguments\n\n\n\n\n\ndata\nan optional data vector (including a list or expression vector). Non-atomic classed R objects are coerced by as.vector and all attributes discarded.\n\n\nnrow\nthe desired number of rows.\n\n\nncol\nthe desired number of columns.\n\n\nbyrow\nlogical. If FALSE (the default) the matrix is filled by columns, otherwise the matrix is filled by rows.\n\n\ndimnames\na dimnames attribute for the matrix: NULL or a list of length 2 giving the row and column names respectively. An empty list is treated as NULL, and a list of length one as row names. The list can be named, and the list names will be used as names for the dimensions.\n\n\nx\nan R object.\n\n\n...\nadditional arguments to be passed to or from methods.\n\n\nrownames.force\nlogical indicating if the resulting matrix should have character (rather than NULL) rownames. The default, NA, uses NULL rownames if the data frame has ‘automatic’ row.names or for a zero-row data frame.\n\n\n\n\n\n\n\n\n\n\n\nThe usage section of matrix()’s help file tells use that the function takes five arguments:\n\ndata\nnrow\nncol\nbyrow\ndimnames\n\nFurthermore, we see that these five arguments are specified in the order shown above.\nIf we explicitly write out the names for all the arguments in our function call, we can specify the argument values in any order. Hence, the following three lines will produce equivalent results, for example.\n\nmatrix(data = 1:6, nrow = 3, ncol = 2, byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(nrow = 3, ncol = 2, data = 1:6,byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(byrow = FALSE, data = 1:6, nrow = 3, ncol = 2, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nIf we provide the argument values in the order they are specified in the function definition, we do not need to write out the argument names. So, the following function call will produce the same result as the three above.\n\nmatrix(1:6, 3, 2, FALSE, NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nWe can also mix these two approaches, but we have to provide all unnamed argument values first, and provide them in the correct order. The following function calls will also produce the same results as above.\n\nmatrix(1:6, 3, 2, FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(1:6, 3, 2, byrow = FALSE, dimnames = NULL)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\nmatrix(1:6, 3, dimnames = NULL, byrow = FALSE, ncol = 2)\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\nWe cannot, however, switch the order of any unnamed argument values. The following code will not reproduce the matrix created above.\n\n## Flip the 'nrow' and 'ncol' arguments\nmatrix(1:6, 2, 3, FALSE, dimnames = NULL)\n\n\n\n\n1\n3\n5\n\n\n2\n4\n6",
     "crumbs": [
       "Home",
       "Documentation",
@@ -667,7 +675,7 @@
     "href": "tutorials/help/sections.html#examples",
     "title": "Help File Sections",
     "section": "Examples",
-    "text": "Examples\n\nR: Order rows using column values\n  \n  \n  \n  \n  \n  \n\n\n\n  Examples\n\n  arrange(mtcars, cyl, disp)\narrange(mtcars, desc(disp))\n\n# grouped arrange ignores groups\nby_cyl &lt;- mtcars %&gt;% group_by(cyl)\nby_cyl %&gt;% arrange(desc(wt))\n# Unless you specifically ask:\nby_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)\n\n# use embracing when wrapping in a function;\n# see ?rlang::args_data_masking for more details\ntidy_eval_arrange &lt;- function(.data, var) {\n  .data %&gt;%\n    arrange({{ var }})\n}\ntidy_eval_arrange(mtcars, mpg)\n\n# Use `across()` or `pick()` to select columns with tidy-select\niris %&gt;% arrange(pick(starts_with(\"Sepal\")))\niris %&gt;% arrange(across(starts_with(\"Sepal\"), desc))\n\n\n\n\n\nThe Examples section contains executible R code that demonstrates the function’s primary use-cases.\n\n\n\n\n\n\nPractice\n\n\n\nRun the first line of example code from the Examples section of the arrange() documentation shown above.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nYou can copy and paste the first line of code directly from the examples section into the editor window.\n\n\n\nlibrary(dplyr)\n\narrange(mtcars, cyl, disp)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4",
+    "text": "Examples\n\nR: Order rows using column values\n  \n  \n  \n  \n  \n  \n\n\n\n  Examples\n\n  arrange(mtcars, cyl, disp)\narrange(mtcars, desc(disp))\n\n# grouped arrange ignores groups\nby_cyl &lt;- mtcars %&gt;% group_by(cyl)\nby_cyl %&gt;% arrange(desc(wt))\n# Unless you specifically ask:\nby_cyl %&gt;% arrange(desc(wt), .by_group = TRUE)\n\n# use embracing when wrapping in a function;\n# see ?rlang::args_data_masking for more details\ntidy_eval_arrange &lt;- function(.data, var) {\n  .data %&gt;%\n    arrange({{ var }})\n}\ntidy_eval_arrange(mtcars, mpg)\n\n# Use `across()` or `pick()` to select columns with tidy-select\niris %&gt;% arrange(pick(starts_with(\"Sepal\")))\niris %&gt;% arrange(across(starts_with(\"Sepal\"), desc))\n\n\n\n\n\nThe Examples section contains executable R code that demonstrates the function’s primary use-cases.\n\n\n\n\n\n\nPractice\n\n\n\nRun the first line of example code from the Examples section of the arrange() documentation shown above.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nYou can copy and paste the first line of code directly from the examples section into the editor window.\n\n\n\nlibrary(dplyr)\n\narrange(mtcars, cyl, disp)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4",
     "crumbs": [
       "Home",
       "Documentation",
@@ -679,7 +687,7 @@
     "href": "tutorials/packages/installing.html",
     "title": "Installing Packages",
     "section": "",
-    "text": "Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the install.packages() function. The following code will install the psych package.\n## Use the default CRAN mirror to install one package\ninstall.packages(\"psych\")\nIf you want to install more than one package, you simply using the concatenation function, c(), to define a character vector giving the names of your desired packages, as shown in the following code.\n## Use the default CRAN mirror to install two packages\ninstall.packages(c(\"mice\", \"lavaan\"))",
+    "text": "Fortunately, installing packages is very simple. In most cases, you only need to specify the name of the package that you want to install in the install.packages() function. The following code will install the psych package.\n## Use the default CRAN mirror to install one package\ninstall.packages(\"psych\")\nIf you want to install more than one package, you simply using the concatenation function, c(), to define a character vector giving the names of your desired packages, as shown in the following code.\n## Use the default CRAN mirror to install two packages\ninstall.packages(c(\"mice\", \"lavaan\"))",
     "crumbs": [
       "Home",
       "Packages",

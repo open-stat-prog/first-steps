@@ -5,7 +5,7 @@ knitr:
     eval: false
 ---
 
-Fortunatelly, installing packages is very simple. In most cases, you only need to specify the name of the package that
+Fortunately, installing packages is very simple. In most cases, you only need to specify the name of the package that
 you want to install in the `install.packages()` function. The following code will install the **psych** package.
 
 ```{r}

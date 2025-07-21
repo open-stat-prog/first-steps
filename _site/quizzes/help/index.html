@@ -71,17 +71,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-link.callout {
-  border-left-color: orange;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-link.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-adv_reading.callout {
@@ -110,17 +110,17 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-link.callout {
+  border-left-color: orange;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -129,7 +129,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -322,7 +322,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/help/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../quizzes/help/index.html">Knowledge Quiz</a></li></ol></nav>
 <div class="quarto-title">
@@ -343,12 +343,30 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </header>
 
 
-<div class="cell" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Click the check-mark button to check your answer.</li>
+<li>Click the question-mark button to see an explanation of the solution.</li>
+</ul>
+</div>
+</div>
+</div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?</p>
-<div id="webex-da5a53227c869a964340d823e7650491" class="webex-radiogroup" data-answer="P1EZURkDHgMbU2U=">
-<label><input type="radio" autocomplete="off" name="da5a53227c869a964340d823e7650491"><span>Details</span></label><label><input type="radio" autocomplete="off" name="da5a53227c869a964340d823e7650491"><span>Value</span></label><label><input type="radio" autocomplete="off" name="da5a53227c869a964340d823e7650491"><span>Description</span></label><label><input type="radio" autocomplete="off" name="da5a53227c869a964340d823e7650491"><span>Usage</span></label><label><input type="radio" autocomplete="off" name="da5a53227c869a964340d823e7650491"><span>See Also</span></label>
+<div id="webex-21921e9850388db97985be5c926e904a" class="webex-radiogroup" data-answer="aQAVAh1VFQgZAG4=">
+<label><input type="radio" autocomplete="off" name="21921e9850388db97985be5c926e904a"><span>Usage</span></label><label><input type="radio" autocomplete="off" name="21921e9850388db97985be5c926e904a"><span>Arguments</span></label><label><input type="radio" autocomplete="off" name="21921e9850388db97985be5c926e904a"><span>Value</span></label><label><input type="radio" autocomplete="off" name="21921e9850388db97985be5c926e904a"><span>Examples</span></label><label><input type="radio" autocomplete="off" name="21921e9850388db97985be5c926e904a"><span>See Also</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -358,8 +376,8 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which section of an R package help file would you reference to learn the default values for a function’s arguments.</p>
-<div id="webex-af6650f7152786cb9861ae1774d9f32d" class="webex-radiogroup" data-answer="OlYaBhkBSgcdBW8=">
-<label><input type="radio" autocomplete="off" name="af6650f7152786cb9861ae1774d9f32d"><span>Value</span></label><label><input type="radio" autocomplete="off" name="af6650f7152786cb9861ae1774d9f32d"><span>Details</span></label><label><input type="radio" autocomplete="off" name="af6650f7152786cb9861ae1774d9f32d"><span>Arguments</span></label><label><input type="radio" autocomplete="off" name="af6650f7152786cb9861ae1774d9f32d"><span>Examples</span></label><label><input type="radio" autocomplete="off" name="af6650f7152786cb9861ae1774d9f32d"><span>See Also</span></label>
+<div id="webex-e353410c656643490327ec41a7883532" class="webex-radiogroup" data-answer="PgMZAxgAHFMaBWs=">
+<label><input type="radio" autocomplete="off" name="e353410c656643490327ec41a7883532"><span>Value</span></label><label><input type="radio" autocomplete="off" name="e353410c656643490327ec41a7883532"><span>Description</span></label><label><input type="radio" autocomplete="off" name="e353410c656643490327ec41a7883532"><span>Arguments</span></label><label><input type="radio" autocomplete="off" name="e353410c656643490327ec41a7883532"><span>Examples</span></label><label><input type="radio" autocomplete="off" name="e353410c656643490327ec41a7883532"><span>See Also</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -406,18 +424,18 @@ cov2cor(V)
 </div>
 </div>
 <p>What is the default value for the <code>use</code> argument of the <code>cor()</code> function?</p>
-<div id="webex-78b5234fb144826a64639188e316e3da" class="webex-radiogroup" data-answer="bAhOBR4CGFZOAWk=">
-<label><input type="radio" autocomplete="off" name="78b5234fb144826a64639188e316e3da"><span><code>method</code></span></label><label><input type="radio" autocomplete="off" name="78b5234fb144826a64639188e316e3da"><span>The <code>use</code> argument does not have a defined default value.</span></label><label><input type="radio" autocomplete="off" name="78b5234fb144826a64639188e316e3da"><span><code>"everything"</code></span></label><label><input type="radio" autocomplete="off" name="78b5234fb144826a64639188e316e3da"><span><code>c("pearson", "spearman", "kendall")</code></span></label><label><input type="radio" autocomplete="off" name="78b5234fb144826a64639188e316e3da"><span><code>x</code></span></label>
+<div id="webex-40f033ade40e40135b9c7509a74f6cf7" class="webex-radiogroup" data-answer="bwFKAB8DTVRJBG0=">
+<label><input type="radio" autocomplete="off" name="40f033ade40e40135b9c7509a74f6cf7"><span><code>"everything"</code></span></label><label><input type="radio" autocomplete="off" name="40f033ade40e40135b9c7509a74f6cf7"><span><code>c("pearson", "spearman", "kendall")</code></span></label><label><input type="radio" autocomplete="off" name="40f033ade40e40135b9c7509a74f6cf7"><span><code>"pearson"</code></span></label><label><input type="radio" autocomplete="off" name="40f033ade40e40135b9c7509a74f6cf7"><span><code>NULL</code></span></label><label><input type="radio" autocomplete="off" name="40f033ade40e40135b9c7509a74f6cf7"><span><code>"spearman"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The default value for the <code>use</code> argument is <code>"everything"</code>.</p>
 <ul>
-<li>Wrong: This is an argument name</li>
-<li>Wrong: There is a default value defined for <code>use</code>.</li>
 <li>Correct</li>
 <li>Wrong: These are all of the possible methods</li>
-<li>Wrong: This is an argument name</li>
+<li>Wrong: This is one of the possible methods</li>
+<li>Wrong: This is the default value for <code>y</code></li>
+<li>Wrong: This is one of the possible methods</li>
 </ul>
 </div>
 </div>

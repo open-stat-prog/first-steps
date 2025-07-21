@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"classes":"","label":"unnamed-chunk-1","fig-width":7,"dpi":72,"message":"true","fig-height":5,"read-only":"false","context":"interactive","fig-cap":"","warning":"true","results":"markup","editor-max-height":"","comment":"","editor-word-wrap":"true","editor-quick-suggestions":"false","editor-font-scale":"1","out-width":"700px","out-height":"","output":"true","autorun":"false"}}];
+globalThis.qwebrCellDetails = [{"code":"","options":{"autorun":"false","fig-width":7,"fig-cap":"","fig-height":5,"read-only":"false","context":"interactive","classes":"","output":"true","message":"true","dpi":72,"editor-font-scale":"1","out-height":"","editor-quick-suggestions":"false","editor-max-height":"","editor-word-wrap":"true","results":"markup","comment":"","label":"unnamed-chunk-1","out-width":"700px","warning":"true"},"id":1}];
 
 </script>
 <script type="module">
@@ -1671,14 +1671,14 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
+div.callout-adv_reading.callout {
+  border-left-color: red;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -1697,14 +1697,14 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-adv_reading.callout {
-  border-left-color: red;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -2223,7 +2223,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of <code>TRUE</code> whenever the tested condition is satisified and <code>FALSE</code> when the tested condition is not satisfied.</p>
+<p>We can tests many flavors of logical conditions in R. Logical tests return a logical vector as the result. A logical vector takes the value of <code>TRUE</code> whenever the tested condition is satisfied and <code>FALSE</code> when the tested condition is not satisfied.</p>
 <section id="equality" class="level2">
 <h2 class="anchored" data-anchor-id="equality">Equality</h2>
 <p>The simplest logical test is an equality check. To check if two objects are equal, we use the ‘equality operator’, <code>==</code>.</p>
@@ -2381,11 +2381,17 @@ Practice
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Use <code>x %% 7</code> to calculate the remainder after dividing <code>x</code> by <code>7</code>.</p>
+<ul>
+<li>Use <code>x %% 7</code> to calculate the remainder after dividing <code>x</code> by <code>7</code>.</li>
+<li>If you’re getting unexpected results, consider using parentheses to ensures the intended order of operations.
+<ul>
+<li>In R, the modulo operator, <code>%%</code>, takes precedence over arithmetic operations like multiplication.</li>
+</ul></li>
+</ul>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">6</span> <span class="sc">%%</span> <span class="dv">7</span>) <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>(weeks <span class="sc">%%</span> <span class="dv">7</span>) <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>

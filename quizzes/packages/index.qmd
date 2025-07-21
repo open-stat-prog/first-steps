@@ -2,6 +2,15 @@
 title: "Knowledge Quiz: Add-On Packages"
 ---
 
+::: {.column-margin}
+
+:::: {.callout-note}
+- Click the check-mark button to check your answer.
+- Click the question-mark button to see an explanation of the solution.
+::::
+
+:::
+
 ```{r packages_quiz}
 #| echo: FALSE
 #| results: "asis"

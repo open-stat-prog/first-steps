@@ -47,3 +47,17 @@ first_buttons <- function(next_topic = "#") {
   cat()
 }
 
+###--------------------------------------------------------------------------###
+
+next_module_button <- function(next_topic = "#") {
+  glue::glue(
+    '
+    <section id="buttons">
+      <a id="nextButton" class="btn btn-primary float-start" href="{next_topic}" role="button">
+      Next Module
+      </a>
+    </section>
+    '
+  ) |>
+  cat()
+}

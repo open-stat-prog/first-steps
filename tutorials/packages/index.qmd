@@ -3,7 +3,7 @@ title: "Add-On Packages"
 ---
 
 When you install R, you're only installing the core set of functionality. You can already do quite a lot with this
-baseline R installation (e.g., a complete linear regression analysis), but you will usually need functinality provided
+baseline R installation (e.g., a complete linear regression analysis), but you will usually need functionality provided
 by add-on *packages* to complete most real-world data analyses.
 
 For example, the following list shows some common analyses for which you would typically use add-on packages (and some

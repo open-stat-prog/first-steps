@@ -134,6 +134,13 @@ To view the contents of an object, we can evaluate the object's name without ass
 Run the following code to print the values saved as `x` and `y`.
 
 ```{webr-r}
+#| context: "setup"
+
+x <- 7
+y <- 2.5
+```
+
+```{webr-r}
 x
 y
 ```

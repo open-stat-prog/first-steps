@@ -35,4 +35,4 @@ Meta-information
 exname: Assignment Operator
 extype: schoice
 exsolution: 100000000
-exshuffle: 4
+exshuffle: 5

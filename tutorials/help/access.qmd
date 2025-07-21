@@ -72,7 +72,7 @@ Access the help file for the `vector()` function.
 
 ## {{< var tab_title.hint >}}
 
-The `vector()` function is provided by the **base** package, which is loaded everytime you start R. So, you should be
+The `vector()` function is provided by the **base** package, which is loaded every time you start R. So, you should be
 able to access the help file without loading any additional packages.
 
 ## {{< var tab_title.solution >}}

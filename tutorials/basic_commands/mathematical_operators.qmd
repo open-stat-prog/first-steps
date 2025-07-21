@@ -2,7 +2,7 @@
 title: "Mathematical Operators"
 ---
 
-## Arithmetic `y <- exp(8^2)`
+## Arithmetic
 
 All of the familiar arithmetic operators are available in R. When we do arithmetic on named R objects, the values stored
 in those objects are used to evaluate the expression.
@@ -24,14 +24,14 @@ y / x
 
 ## Powers & Roots
 
-We use the carret character, `^`, to specify exponents. The following code will square and cube the value of `y`.
+We use the caret character, `^`, to specify exponents. The following code will square and cube the value of `y`.
 
 ```{r}
 y^2
 y^3
 ```
 
-The `sqrt()` function returns the square root of it's argument (i.e., the value we specify inside the parantheses). The
+The `sqrt()` function returns the square root of it's argument (i.e., the value we specify inside the parentheses). The
 following code calculates the square root of `y`.
 
 ```{r}
@@ -67,10 +67,14 @@ ceiling(foo)  # round 'foo' up to the nearest whole number
 abs(foo) # absolute value of 'foo'
 ```
 
-::: {.callout-note}
+::: {.column-margin}
+
+:::: {.callout-note}
 
 Note that `log(y)` calculates the *natural logarithm* of `y`, $\ln(y)$. If you want the "ordinary" base-10 log, you need
 to use the `log10()` function.
+
+::::
 
 :::
 
@@ -83,6 +87,7 @@ to use the `log10()` function.
 in whole weeks.
    - Assume 52 weeks in each year.
    - Disregard partial years (i.e., assume every year counted in `age` contains 52 whole weeks).
+1. Print the value of `weeks`.
 
 :::: {.panel-tabset}
 ## {{< var tab_title.editor >}}
@@ -97,6 +102,7 @@ At time-of-writing, I'm 38 years old. So, these would be my `age` and `weeks` ob
 ```{r}
 age   <- 38
 weeks <- 38 * 52
+weeks
 ```
 ::::
 
@@ -134,12 +140,16 @@ y^1/2
 ## {{< var tab_title.solution >}}
 
 ```{r}
-y^(1/2) == sqrt(y)
-y^1/2 == y/2
+y^(1/2)
+sqrt(y)
 ```
+In the first case, we're raising `y` to the power of $\frac{1}{2}$.
 
-- In the first case, we're raising `y` to the power of $\frac{1}{2}$.
-- In the second case, we're first raising `y` to the power of 1 (which does nothing) and then dividing the result by 2.
+```{r}
+y^1/2
+y/2
+```
+In the second case, we're first raising `y` to the power of 1 (which does nothing) and then dividing the result by 2.
 ::::
 
 :::

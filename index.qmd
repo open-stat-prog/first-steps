@@ -1,9 +1,9 @@
 ---
 title: "First Steps"
+page-navigation: false
 format:
   html: 
     toc: false
-    page_navigation: false
 ---
 
 ```{r include = FALSE}

@@ -71,19 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-adv_reading.callout {
   border-left-color: red;
 }
@@ -92,19 +79,6 @@ div.callout-adv_reading.callout-style-default > .callout-header {
 }
 div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -123,13 +97,39 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   content: '\f0c1' !important;
   background-image: none;
 }
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 </style>
 
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -322,7 +322,7 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Basic Commands</a></li><li class="breadcrumb-item"><a href="../../quizzes/basic_commands/index.html">Knowledge Quiz</a></li></ol></nav>
 <div class="quarto-title">
@@ -343,12 +343,30 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
 </header>
 
 
-<div class="cell" data-layout-align="center">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Click the check-mark button to check your answer.</li>
+<li>Click the question-mark button to see an explanation of the solution.</li>
+</ul>
+</div>
+</div>
+</div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<div id="webex-49da3b53d1674dd4d9ef243243d550b8" class="webex-radiogroup" data-answer="bwhIUR9SGQM5">
-<label><input type="radio" autocomplete="off" name="49da3b53d1674dd4d9ef243243d550b8"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="49da3b53d1674dd4d9ef243243d550b8"><span><code>7 &lt;- y</code></span></label><label><input type="radio" autocomplete="off" name="49da3b53d1674dd4d9ef243243d550b8"><span><code>7 -&gt; y</code></span></label><label><input type="radio" autocomplete="off" name="49da3b53d1674dd4d9ef243243d550b8"><span><code>y = 7</code></span></label>
+<div id="webex-bf055c55e46f239e0a642f889dde4347" class="webex-radiogroup" data-answer="OVccBRlTGQVJBGs=">
+<label><input type="radio" autocomplete="off" name="bf055c55e46f239e0a642f889dde4347"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="bf055c55e46f239e0a642f889dde4347"><span><code>7 &lt;- y</code></span></label><label><input type="radio" autocomplete="off" name="bf055c55e46f239e0a642f889dde4347"><span><code>y == 7</code></span></label><label><input type="radio" autocomplete="off" name="bf055c55e46f239e0a642f889dde4347"><span><code>y + 7</code></span></label><label><input type="radio" autocomplete="off" name="bf055c55e46f239e0a642f889dde4347"><span><code>y &lt;- 6</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -356,36 +374,37 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
 <ul>
 <li>Correct</li>
 <li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
-<li>This is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.</li>
-<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
+<li>This is a logical comparison. We’re checking if the value of <code>y</code> is equal to the <code>7</code>.</li>
+<li>This command adds the value of <code>y</code> to the value of <code>7</code> and prints the result.</li>
+<li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What value will the following R code produce?</p>
-<p>(7 - 3) * 4 - 2</p>
-<p><input class="webex-solveme nospaces" id="webex-a0eeb9113e76fc6d8ede80673ecbbd7d" data-tol="0" size="20" data-answer="OhJUUUBk"></p>
+<p>(2 + 4) * 3 - 8</p>
+<p><input class="webex-solveme nospaces" id="webex-ebf8e697a77dd1ff7af98d771b7dcc64" data-tol="0" size="20" data-answer="PkBXCEdr"></p>
 </div>
 <div class="webex-solution">
-<p>By applying the appropriate order of operations, we get 14.</p>
+<p>By applying the appropriate order of operations, we get 10.</p>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following expressions will return <code>TRUE</code>?</p>
-<div id="webex-0c3d4c14b90ae0b78d23dbd394a18321" class="webex-checkboxgroup" data-answer="a1IfVBhTHQVOCBxROA==">
-<label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>!TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>"alice" == "bob" | "alice" == "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>!(6 &gt; 7)</code></span></label><label><input type="checkbox" autocomplete="off" name="0c3d4c14b90ae0b78d23dbd394a18321"><span><code>"alice" == "bob" &amp; "alice" == "alice"</code></span></label>
+<div id="webex-52e01cdcc32c896c1f17969a0a956e85" class="webex-checkboxgroup" data-answer="bgJJAB1TSFJPAx5SZQ==">
+<label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>"foo" == "bar"</code></span></label><label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>!TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>TRUE &amp; FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>(8 + 6) &lt; (8 * 6)</code></span></label><label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="52e01cdcc32c896c1f17969a0a956e85"><span><code>(8 - 1) == 7 &amp; 7 &gt;= (14 / 2)</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>TRUE: Trivially</li>
-<li>FALSE: Trivially</li>
+<li>FALSE: “foo” is not equal to “bar”</li>
 <li>FALSE: Trivial negation</li>
-<li>TRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”</li>
-<li>TRUE: 6 is not strictly greater than 7, and that result is negated</li>
-<li>FALSE: “alice” is not equal to “bob”</li>
+<li>FALSE: Trivially</li>
+<li>TRUE: 14 is strictly less than 48</li>
+<li>FALSE: Trivially</li>
+<li>TRUE: 7 is equal to 7, and 7 is greater than or equal to 7</li>
 </ul>
 </div>
 </div>

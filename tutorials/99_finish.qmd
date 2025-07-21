@@ -1,7 +1,54 @@
 ---
-title: "The End"
+title: "Conclusion"
+format:
+  html: 
+    toc: false
+    link-external-icon: false
+    link-external-newwindow: false
 ---
 
-![](/assets/images/clapping_penguine.gif){fig-alt="A Clapping, Cartoon Penguine"}
+```{r include = FALSE}
+source(here::here("R", "helpers.R"))
+```
 
-Congratulations! You've finished this module!
+Congratulations! You've completed the *First Steps* module!
+
+## Learning Goals
+
+Now that you've completing this module, you should be able to:
+
+### Basic Commands
+
+1. Create simple R objects
+1. Conduct simple mathematical calculations involving R objects
+1. Conduct simple logical comparisons between R objects
+
+### R Functions
+
+1. Recognize the R functions in a section of R code
+1. Give a conceptual overview of how R functions operate
+1. Call R functions to perform calculations on R objects
+
+### Add-On Packages
+
+1. Explain the procedure required to install, load, and use an R package
+1. Install new R packages from a remote package repository
+1. Load an R package
+1. Use the functions provided by add-on packages
+
+### Getting Help
+
+1. Access the documentation for functions provided by installed packages
+1. Explain the purpose of the sections in an R help file
+1. Use the information in an R help file to learn how to use an unfamiliar R function
+
+## Next Steps
+
+If you want to continue with your R learning journey, we recommend following the *Data Types* module next. Click the 
+button below to start the next module.
+
+```{r}
+#| echo: false
+#| results: asis
+next_module_button("https://open-stat-prog.com/data-types/index.html")
+```

@@ -1,8 +1,11 @@
 ---
 title: "Default Function Arguments"
+knitr:
+  opts_chunk:
+    cache: false
 ---
 
-```{r setup, echo = FALSE, include = FALSE, cache = FALSE}
+```{r setup, echo = FALSE, include = FALSE}
 library(printr)
 ```
 
@@ -52,7 +55,7 @@ out the argument names. So, the following function call will produce the same re
 matrix(1:6, 3, 2, FALSE, NULL)
 ```
 
-We can also mix these two approaches, but we have to provide all unamed argument values first, and provide them in the
+We can also mix these two approaches, but we have to provide all unnamed argument values first, and provide them in the
 correct order. The following function calls will also produce the same results as above.
 
 ```{r}
