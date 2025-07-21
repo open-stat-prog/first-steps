@@ -1,0 +1,73 @@
+website:
+
+  title: "First Steps"
+
+  site-url: "https://www.openstatprog.com/first-steps/"
+
+  page-navigation: true
+
+  back-to-top-navigation: true
+
+  navbar:
+    title: false
+    background: primary
+    foreground: dark
+    left:
+      - href: "https://www.openstatprog.com"
+        text: "Open-Stat-Prog"
+      - href: index.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://github.com/open-stat-prog/first-steps
+          - text: Report a Bug
+            href: https://github.com/open-stat-prog/first-steps/issues
+
+  sidebar:
+    style: "floating"
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: "Overview"
+      - section: tutorials/basic_commands/index.qmd
+        text: "Basic Commands"
+        contents:
+        - href: tutorials/basic_commands/fundamentals.qmd
+        - href: tutorials/basic_commands/mathematical_operators.qmd
+        - href: tutorials/basic_commands/logical_comparisons.qmd
+        - href: tutorials/basic_commands/environments.qmd
+        - href: quizzes/basic_commands/index.qmd
+          text: "Knowledge Quiz"
+      - section: tutorials/functions/index.qmd
+        text: "Functions"
+        contents:
+          - href: tutorials/functions/functions.qmd
+          - href: quizzes/functions/index.qmd
+            text: "Knoweldge Quiz"
+      - section: tutorials/packages/index.qmd
+        text: "Packages"
+        contents:
+          - href: tutorials/packages/installing.qmd
+          - href: tutorials/packages/loading.qmd
+          - href: quizzes/packages/index.qmd
+            text: "Knowledge Quiz"
+      - section: tutorials/help/index.qmd
+        text: "Documentation"
+        contents:
+          - href: tutorials/help/sections.qmd
+          - href: tutorials/help/access.qmd
+          - href: tutorials/help/default_arguments.qmd
+          - href: quizzes/help/index.qmd
+            text: "Knowledge Quiz"
+      - href: conclusion.qmd
+
+  page-footer:
+    background: primary
+    foreground: dark
+    left: |
+      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
+    right: 
+      - text: "&copy; 2025"
+      - href: "https://github.com/open-stat-prog"
+        text: Open-Stat-Prog

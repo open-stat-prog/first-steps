@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"editor-word-wrap":"true","fig-width":7,"autorun":"false","context":"interactive","warning":"true","output":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-1","out-width":"700px","dpi":72,"editor-quick-suggestions":"false","message":"true","fig-cap":"","fig-height":5,"classes":"","out-height":"","read-only":"false","results":"markup","editor-max-height":""},"code":"","id":1}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"","options":{"editor-quick-suggestions":"false","output":"true","results":"markup","classes":"","autorun":"false","editor-font-scale":"1","read-only":"false","fig-height":5,"dpi":72,"context":"interactive","out-height":"","warning":"true","fig-cap":"","editor-max-height":"","out-width":"700px","editor-word-wrap":"true","comment":"","fig-width":7,"message":"true","label":"unnamed-chunk-1"}}];
 
 </script>
 <script type="module">
@@ -1658,6 +1658,19 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-link.callout {
   border-left-color: orange;
 }
@@ -1669,19 +1682,6 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
-  background-image: none;
-}
-div.callout-adv_reading.callout {
-  border-left-color: red;
-}
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1697,14 +1697,14 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
+div.callout-adv_reading.callout {
+  border-left-color: red;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -1722,11 +1722,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">First Steps</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -1734,12 +1729,31 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.openstatprog.com"> 
+<span class="menu-text">Open-Stat-Prog</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">First Steps</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -1896,7 +1910,7 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
@@ -2499,7 +2513,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.openstatprog\.com\/first-steps\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -2858,13 +2872,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- 2025, Open-Stat-Prog
+ © 2025
   </li>  
-    <li class="nav-item compact">
+    <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
+<p>Open-Stat-Prog</p>
+</a>
   </li>  
 </ul>
     </div>
