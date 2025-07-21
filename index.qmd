@@ -6,8 +6,8 @@ format:
     toc: false
 ---
 
-```{r include = FALSE}
-source(here::here("R", "helpers.R"))
+```{r, echo = FALSE, include = FALSE}
+source(here::here("R", "buttons.R"))
 ```
 
 Welcome to the *First Steps* module. In this module, you will take the first steps in your R programming journey by
@@ -55,5 +55,5 @@ Click the button below to get started with the first tutorial.
 ```{r}
 #| echo: false
 #| results: asis
-begin_buttons("/tutorials/basic_commands/index.html")
+begin_button("/tutorials/basic_commands/index.html")
 ```

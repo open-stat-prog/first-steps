@@ -71,19 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-adv_reading.callout {
-  border-left-color: red;
-}
-div.callout-adv_reading.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: violet;
 }
@@ -92,6 +79,19 @@ div.callout-reading.callout-style-default > .callout-header {
 }
 div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-adv_reading.callout {
+  border-left-color: red;
+}
+div.callout-adv_reading.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-adv_reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout-adv_reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -135,11 +135,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">First Steps</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -147,12 +142,31 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.openstatprog.com"> 
+<span class="menu-text">Open-Stat-Prog</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">First Steps</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -309,7 +323,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
@@ -365,46 +379,46 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<div id="webex-cf3b2cfa5fee8f596b41640e70df84ce" class="webex-radiogroup" data-answer="OFYfUh5SSlEZVjg=">
-<label><input type="radio" autocomplete="off" name="cf3b2cfa5fee8f596b41640e70df84ce"><span><code>y == 7</code></span></label><label><input type="radio" autocomplete="off" name="cf3b2cfa5fee8f596b41640e70df84ce"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="cf3b2cfa5fee8f596b41640e70df84ce"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="cf3b2cfa5fee8f596b41640e70df84ce"><span><code>y = 7</code></span></label><label><input type="radio" autocomplete="off" name="cf3b2cfa5fee8f596b41640e70df84ce"><span><code>y &lt; 7</code></span></label>
+<div id="webex-6fd7e883167352bd57d0cdacee48308f" class="webex-radiogroup" data-answer="bVZIB0kJFAMdBmo=">
+<label><input type="radio" autocomplete="off" name="6fd7e883167352bd57d0cdacee48308f"><span><code>y &lt; 7</code></span></label><label><input type="radio" autocomplete="off" name="6fd7e883167352bd57d0cdacee48308f"><span><code>y |&gt; 7</code></span></label><label><input type="radio" autocomplete="off" name="6fd7e883167352bd57d0cdacee48308f"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="6fd7e883167352bd57d0cdacee48308f"><span><code>y &lt;- 6</code></span></label><label><input type="radio" autocomplete="off" name="6fd7e883167352bd57d0cdacee48308f"><span><code>7 &lt;- y</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
 <ul>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is equal to the <code>7</code>.</li>
-<li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
-<li>Correct</li>
-<li>While <code>=</code> is a legal assignment operator, using an equals sign for assignment is not recommended style.</li>
 <li>This is a logical comparison. We’re checking if the value of <code>y</code> is less than <code>7</code>.</li>
+<li>This is a misuse of the native R pipe operator.</li>
+<li>Correct</li>
+<li>That’s the correct assignment operator, but this command assigns the wrong value.</li>
+<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What value will the following R code produce?</p>
-<p>(2 + 4) * 3 - 8</p>
-<p><input class="webex-solveme nospaces" id="webex-8dbf51e74292ed828b0712135d557c13" data-tol="0" size="20" data-answer="Y0ZTVhds"></p>
+<p>2 + 4 * 3 - 8</p>
+<p><input class="webex-solveme nospaces" id="webex-6e4d3232cfe4400759dba5f69637a106" data-tol="0" size="20" data-answer="bUcCRm4="></p>
 </div>
 <div class="webex-solution">
-<p>By applying the appropriate order of operations, we get 10.</p>
+<p>By applying the appropriate order of operations, we get 6.</p>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following expressions will return <code>TRUE</code>?</p>
-<div id="webex-5bc84c250f387ca548d2c220c9797212" class="webex-checkboxgroup" data-answer="blNPCBhSHgUcVh8Jag==">
-<label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>"alice" == "bob" | "alice" != "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>!(6 &gt; 7)</code></span></label><label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>"foo" == "bar"</code></span></label><label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="5bc84c250f387ca548d2c220c9797212"><span><code>(8 - 1) == 7 &amp; 7 &gt;= (14 / 2)</code></span></label>
+<div id="webex-040e207a2fa65a9688cdbd3c841d245a" class="webex-checkboxgroup" data-answer="awQcVB4BG1EeV00HaA==">
+<label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>"alice" == "bob" &amp; "alice" == "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>!(6 &gt; 7)</code></span></label><label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>"alice" == "bob" | "alice" != "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>"foo" != "bar"</code></span></label><label><input type="checkbox" autocomplete="off" name="040e207a2fa65a9688cdbd3c841d245a"><span><code>"alice" == "bob" | "alice" == "alice"</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
+<li>FALSE: “alice” is not equal to “bob”</li>
 <li>TRUE: Trivially</li>
-<li>FALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”</li>
 <li>TRUE: 6 is not strictly greater than 7, and that result is negated</li>
-<li>FALSE: “foo” is not equal to “bar”</li>
-<li>FALSE: Trivially</li>
-<li>TRUE: 7 is equal to 7, and 7 is greater than or equal to 7</li>
+<li>FALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”</li>
+<li>TRUE: “foo” is not equal to “bar”</li>
+<li>TRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”</li>
 </ul>
 </div>
 </div>
@@ -505,7 +519,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.openstatprog\.com\/first-steps\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -864,13 +878,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- 2025, Open-Stat-Prog
+ © 2025
   </li>  
-    <li class="nav-item compact">
+    <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
+<p>Open-Stat-Prog</p>
+</a>
   </li>  
 </ul>
     </div>

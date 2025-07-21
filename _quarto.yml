@@ -3,63 +3,6 @@ project:
   execute-dir: project
   output-dir: docs
 
-website:
-  title: "First Steps"
-  page-navigation: true
-  back-to-top-navigation: true
-  navbar:
-    background: primary
-    foreground: dark
-    left:
-      - href: index.qmd
-        text: Home
-  sidebar:
-    style: "floating"
-    collapse-level: 1
-    contents:
-      - href: index.qmd
-        text: "Overview"
-      - section: tutorials/basic_commands/index.qmd
-        text: "Basic Commands"
-        contents:
-        - href: tutorials/basic_commands/fundamentals.qmd
-        - href: tutorials/basic_commands/mathematical_operators.qmd
-        - href: tutorials/basic_commands/logical_comparisons.qmd
-        - href: tutorials/basic_commands/environments.qmd
-        - href: quizzes/basic_commands/index.qmd
-          text: "Knowledge Quiz"
-      - section: tutorials/functions/index.qmd
-        text: "Functions"
-        contents:
-          - href: tutorials/functions/functions.qmd
-          - href: quizzes/functions/index.qmd
-            text: "Knoweldge Quiz"
-      - section: tutorials/packages/index.qmd
-        text: "Packages"
-        contents:
-          - href: tutorials/packages/installing.qmd
-          - href: tutorials/packages/loading.qmd
-          - href: quizzes/packages/index.qmd
-            text: "Knowledge Quiz"
-      - section: tutorials/help/index.qmd
-        text: "Documentation"
-        contents:
-          - href: tutorials/help/sections.qmd
-          - href: tutorials/help/access.qmd
-          - href: tutorials/help/default_arguments.qmd
-          - href: quizzes/help/index.qmd
-            text: "Knowledge Quiz"
-      - href: tutorials/99_finish.qmd
-        text: "Conclusion"
-  page-footer:
-    left: |
-      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
-    right: 
-      - text: 2025, Open-Stat-Prog
-      - icon: github
-        href: https://github.com/open-stat-prog
-    background: primary
-
 format:
   html:
     theme:
@@ -113,3 +56,7 @@ custom-callout:
 filters:
   - webr
   - custom-callout
+
+## Import the website metadata since that section gets pretty complicated
+metadata-files:
+  - _website.yml

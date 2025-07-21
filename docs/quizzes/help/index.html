@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/99_finish.html" rel="next">
+<link href="../../conclusion.html" rel="next">
 <link href="../../tutorials/help/default_arguments.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -71,32 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-link.callout {
-  border-left-color: orange;
-}
-div.callout-link.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: violet;
 }
@@ -123,6 +97,32 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-link.callout {
+  border-left-color: orange;
+}
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 </style>
 
 
@@ -135,11 +135,6 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">First Steps</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -147,12 +142,31 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.openstatprog.com"> 
+<span class="menu-text">Open-Stat-Prog</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">First Steps</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -309,7 +323,7 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
@@ -365,8 +379,8 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which section of an R package help file would you reference to learn the order in which the function arguments are specified in the function definition?</p>
-<div id="webex-dd927ff8b3499cc4cb4f1be08dedb17b" class="webex-radiogroup" data-answer="P1QVAhtWSghOAmk=">
-<label><input type="radio" autocomplete="off" name="dd927ff8b3499cc4cb4f1be08dedb17b"><span>Details</span></label><label><input type="radio" autocomplete="off" name="dd927ff8b3499cc4cb4f1be08dedb17b"><span>Arguments</span></label><label><input type="radio" autocomplete="off" name="dd927ff8b3499cc4cb4f1be08dedb17b"><span>See Also</span></label><label><input type="radio" autocomplete="off" name="dd927ff8b3499cc4cb4f1be08dedb17b"><span>Value</span></label><label><input type="radio" autocomplete="off" name="dd927ff8b3499cc4cb4f1be08dedb17b"><span>Usage</span></label>
+<div id="webex-ef3e41d50dc0eb8167ccbf4d38065675" class="webex-radiogroup" data-answer="PlcfVRgBSAUcVD4=">
+<label><input type="radio" autocomplete="off" name="ef3e41d50dc0eb8167ccbf4d38065675"><span>Usage</span></label><label><input type="radio" autocomplete="off" name="ef3e41d50dc0eb8167ccbf4d38065675"><span>See Also</span></label><label><input type="radio" autocomplete="off" name="ef3e41d50dc0eb8167ccbf4d38065675"><span>Arguments</span></label><label><input type="radio" autocomplete="off" name="ef3e41d50dc0eb8167ccbf4d38065675"><span>Details</span></label><label><input type="radio" autocomplete="off" name="ef3e41d50dc0eb8167ccbf4d38065675"><span>Description</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -376,8 +390,8 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which section of an R package help file would you reference to learn the default values for a function’s arguments.</p>
-<div id="webex-65a1752ac18d49110d63b71a03b150f9" class="webex-radiogroup" data-answer="bQVNARsFHlFPAGU=">
-<label><input type="radio" autocomplete="off" name="65a1752ac18d49110d63b71a03b150f9"><span>Value</span></label><label><input type="radio" autocomplete="off" name="65a1752ac18d49110d63b71a03b150f9"><span>Details</span></label><label><input type="radio" autocomplete="off" name="65a1752ac18d49110d63b71a03b150f9"><span>See Also</span></label><label><input type="radio" autocomplete="off" name="65a1752ac18d49110d63b71a03b150f9"><span>Description</span></label><label><input type="radio" autocomplete="off" name="65a1752ac18d49110d63b71a03b150f9"><span>Usage</span></label>
+<div id="webex-91f36112cbc0c692fcadd3dcae8118c4" class="webex-radiogroup" data-answer="YgFKAxoBHQJPUz4=">
+<label><input type="radio" autocomplete="off" name="91f36112cbc0c692fcadd3dcae8118c4"><span>Description</span></label><label><input type="radio" autocomplete="off" name="91f36112cbc0c692fcadd3dcae8118c4"><span>Examples</span></label><label><input type="radio" autocomplete="off" name="91f36112cbc0c692fcadd3dcae8118c4"><span>Value</span></label><label><input type="radio" autocomplete="off" name="91f36112cbc0c692fcadd3dcae8118c4"><span>Details</span></label><label><input type="radio" autocomplete="off" name="91f36112cbc0c692fcadd3dcae8118c4"><span>Arguments</span></label>
 </div>
 </div>
 <div class="webex-solution">
@@ -424,18 +438,18 @@ cov2cor(V)
 </div>
 </div>
 <p>What is the default value for the <code>use</code> argument of the <code>cor()</code> function?</p>
-<div id="webex-3b1a379b9d7ab5746989fb474e970d65" class="webex-radiogroup" data-answer="aFIdUR8HFVMVVGo=">
-<label><input type="radio" autocomplete="off" name="3b1a379b9d7ab5746989fb474e970d65"><span><code>c("pearson", "spearman", "kendall")</code></span></label><label><input type="radio" autocomplete="off" name="3b1a379b9d7ab5746989fb474e970d65"><span><code>y</code></span></label><label><input type="radio" autocomplete="off" name="3b1a379b9d7ab5746989fb474e970d65"><span>The <code>use</code> argument does not have a defined default value.</span></label><label><input type="radio" autocomplete="off" name="3b1a379b9d7ab5746989fb474e970d65"><span><code>"everything"</code></span></label><label><input type="radio" autocomplete="off" name="3b1a379b9d7ab5746989fb474e970d65"><span><code>NULL</code></span></label>
+<div id="webex-bbdc9b01730e88afc876a55e2308c25d" class="webex-radiogroup" data-answer="OVNIUxVSHAEbA20=">
+<label><input type="radio" autocomplete="off" name="bbdc9b01730e88afc876a55e2308c25d"><span><code>"everything"</code></span></label><label><input type="radio" autocomplete="off" name="bbdc9b01730e88afc876a55e2308c25d"><span><code>c("pearson", "spearman", "kendall")</code></span></label><label><input type="radio" autocomplete="off" name="bbdc9b01730e88afc876a55e2308c25d"><span><code>"spearman"</code></span></label><label><input type="radio" autocomplete="off" name="bbdc9b01730e88afc876a55e2308c25d"><span><code>"Everything</code></span></label><label><input type="radio" autocomplete="off" name="bbdc9b01730e88afc876a55e2308c25d"><span><code>x</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>The default value for the <code>use</code> argument is <code>"everything"</code>.</p>
 <ul>
-<li>Wrong: These are all of the possible methods</li>
-<li>Wrong: This is an argument name</li>
-<li>Wrong: There is a default value defined for <code>use</code>.</li>
 <li>Correct</li>
-<li>Wrong: This is the default value for <code>y</code></li>
+<li>Wrong: These are all of the possible methods</li>
+<li>Wrong: This is one of the possible methods</li>
+<li>Wrong: The “E” should be lowercase</li>
+<li>Wrong: This is an argument name</li>
 </ul>
 </div>
 </div>
@@ -536,7 +550,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.openstatprog\.com\/first-steps\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -878,7 +892,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/99_finish.html" class="pagination-link" aria-label="Conclusion">
+      <a href="../../conclusion.html" class="pagination-link" aria-label="Conclusion">
         <span class="nav-page-text">Conclusion</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -895,13 +909,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- 2025, Open-Stat-Prog
+ © 2025
   </li>  
-    <li class="nav-item compact">
+    <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
+<p>Open-Stat-Prog</p>
+</a>
   </li>  
 </ul>
     </div>

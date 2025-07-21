@@ -71,19 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-link.callout {
   border-left-color: orange;
 }
@@ -123,6 +110,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   content: '\f085' !important;
   background-image: none;
 }
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 </style>
 
 
@@ -135,11 +135,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">First Steps</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -147,12 +142,31 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.openstatprog.com"> 
+<span class="menu-text">Open-Stat-Prog</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">First Steps</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/open-stat-prog/first-steps/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -309,7 +323,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/99_finish.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
@@ -365,19 +379,19 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following options represent R function calls?</p>
-<div id="webex-73bca87051cd76218e9c8425faaf0ec0" class="webex-checkboxgroup" data-answer="bANOUk0JGwAZAU9Uag==">
-<label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>NA</code></span></label><label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>mean(x, trim = 0.1, na.rm = TRUE)</code></span></label><label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>rnorm(n = 100)</code></span></label><label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>y</code></span></label><label><input type="checkbox" autocomplete="off" name="73bca87051cd76218e9c8425faaf0ec0"><span><code>3.14159</code></span></label>
+<div id="webex-3ef872ea716afb9365e890f23a06e179" class="webex-checkboxgroup" data-answer="aFVKCBsDSVEbARpQOw==">
+<label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>y</code></span></label><label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>Inf</code></span></label><label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>rnorm(n = 100)</code></span></label><label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>bar</code></span></label><label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>"foo"</code></span></label><label><input type="checkbox" autocomplete="off" name="3ef872ea716afb9365e890f23a06e179"><span><code>.libPaths()</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>You can recognize a valid function call by the pattern: <code>FUNCTION_NAME()</code>.</p>
 <ul>
-<li>This is R’s missing value code.</li>
-<li>Correct. This function call would calculate the trimmed mean of <code>x</code>, ignoring any missing values.</li>
-<li>Correct. This function call would generate 100 random standard normal deviates.</li>
-<li>This is a length-one logical vector.</li>
 <li>This is a symbol (i.e., the name of an object).</li>
-<li>This is a length-one numeric vector.</li>
+<li>This is R’s infinite value code.</li>
+<li>Correct. This function call would generate 100 random standard normal deviates.</li>
+<li>This is a symbol (i.e., the name of an object).</li>
+<li>This is a length-one character vector.</li>
+<li>Correct. This function call will list the library paths where R will install packages on your system.</li>
 </ul>
 </div>
 </div>
@@ -478,7 +492,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.openstatprog\.com\/first-steps\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -837,13 +851,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- 2025, Open-Stat-Prog
+ © 2025
   </li>  
-    <li class="nav-item compact">
+    <li class="nav-item">
     <a class="nav-link" href="https://github.com/open-stat-prog">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
+<p>Open-Stat-Prog</p>
+</a>
   </li>  
 </ul>
     </div>
