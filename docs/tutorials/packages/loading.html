@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()","options":{"editor-word-wrap":"true","label":"unnamed-chunk-1","editor-max-height":"","comment":"","fig-cap":"","classes":"","message":"true","editor-font-scale":"1","out-height":"","results":"markup","read-only":"false","fig-width":7,"warning":"true","output":"true","editor-quick-suggestions":"false","context":"interactive","autorun":"false","dpi":72,"fig-height":5,"out-width":"700px"},"id":1}];
+globalThis.qwebrCellDetails = [{"options":{"read-only":"false","fig-width":7,"editor-font-scale":"1","out-width":"700px","editor-max-height":"","results":"markup","message":"true","autorun":"false","comment":"","out-height":"","fig-height":5,"dpi":72,"editor-quick-suggestions":"false","context":"interactive","classes":"","warning":"true","fig-cap":"","label":"unnamed-chunk-1","output":"true","editor-word-wrap":"true"},"id":1,"code":"library(ggplot2)\n\nggplot(iris, aes(Species, Petal.Length)) + geom_boxplot()"}];
 
 </script>
 <script type="module">
@@ -1671,6 +1671,19 @@ div.callout-link.callout-style-default .callout-icon::before, div.callout-link.c
   content: '\f0c1' !important;
   background-image: none;
 }
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 div.callout-adv_reading.callout {
   border-left-color: red;
 }
@@ -1695,19 +1708,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
   background-image: none;
 }
 </style>

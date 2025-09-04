@@ -50,5 +50,6 @@ button below to start the next module.
 ```{r}
 #| echo: false
 #| results: asis
-next_module_button("/in_progress.html")
+
+next_module_button("https://www.openstatprog.com/data-types/index.html")
 ```
