@@ -65,3 +65,6 @@ _site/
 # the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# Don't let Mac users contaminate our repo
+.DS_Store

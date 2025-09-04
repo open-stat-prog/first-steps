@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"?dplyr::arrange","options":{"editor-font-scale":"1","warning":"true","label":"unnamed-chunk-1","autorun":"false","message":"true","dpi":72,"read-only":"false","comment":"","out-width":"700px","fig-height":5,"output":"true","classes":"","context":"interactive","results":"markup","editor-word-wrap":"true","out-height":"","fig-cap":"","fig-width":7,"editor-quick-suggestions":"false","editor-max-height":""},"id":1},{"code":"help(arrange, package = \"dplyr\")","options":{"editor-font-scale":"1","warning":"true","label":"unnamed-chunk-2","autorun":"false","message":"true","dpi":72,"read-only":"false","comment":"","out-width":"700px","fig-height":5,"output":"true","classes":"","context":"interactive","results":"markup","editor-word-wrap":"true","out-height":"","fig-cap":"","fig-width":7,"editor-quick-suggestions":"false","editor-max-height":""},"id":2},{"code":"","options":{"editor-font-scale":"1","warning":"true","label":"unnamed-chunk-3","autorun":"false","message":"true","dpi":72,"read-only":"false","comment":"","out-width":"700px","fig-height":5,"output":"true","classes":"","context":"interactive","results":"markup","editor-word-wrap":"true","out-height":"","fig-cap":"","fig-width":7,"editor-quick-suggestions":"false","editor-max-height":""},"id":3}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"?dplyr::arrange","options":{"label":"unnamed-chunk-1","editor-max-height":"","fig-height":5,"comment":"","output":"true","classes":"","read-only":"false","out-width":"700px","context":"interactive","out-height":"","fig-width":7,"editor-word-wrap":"true","warning":"true","editor-font-scale":"1","results":"markup","editor-quick-suggestions":"false","fig-cap":"","message":"true","autorun":"false","dpi":72}},{"id":2,"code":"help(arrange, package = \"dplyr\")","options":{"label":"unnamed-chunk-2","editor-max-height":"","fig-height":5,"comment":"","output":"true","classes":"","read-only":"false","out-width":"700px","context":"interactive","out-height":"","fig-width":7,"editor-word-wrap":"true","warning":"true","editor-font-scale":"1","results":"markup","editor-quick-suggestions":"false","fig-cap":"","message":"true","autorun":"false","dpi":72}},{"id":3,"code":"","options":{"label":"unnamed-chunk-3","editor-max-height":"","fig-height":5,"comment":"","output":"true","classes":"","read-only":"false","out-width":"700px","context":"interactive","out-height":"","fig-width":7,"editor-word-wrap":"true","warning":"true","editor-font-scale":"1","results":"markup","editor-quick-suggestions":"false","fig-cap":"","message":"true","autorun":"false","dpi":72}}];
 
 </script>
 <script type="module">
@@ -1658,19 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-link.callout {
-  border-left-color: orange;
-}
-div.callout-link.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-adv_reading.callout {
   border-left-color: red;
 }
@@ -1684,17 +1671,17 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
+div.callout-link.callout {
+  border-left-color: orange;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-link.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-link .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-link.callout-style-default .callout-icon::before, div.callout-link.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1708,6 +1695,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 </style>

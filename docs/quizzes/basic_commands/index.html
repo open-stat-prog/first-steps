@@ -97,19 +97,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-adv_reading.callout {
   border-left-color: red;
 }
@@ -121,6 +108,19 @@ div.callout-adv_reading.callout-style-default .callout-icon::before, div.callout
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
   background-image: none;
 }
 </style>
@@ -379,46 +379,46 @@ Note
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following commands represents the recommended way to assign the value <code>7</code> to the object <code>y</code>?</p>
-<div id="webex-410dab59abab63a8f5194bd9f2d8b758" class="webex-radiogroup" data-answer="bwEcVE1SGQhNUjw=">
-<label><input type="radio" autocomplete="off" name="410dab59abab63a8f5194bd9f2d8b758"><span><code>y |&gt; 7</code></span></label><label><input type="radio" autocomplete="off" name="410dab59abab63a8f5194bd9f2d8b758"><span><code>y == 7</code></span></label><label><input type="radio" autocomplete="off" name="410dab59abab63a8f5194bd9f2d8b758"><span><code>y + 7</code></span></label><label><input type="radio" autocomplete="off" name="410dab59abab63a8f5194bd9f2d8b758"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="410dab59abab63a8f5194bd9f2d8b758"><span><code>y &lt; 7</code></span></label>
+<div id="webex-45ccebc56a51050b90b865a98177f5f1" class="webex-radiogroup" data-answer="bwVPU0lSTwQaUWg=">
+<label><input type="radio" autocomplete="off" name="45ccebc56a51050b90b865a98177f5f1"><span><code>y |&gt; 7</code></span></label><label><input type="radio" autocomplete="off" name="45ccebc56a51050b90b865a98177f5f1"><span><code>y + 7</code></span></label><label><input type="radio" autocomplete="off" name="45ccebc56a51050b90b865a98177f5f1"><span><code>7 -&gt; y</code></span></label><label><input type="radio" autocomplete="off" name="45ccebc56a51050b90b865a98177f5f1"><span><code>y &lt;- 7</code></span></label><label><input type="radio" autocomplete="off" name="45ccebc56a51050b90b865a98177f5f1"><span><code>7 &lt;- y</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <p>Although there are three valid assignment operators: <code>&lt;-</code>, <code>-&gt;</code>, <code>=</code>, only the left-facing arrow is recommended by most style guides.</p>
 <ul>
 <li>This is a misuse of the native R pipe operator.</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is equal to the <code>7</code>.</li>
 <li>This command adds the value of <code>y</code> to the value of <code>7</code> and prints the result.</li>
+<li>This is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.</li>
 <li>Correct</li>
-<li>This is a logical comparison. We’re checking if the value of <code>y</code> is less than <code>7</code>.</li>
+<li>This isn’t legal R code. This command attempts to assign the value <code>y</code> to the variable <code>7</code>, but variable names can’t begin with numbers.</li>
 </ul>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>What value will the following R code produce?</p>
-<p>(2 * 3 + 4) / 2</p>
-<p><input class="webex-solveme nospaces" id="webex-539084587884e22351b8fb8fab04b295" data-tol="0" size="20" data-answer="bhEMEmU="></p>
+<p>(2 + 4) * 3 - 8</p>
+<p><input class="webex-solveme nospaces" id="webex-b4166abaea4939d3d636fb2ecbbfb70e" data-tol="0" size="20" data-answer="ORYABhQ8"></p>
 </div>
 <div class="webex-solution">
-<p>By applying the appropriate order of operations, we get 5.</p>
+<p>By applying the appropriate order of operations, we get 10.</p>
 </div>
 </div>
 <div class="webex-question">
 <div class="webex-check webex-box">
 <p>Which of the following expressions will return <code>TRUE</code>?</p>
-<div id="webex-19ee1188c62f288f331c65cb2393fe8a" class="webex-checkboxgroup" data-answer="aghJVB0BFAhPBx5Wbw==">
-<label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>"alice" == "bob" | "alice" == "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>!(6 &gt; 7)</code></span></label><label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>TRUE &amp; FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>"alice" == "bob" | "alice" != "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>(8 + 6) &lt; (8 * 6)</code></span></label><label><input type="checkbox" autocomplete="off" name="19ee1188c62f288f331c65cb2393fe8a"><span><code>!TRUE</code></span></label>
+<div id="webex-dc496cc86397dfb824b94aa5d4856879" class="webex-checkboxgroup" data-answer="P1MYCBpTTwgaAxUHOQ==">
+<label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>"alice" == "bob" &amp; "alice" == "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>"alice" == "bob" | "alice" != "alice"</code></span></label><label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>TRUE &amp; FALSE</code></span></label><label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>!TRUE</code></span></label><label><input type="checkbox" autocomplete="off" name="dc496cc86397dfb824b94aa5d4856879"><span><code>FALSE</code></span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
-<li>TRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”</li>
-<li>TRUE: 6 is not strictly greater than 7, and that result is negated</li>
-<li>FALSE: Trivially</li>
+<li>FALSE: “alice” is not equal to “bob”</li>
+<li>TRUE: Trivially</li>
 <li>FALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”</li>
-<li>TRUE: 14 is strictly less than 48</li>
+<li>FALSE: Trivially</li>
 <li>FALSE: Trivial negation</li>
+<li>FALSE: Trivially</li>
 </ul>
 </div>
 </div>
